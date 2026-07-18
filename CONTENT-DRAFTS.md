@@ -6,9 +6,11 @@ Founder name confirmed as **Steve Land**.
 
 ---
 
-## A. About Page (`/pages/about`)
+## A. About Page (`/pages/about`) — ✅ built in `templates/page.about.json`
 
-Suggested template: reuse `page.json` (main-page + rich text), or build a light custom page template mirroring the visual rhythm of the homepage (image-with-text → divider → rich-text → hotspots-style ingredient recap → founder story → CTA). Below is copy blocked out by section so it maps cleanly onto existing section types already in the theme.
+This is no longer just a draft — `templates/page.about.json` in this repo now contains the full page, built the same way `page.contact.json` is (a disabled `main-page` + real sections underneath): hero → divider → origin story → philosophy → three-pillar recap (reused from the homepage) → founder-story teaser (same `featured-article` block the Contact page uses, linking to "The BRAiNLUBE Story") → divider → closing CTA.
+
+**One manual step is still required in Shopify Admin** (page templates only apply once a Page resource exists — that's store data, not a theme file): create a Page titled **About**, handle `about`, and set its template suffix to `about` so it picks up `page.about.json`. The copy below is what's now live in that template file, kept here for reference/editing.
 
 ### Hero (image-with-text section)
 > **SUBTITLE:** THE STORY BEHIND THE CAN
@@ -88,3 +90,23 @@ The live FAQ already tells customers new flavors are coming ("Cerebral Citrus, B
 ## D. Legal / Policy Pages
 
 Not part of this repo — Shopify auto-generates policy pages (Shipping, Returns, Privacy, Terms) under **Settings → Policies** once the store is live, separate from the `pages` app. Footer links to `customer-resources` and `contact` menus need to be wired to these after the theme is connected. Flagging here so it isn't forgotten, not because it's a theme-file task.
+
+---
+
+## E. Product Description (Admin field — not a theme file)
+
+`product.description` is store data (Shopify Admin → Products → OG Mango → Description), not something a theme template controls, so it can't be committed to this repo — it has to be pasted into Admin directly. Current live description is thin; here's a fuller draft matching the sharper FAQ voice, meant to replace it:
+
+> **BRAiNLUBE™ — OG Mango**
+>
+> Most energy drinks spike you, then dump you an hour later. This one doesn't.
+>
+> BRAiNLUBE™ is a cognitive-support drink first and an energy drink second — six natural ingredients (ashwagandha, bacopa monnieri, ginkgo biloba, ginseng, guarana, and just enough caffeine) chosen to cross the blood-brain barrier and actually do something, dosed precisely enough to build in your system without overloading it. Real mango juice, lightly carbonated, nothing synthetic.
+>
+> **What it's for:** the stretch of your day where you need to think clearly, not just feel wired — deep work, long shifts, exam prep, whatever demands your brain more than your adrenaline.
+>
+> **What's in every can:** real roots, leaves, berries, and adaptogens. No synthetic stimulant stack, no crash at 2pm.
+>
+> *Not intended for children under 18. Not recommended for individuals sensitive to caffeine, pregnant women, or nursing mothers. Limit to two 12oz cans daily.*
+
+This also gives the product page real content of its own — right now a visitor landing directly on the product URL (from an ad, a share, a QR code on the can) sees a thin page, since most of the actual selling copy lives on the homepage and in the FAQ instead.

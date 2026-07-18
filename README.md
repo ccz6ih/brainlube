@@ -87,6 +87,7 @@ templates/    JSON templates that assemble sections per page/resource type
 | `blog.json` | Blog listing | ✅ Built, "BRAiNWAVES" |
 | `article.json` | Blog post | ✅ Built |
 | `blog.faq.json` | Alternate blog template (`main-blog-faq`) | ⚠️ Exists in repo, **not confirmed in use** on any live blog |
+| `page.about.json` | About page | ✅ **New** — built this pass (see §6). Needs a Page resource created in Admin (handle `about`, template suffix `about`) to go live. |
 | `404.json`, `search.json`, `cart.json`, `gift_card.liquid`, `customers/*` | Scaffolding | ✅ Default theme behavior, no custom copy needed yet |
 
 ### Navigation (from `sections/footer-group.json`)
@@ -111,9 +112,25 @@ See **`CONTENT-DRAFTS.md`** in this repo for the actual page copy and the recomm
 
 ## 5. Before Connecting to Shopify — Checklist
 
-- [ ] Confirm founder's correct name (Steven Land vs. S. Bradley Land)
-- [ ] Create `/pages/about` in Shopify Admin (Online Store → Pages), assign the `page` template, paste in drafted copy
-- [ ] Decide on collection structure (see CONTENT-DRAFTS.md) and create collections in Admin — collections are store data, not theme files, so they're created after connecting the theme, in Shopify Admin
+- [x] Confirm founder's correct name — **Steve Land**, corrected everywhere in the repo
+- [x] Push this repo to GitHub
+- [ ] In Shopify Admin: **Online Store → Themes → Add theme → Connect from GitHub**
+- [ ] Create the About page: Admin → Pages → new page titled "About," handle `about`, template suffix `about` (picks up `templates/page.about.json`, already built — see §6)
+- [ ] Tag the OG Mango product `Limited Edition` in Admin so the badge configured in `config/settings_data.json` (`custom_badges`) actually renders (see §6)
+- [ ] Replace the product's Admin description field with the draft in `CONTENT-DRAFTS.md` §E (theme files can't hold this — it's store data)
+- [ ] Decide on collection structure (see CONTENT-DRAFTS.md §B) and create collections in Admin — deferred by design for now, revisit once the site itself is dialed in
 - [ ] Verify footer menu targets (`customer-resources`, `contact`) actually resolve to real policy pages (Shopify auto-generates legal policy pages under Settings → Policies, distinct from the `pages` app)
 - [ ] Decide whether `blog.faq.json` (`main-blog-faq`) should be assigned anywhere, or removed if unused
-- [ ] Push this repo to GitHub, then in Shopify Admin: **Online Store → Themes → Add theme → Connect from GitHub**
+
+## 6. What Changed In This Build Pass
+
+Beyond the initial import, this pass made the following edits directly in the theme files (see `CONVERSION-RECOMMENDATIONS.md` for the full reasoning behind each):
+
+- **`templates/index.json`** — fixed the founder-name error, rewrote the flat intro rich-text copy to be more vivid/specific, and repointed the founder-story teaser link from `/pages/contact` to the new `/pages/about`.
+- **`templates/product.json`** —
+  - Enabled the `badges` block (was disabled) so product tags/sale/custom badges actually render on the product page.
+  - Added two `attribute_insights` blocks in the buy box — **Caffeine Level** (fill scale) and **Crash Risk** (segmented scale) — turning the site's core "no crash" claim into a visual instead of just a sentence.
+  - Added a new `image-with-hotspots` section ("What's Inside This Can") bringing the homepage's six-ingredient callouts onto the product page itself, where people actually decide to buy. Only the Ashwagandha hotspot has a photo assigned (reused from the homepage) — the other five are wired up and waiting on the ingredient photography you're gathering.
+  - Deleted the disabled, redundant duplicate SVG benefit-icon block that was dead weight in the template.
+- **`config/settings_data.json`** — added a `Limited Edition` custom badge (black background, white text). Renders automatically once the product is tagged `Limited Edition` in Admin (badges are theme config + product tags together — the tag itself has to be added in Admin).
+- **`templates/page.about.json`** — new file, full About page (hero → origin story → philosophy → three-pillar recap → founder-story teaser → CTA), built from the draft in `CONTENT-DRAFTS.md` §A.
