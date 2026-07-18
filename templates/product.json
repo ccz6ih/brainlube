@@ -241,10 +241,21 @@
     "rich_text_8F9YN9": {
       "type": "rich-text",
       "blocks": {
+        "title_wXnhrf": {
+          "type": "title",
+          "settings": {
+            "title": "BRAiNLUBE™ is more than just an energy drink. It’s a brain-support formula rooted in research. Our ingredients have been shown to help with:",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
         "text_UnQP97": {
           "type": "text",
           "settings": {
-            "text": "<p>BRAiNLUBE™ is more than just an energy drink. It’s a brain-support formula rooted in research. Our ingredients have been shown to help with:</p>",
+            "text": "",
             "read_more": false,
             "sm_size_multiplier": "sm-size--default",
             "sm_margin_top": 0,
@@ -254,6 +265,7 @@
         }
       },
       "block_order": [
+        "title_wXnhrf",
         "text_UnQP97"
       ],
       "name": "t:sections.rich-text.name",
