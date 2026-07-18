@@ -173,7 +173,7 @@
       "settings": {
         "color_scheme": "alternative-1",
         "custom_liquid": "<div class=\"grid grid-cols-2 md-grid-cols-4\" style=\"gap:32px;text-align:center;\">\n    <div><div style=\"font-size:32px;\">🌿</div><p style=\"margin-top:8px;\"><strong>Real adaptogens</strong><br>not synthetic stimulants</p></div>\n    <div><div style=\"font-size:32px;\">⚡</div><p style=\"margin-top:8px;\"><strong>130mg clean caffeine</strong><br>balanced with L-theanine</p></div>\n    <div><div style=\"font-size:32px;\">🧠</div><p style=\"margin-top:8px;\"><strong>Nootropics for focus</strong><br>memory, clarity, calm</p></div>\n    <div><div style=\"font-size:32px;\">🚫</div><p style=\"margin-top:8px;\"><strong>No artificial colors</strong><br>real fruit juice base</p></div>\n  </div>",
-        "enable_full_width": false,
+        "enable_full_width": true,
         "md_padding_top": 40,
         "md_padding_bottom": 40,
         "padding_top": 32,
