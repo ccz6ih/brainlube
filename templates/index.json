@@ -116,6 +116,17 @@
     "the-rich-text": {
       "type": "rich-text",
       "blocks": {
+        "subtitle_chNEnL": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "Small-batch. Clean ingredients. Ships in 24h.",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
         "buttons_qdhAF3": {
           "type": "buttons",
           "settings": {
@@ -135,22 +146,11 @@
             "size_multiplier": "size--default",
             "margin_top": 24
           }
-        },
-        "the-rich-text-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Small-batch. Clean ingredients. Ships in 24h.</p>",
-            "read_more": false,
-            "sm_size_multiplier": "sm-size--small",
-            "sm_margin_top": 0,
-            "size_multiplier": "size--small",
-            "margin_top": 0
-          }
         }
       },
       "block_order": [
-        "buttons_qdhAF3",
-        "the-rich-text-text-1"
+        "subtitle_chNEnL",
+        "buttons_qdhAF3"
       ],
       "custom_css": [
         "button {font-weight: bold;}"
@@ -421,7 +421,7 @@
             "title_tag": "h6",
             "text": "",
             "text_alignment": "text-align-center",
-            "sm_size_multiplier": "sm-size--small",
+            "sm_size_multiplier": "sm-size--default",
             "size_multiplier": "size--default"
           }
         },
