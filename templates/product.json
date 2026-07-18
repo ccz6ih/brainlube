@@ -36,6 +36,7 @@
           "type": "description",
           "settings": {
             "enable_collapsible": false,
+            "collapsible_type": "collapsible",
             "margin_top": 24
           }
         },
@@ -44,7 +45,9 @@
           "settings": {
             "picker_type": "button",
             "cross_out_unavailable": false,
-            "margin_top": 8
+            "margin_top": 8,
+            "dropdown_picker_options": "",
+            "button_picker_options": ""
           }
         },
         "the-price": {
@@ -54,6 +57,48 @@
             "font_weight": "normal",
             "sm_size_multiplier": "sm-size--huge",
             "size_multiplier": "size--huge"
+          }
+        },
+        "attribute_insights_caffeine": {
+          "type": "attribute_insights",
+          "settings": {
+            "title": "Caffeine Level",
+            "value": "62",
+            "display_type": "fill",
+            "border_radius": 12,
+            "show_helper_splitters": true,
+            "amount_of_segments": 5,
+            "start_label": "Mild",
+            "center_label": "Moderate",
+            "end_label": "High",
+            "show_messages": true,
+            "below_threshold_value": 34,
+            "above_threshold_value": 66,
+            "below_threshold_message": "",
+            "between_threshold_message": "Paired with L-theanine — a well-documented combo for alert focus without the jitters.",
+            "above_threshold_message": "",
+            "margin_top": 24
+          }
+        },
+        "attribute_insights_crash": {
+          "type": "attribute_insights",
+          "settings": {
+            "title": "Crash Risk",
+            "value": "12",
+            "display_type": "segmented",
+            "border_radius": 8,
+            "show_helper_splitters": true,
+            "amount_of_segments": 5,
+            "start_label": "Low",
+            "center_label": "Moderate",
+            "end_label": "High",
+            "show_messages": true,
+            "below_threshold_value": 34,
+            "above_threshold_value": 66,
+            "below_threshold_message": "L-theanine and adaptogens buffer the caffeine, so energy builds steady and fades slow — no 2pm crash.",
+            "between_threshold_message": "",
+            "above_threshold_message": "",
+            "margin_top": 12
           }
         },
         "6fc29670-ecc3-4bbf-bc13-6d7232b75085": {
@@ -111,46 +156,6 @@
             "icon": "icon-caret__right",
             "margin_top": 0
           }
-        },
-        "attribute_insights_caffeine": {
-          "type": "attribute_insights",
-          "settings": {
-            "title": "Caffeine Level",
-            "value": "62",
-            "display_type": "fill",
-            "border_radius": 12,
-            "show_helper_splitters": true,
-            "start_label": "Mild",
-            "center_label": "Moderate",
-            "end_label": "High",
-            "show_messages": true,
-            "below_threshold_value": 34,
-            "above_threshold_value": 66,
-            "below_threshold_message": "",
-            "between_threshold_message": "Paired with L-theanine — a well-documented combo for alert focus without the jitters.",
-            "above_threshold_message": "",
-            "margin_top": 24
-          }
-        },
-        "attribute_insights_crash": {
-          "type": "attribute_insights",
-          "settings": {
-            "title": "Crash Risk",
-            "value": "12",
-            "display_type": "segmented",
-            "border_radius": 8,
-            "amount_of_segments": 5,
-            "start_label": "Low",
-            "center_label": "Moderate",
-            "end_label": "High",
-            "show_messages": true,
-            "below_threshold_value": 34,
-            "above_threshold_value": 66,
-            "below_threshold_message": "L-theanine and adaptogens buffer the caffeine, so energy builds steady and fades slow — no 2pm crash.",
-            "between_threshold_message": "",
-            "above_threshold_message": "",
-            "margin_top": 12
-          }
         }
       },
       "block_order": [
@@ -177,7 +182,9 @@
         "show_breadcrumb": false,
         "product_image_aspect_ratio": "portrait_alt",
         "media_fill_rule": "contain",
+        "variant_images": "all",
         "color_scheme": "default",
+        "custom_background_colors": false,
         "section_bg": "",
         "media_col_bg": "",
         "content_col_bg": "",
@@ -238,6 +245,7 @@
           "type": "text",
           "settings": {
             "text": "<p>BRAiNLUBE™ is more than just an energy drink. It’s a brain-support formula rooted in research. Our ingredients have been shown to help with:</p>",
+            "read_more": false,
             "sm_size_multiplier": "sm-size--default",
             "sm_margin_top": 0,
             "size_multiplier": "size--default",
@@ -260,6 +268,188 @@
         "mobile_alignment": "text-align-center",
         "padding_top": 80,
         "padding_bottom": 0
+      }
+    },
+    "image_with_hotspots_ingredients": {
+      "type": "image-with-hotspots",
+      "blocks": {
+        "title_ingredients": {
+          "type": "title",
+          "settings": {
+            "title": "WHAT'S INSIDE THIS CAN",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--large",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_ingredients": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Six ingredients, all-natural, all pulling their weight. Tap each one to see why it made the cut.</p>",
+            "sm_size_multiplier": "sm-size--small",
+            "sm_margin_top": 8,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "image_ingredients": {
+          "type": "image",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/brainlube-website-imagery-single-can.png",
+            "external_video_url": "",
+            "external_video_aspect_ratio": "16:9",
+            "md_padding_top": 32,
+            "md_padding_bottom": 32,
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "hotspot_ashwagandha": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Ashwagandha",
+            "title_position": "left",
+            "vertical_position": 30,
+            "horizontal_position": 39,
+            "text": "<p>adaptogen root herb with benefits for mental energy, stress resistance and mood; may also help with healthy brain aging</p>",
+            "media_type": "image",
+            "image": "shopify://shop_images/AdobeStock_816943394_Preview.jpg",
+            "external_video_url": "",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "hotspot_bacopa": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Bacopa Monnieri",
+            "title_position": "left",
+            "vertical_position": 50,
+            "horizontal_position": 39,
+            "text": "<p>best nootropic herb for students, shown to improve retention of knowledge and strengthen stress resistance</p>",
+            "media_type": "image",
+            "external_video_url": "",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "hotspot_caffeine": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Caffeine",
+            "title_position": "left",
+            "vertical_position": 70,
+            "horizontal_position": 39,
+            "text": "<p>a stimulant that boosts alertness and almost always is accompanied by a subsequent crash</p>",
+            "media_type": "image",
+            "external_video_url": "",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "hotspot_ginkgo": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Ginkgo Biloba",
+            "title_position": "right",
+            "vertical_position": 30,
+            "horizontal_position": 60,
+            "text": "<p>a nootropic that enhances brain circulation, strong reputation for helping with memory and age related cognitive performance</p>",
+            "media_type": "image",
+            "external_video_url": "",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "hotspot_ginseng": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Ginseng",
+            "title_position": "right",
+            "vertical_position": 50,
+            "horizontal_position": 60,
+            "text": "<p>adaptogen that supports brain chemicals while countering stress; energizes mental and physical performance</p>",
+            "media_type": "image",
+            "external_video_url": "",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "hotspot_guarana": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Guarana",
+            "title_position": "right",
+            "vertical_position": 70,
+            "horizontal_position": 60,
+            "text": "<p>a berry that is one of the best natural sources of caffeine, traditionally used to boost mind energy and physical endurance</p>",
+            "media_type": "image",
+            "external_video_url": "",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        }
+      },
+      "block_order": [
+        "title_ingredients",
+        "text_ingredients",
+        "image_ingredients",
+        "hotspot_ashwagandha",
+        "hotspot_bacopa",
+        "hotspot_caffeine",
+        "hotspot_ginkgo",
+        "hotspot_ginseng",
+        "hotspot_guarana"
+      ],
+      "settings": {
+        "color_scheme": "alternative-1",
+        "section_bg": "linear-gradient(0deg, rgba(255, 255, 255, 1) 15%, rgba(199, 232, 229, 1) 50%)",
+        "numbered_hotspots": false,
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-5",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 56,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-center",
+        "full_width_buttons": false,
+        "sm_down_hide_hotspot_titles": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "1784337049ed3d7b28": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_wFFpKA": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": true,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_wFFpKA"
+      ],
+      "settings": {
+        "enable_full_width": true,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "banner_grid_GdCgCD": {
@@ -376,11 +566,17 @@
         "pause_on_hover": false,
         "sm_size_multiplier": "sm-size--tiny",
         "sm_item_gap": 104,
+        "sm_image_gap": 16,
+        "sm_image_width": 60,
+        "sm_rounded_corners": false,
         "sm_padding": 24,
         "md_padding_top": 0,
         "md_padding_bottom": 40,
         "size_multiplier": "size--tiny",
         "item_gap": 24,
+        "image_gap": 16,
+        "image_width": 60,
+        "rounded_corners": false,
         "padding": 24,
         "padding_top": 0,
         "padding_bottom": 24
@@ -410,6 +606,7 @@
       "settings": {
         "product_limit": 10,
         "color_scheme": "",
+        "enable_card_thumbnail": false,
         "enable_full_width": false,
         "layout_desktop": "slide",
         "products_per_row_desktop": 4,
@@ -555,131 +752,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "image_with_hotspots_ingredients": {
-      "type": "image-with-hotspots",
-      "blocks": {
-        "title_ingredients": {
-          "type": "title",
-          "settings": {
-            "title": "WHAT'S INSIDE THIS CAN",
-            "heading_tag": "h2",
-            "sm_size_multiplier": "sm-size--large",
-            "sm_margin_top": 0,
-            "size_multiplier": "size--default",
-            "margin_top": 0
-          }
-        },
-        "text_ingredients": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Six ingredients, all-natural, all pulling their weight. Tap each one to see why it made the cut.</p>",
-            "sm_size_multiplier": "sm-size--small",
-            "sm_margin_top": 8,
-            "size_multiplier": "size--default",
-            "margin_top": 0
-          }
-        },
-        "image_ingredients": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/brainlube-website-imagery-single-can.png",
-            "md_padding_top": 32,
-            "md_padding_bottom": 32,
-            "padding_top": 0,
-            "padding_bottom": 0
-          }
-        },
-        "hotspot_ashwagandha": {
-          "type": "hotspot",
-          "settings": {
-            "title": "Ashwagandha",
-            "title_position": "left",
-            "vertical_position": 30,
-            "horizontal_position": 39,
-            "text": "<p>adaptogen root herb with benefits for mental energy, stress resistance and mood; may also help with healthy brain aging</p>",
-            "image": "shopify://shop_images/AdobeStock_816943394_Preview.jpg"
-          }
-        },
-        "hotspot_bacopa": {
-          "type": "hotspot",
-          "settings": {
-            "title": "Bacopa Monnieri",
-            "title_position": "left",
-            "vertical_position": 50,
-            "horizontal_position": 39,
-            "text": "<p>best nootropic herb for students, shown to improve retention of knowledge and strengthen stress resistance</p>"
-          }
-        },
-        "hotspot_caffeine": {
-          "type": "hotspot",
-          "settings": {
-            "title": "Caffeine",
-            "title_position": "left",
-            "vertical_position": 70,
-            "horizontal_position": 39,
-            "text": "<p>a stimulant that boosts alertness and almost always is accompanied by a subsequent crash</p>"
-          }
-        },
-        "hotspot_ginkgo": {
-          "type": "hotspot",
-          "settings": {
-            "title": "Ginkgo Biloba",
-            "title_position": "right",
-            "vertical_position": 30,
-            "horizontal_position": 60,
-            "text": "<p>a nootropic that enhances brain circulation, strong reputation for helping with memory and age related cognitive performance</p>"
-          }
-        },
-        "hotspot_ginseng": {
-          "type": "hotspot",
-          "settings": {
-            "title": "Ginseng",
-            "title_position": "right",
-            "vertical_position": 50,
-            "horizontal_position": 60,
-            "text": "<p>adaptogen that supports brain chemicals while countering stress; energizes mental and physical performance</p>"
-          }
-        },
-        "hotspot_guarana": {
-          "type": "hotspot",
-          "settings": {
-            "title": "Guarana",
-            "title_position": "right",
-            "vertical_position": 70,
-            "horizontal_position": 60,
-            "text": "<p>a berry that is one of the best natural sources of caffeine, traditionally used to boost mind energy and physical endurance</p>"
-          }
-        }
-      },
-      "block_order": [
-        "title_ingredients",
-        "text_ingredients",
-        "image_ingredients",
-        "hotspot_ashwagandha",
-        "hotspot_bacopa",
-        "hotspot_caffeine",
-        "hotspot_ginkgo",
-        "hotspot_ginseng",
-        "hotspot_guarana"
-      ],
-      "settings": {
-        "color_scheme": "alternative-1",
-        "section_bg": "linear-gradient(0deg, rgba(255, 255, 255, 1) 15%, rgba(199, 232, 229, 1) 50%)",
-        "numbered_hotspots": false,
-        "enable_full_width": false,
-        "media_position": "media_last",
-        "content_width": "col-sm-max-5",
-        "desktop_alignment": "sm-text-align-left",
-        "sm_full_width_buttons": false,
-        "md_padding_top": 56,
-        "md_padding_bottom": 40,
-        "mobile_alignment": "text-align-center",
-        "full_width_buttons": false,
-        "sm_down_hide_hotspot_titles": false,
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
     }
   },
   "order": [
@@ -687,6 +759,7 @@
     "divider_Tqdp6r",
     "rich_text_8F9YN9",
     "image_with_hotspots_ingredients",
+    "1784337049ed3d7b28",
     "banner_grid_GdCgCD",
     "sliding_text_8LbBG3",
     "the-product-recommendations",
