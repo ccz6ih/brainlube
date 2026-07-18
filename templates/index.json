@@ -109,7 +109,7 @@
       "settings": {
         "md_padding_top": 0,
         "md_padding_bottom": 0,
-        "padding_top": 0,
+        "padding_top": 40,
         "padding_bottom": 0
       }
     },
@@ -486,7 +486,7 @@
       "settings": {
         "color_scheme": "default",
         "custom_liquid": "<h2 class=\"text-align-center\">Coffee wakes you up. BRAiNLUBE wakes up your brain.</h2><div style=\"overflow-x:auto;\"><table style=\"width:100%;border-collapse:collapse;min-width:480px;margin-top:24px;\">\n    <thead><tr><th style=\"text-align:left;padding:8px;border-bottom:2px solid #ddd;\"> </th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">BRAiNLUBE</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Typical Energy Drink</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Coffee</th></tr></thead>\n    <tbody>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Clean lift, no crash</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">Depends</td></tr>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Nootropics for focus &amp; memory</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Adaptogens for calm &amp; stress</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Real fruit juice, no artificial colors</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td></tr>\n    <tr><td style=\"padding:8px;\">Moderate, balanced caffeine (130mg)</td><td style=\"text-align:center;padding:8px;\">✓</td><td style=\"text-align:center;padding:8px;\">Often too much</td><td style=\"text-align:center;padding:8px;\">Varies</td></tr>\n    </tbody></table></div>",
-        "enable_full_width": false,
+        "enable_full_width": true,
         "md_padding_top": 64,
         "md_padding_bottom": 64,
         "padding_top": 48,
