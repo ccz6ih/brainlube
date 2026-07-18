@@ -130,16 +130,16 @@
         "buttons_qdhAF3": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop BRAiNLUBE — $30",
+            "button_label_1": "Shop BRAiNLUBE",
             "button_link_1": "shopify://products/nootropics-energy-drink-mango",
             "button_style_1": "",
             "button_label_2": "See what’s inside →",
             "button_link_2": "shopify://products/nootropics-energy-drink-mango",
-            "button_style_2": "btn--secondary",
+            "button_style_2": "link",
             "button_label_3": "",
             "button_link_3": "",
             "button_style_3": "",
-            "sm_full_width_buttons": false,
+            "sm_full_width_buttons": true,
             "sm_size_multiplier": "sm-size--default",
             "sm_margin_top": 24,
             "full_width_buttons": false,
@@ -161,10 +161,10 @@
         "content_width": 100,
         "desktop_content_alignment": "center",
         "desktop_alignment": "sm-text-align-center",
-        "md_padding_top": 80,
-        "md_padding_bottom": 80,
+        "md_padding_top": 48,
+        "md_padding_bottom": 0,
         "mobile_alignment": "text-align-center",
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 80
       }
     },
