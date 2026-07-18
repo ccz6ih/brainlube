@@ -52,6 +52,7 @@
     "badge_letter_spacing": 10,
     "badge_uppercase": true,
     "badge_border_radius": 200,
+    "custom_badges": "Limited Edition:#111111:#ffffff",
     "product_card_aspect_ratio": "portrait_alt",
     "product_card_fill_rule": "cover",
     "product_card_options": "default",
@@ -72,6 +73,13 @@
     "css_animations": false,
     "favicon": "shopify://shop_images/brainlube-website-favicon.jpg",
     "content_for_index": [],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "default": {
         "settings": {
@@ -84,7 +92,11 @@
           "card_foreground": "#111111",
           "card_background": "#ffffff",
           "card_background_gradient": "linear-gradient(127deg, rgba(254, 240, 81, 1), rgba(255, 70, 199, 1) 100%)",
-          "overlay": "#ffffff"
+          "overlay": "#ffffff",
+          "overlay_text": "#FFFFFF",
+          "overlay_button_background": "#FFFFFF",
+          "overlay_button_foreground": "#000000",
+          "overlay_outlines": "#FFFFFF"
         }
       },
       "alternative-1": {
@@ -98,7 +110,11 @@
           "card_foreground": "#111111",
           "card_background": "#c7e8e5",
           "card_background_gradient": "linear-gradient(127deg, rgba(254, 240, 81, 1), rgba(255, 70, 199, 1) 100%)",
-          "overlay": "#ffffff"
+          "overlay": "#ffffff",
+          "overlay_text": "#FFFFFF",
+          "overlay_button_background": "#FFFFFF",
+          "overlay_button_foreground": "#000000",
+          "overlay_outlines": "#FFFFFF"
         }
       },
       "alternative-2": {
@@ -112,7 +128,11 @@
           "card_foreground": "#000000",
           "card_background": "#e6fffe",
           "card_background_gradient": "#FFFFFF",
-          "overlay": "#ffffff"
+          "overlay": "#ffffff",
+          "overlay_text": "#FFFFFF",
+          "overlay_button_background": "#FFFFFF",
+          "overlay_button_foreground": "#000000",
+          "overlay_outlines": "#FFFFFF"
         }
       },
       "overlay-scheme": {
@@ -126,7 +146,11 @@
           "card_foreground": "#ffffff",
           "card_background": "#cc0095",
           "card_background_gradient": "#FFFFFF",
-          "overlay": "#000000"
+          "overlay": "#000000",
+          "overlay_text": "#FFFFFF",
+          "overlay_button_background": "#FFFFFF",
+          "overlay_button_foreground": "#000000",
+          "overlay_outlines": "#FFFFFF"
         }
       },
       "scheme-aee9bb5b-e48f-4813-8f25-ad9a89e25c5e": {
@@ -140,7 +164,11 @@
           "card_foreground": "#111111",
           "card_background": "#ffffff",
           "card_background_gradient": "linear-gradient(127deg, rgba(254, 240, 81, 1), rgba(255, 70, 199, 1) 100%)",
-          "overlay": "#ffffff"
+          "overlay": "#ffffff",
+          "overlay_text": "#FFFFFF",
+          "overlay_button_background": "#FFFFFF",
+          "overlay_button_foreground": "#000000",
+          "overlay_outlines": "#FFFFFF"
         }
       },
       "scheme-6574f8cf-a893-4dc6-85d8-c70fa061005a": {
@@ -154,11 +182,14 @@
           "card_foreground": "#111111",
           "card_background": "#ffffff",
           "card_background_gradient": "linear-gradient(127deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
-          "overlay": "#ffffff"
+          "overlay": "#ffffff",
+          "overlay_text": "#FFFFFF",
+          "overlay_button_background": "#FFFFFF",
+          "overlay_button_foreground": "#000000",
+          "overlay_outlines": "#FFFFFF"
         }
       }
-    },
-    "custom_badges": "Limited Edition:#111111:#ffffff"
+    }
   },
   "presets": {
     "Taiga": {
