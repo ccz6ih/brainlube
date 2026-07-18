@@ -469,9 +469,9 @@
         "info_block_gneeJw": {
           "type": "info_block",
           "settings": {
-            "title": "Button label",
-            "text": "<p>This is the on demand info shown when the Hotspot is clicked.</p>",
-            "media_type": "image",
+            "title": "Nootropics: support how you think and remember",
+            "text": "<p>\"Nootropic\" is just a fancy word for something that supports your brain — focus, memory, mental clarity. We use <strong>bacopa</strong> (long known as the \"student's herb\" for supporting memory), <strong>ginkgo</strong> (known for supporting healthy blood flow to the brain), and <strong>L-tyrosine</strong> (which supports focus when you're under pressure). No magic, no hype — just ingredients chosen because they earn their spot.</p>",
+            "media_type": "mixed_media",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
@@ -480,8 +480,8 @@
         "info_block_KfeYGt": {
           "type": "info_block",
           "settings": {
-            "title": "Button label",
-            "text": "<p>This is the on demand info shown when the Hotspot is clicked.</p>",
+            "title": "Why a drink instead of a pill",
+            "text": "<p>Pills and powders are easy to forget and easy to skip. A cold, actually-tasty drink is something you look forward to — so you'll actually use it. And because it's a liquid, there's nothing to choke down or mix up. Crack, sip, done.</p><p><strong>Our rule: enough to work, not enough to overload</strong></p><p>More isn't better — it's just more. We dose our ingredients so they absorb well and build up in your system over time, without the \"too much\" feeling. That's why you get clean energy, not a chemical buzz.</p>",
             "media_type": "image",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
