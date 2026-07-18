@@ -266,6 +266,121 @@
         "padding_bottom": 40
       }
     },
+    "banner_grid_EYpd88": {
+      "type": "banner-grid",
+      "blocks": {
+        "image_Egr6W6": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/43eca8d8-6576-4f0a-b242-4778389cd75b-2026-07-18.png",
+            "media_link": "",
+            "title": "",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-left",
+            "padding": 40
+          }
+        },
+        "text_PGWirb": {
+          "type": "text",
+          "settings": {
+            "svg": "",
+            "subtitle": "",
+            "title": "Sip smarter. Live brighter.",
+            "richtext": "<p>Give your brain the clean fuel it's been asking for. One can, twenty minutes, and a clearer head for the part of your day that matters most.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "color_scheme": "",
+            "padding": 40,
+            "text_position": "center",
+            "text_alignment": "text-align-center"
+          }
+        },
+        "image_3QtL9k": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/b1f96ba3-5068-44df-ae07-e3dbb121e62b-2026-07-18.png",
+            "media_link": "",
+            "title": "",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-left",
+            "padding": 40
+          }
+        },
+        "video_nYrmYg": {
+          "type": "video",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/f43e8723-bf0f-4c88-9056-03b002d1d1f5-2026-07-18.mp4",
+            "external_video_aspect_ratio": "16:9",
+            "media_link": "",
+            "title": "",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-left",
+            "padding": 40,
+            "color_scheme": "",
+            "overlay_opacity": 0
+          }
+        },
+        "product_YLcaTr": {
+          "type": "product",
+          "settings": {
+            "product": "nootropics-energy-drink-mango",
+            "color_scheme": "",
+            "product_card_content": "",
+            "text_alignment": ""
+          }
+        },
+        "image_kkBgAB": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/28e587ac-88f1-4944-8f89-5c4ef0d22f3e-2026-07-18.png",
+            "media_link": "",
+            "title": "",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-left",
+            "padding": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_Egr6W6",
+        "text_PGWirb",
+        "image_3QtL9k",
+        "video_nYrmYg",
+        "product_YLcaTr",
+        "image_kkBgAB"
+      ],
+      "name": "t:sections.banner-grid.name",
+      "settings": {
+        "block_aspect_ratio": "portrait",
+        "color_scheme": "",
+        "section_columns_desktop": 3,
+        "enable_full_width": false,
+        "sm_rounded_corners": false,
+        "layout_desktop": "grid",
+        "sm_grid_gap": 12,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "section_columns_tablet": 2,
+        "section_columns_mobile": 1,
+        "layout_mobile": "grid",
+        "sm_down_edge_to_edge": true,
+        "rounded_corners": false,
+        "grid_gap": 0,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    },
     "featured_article_about": {
       "type": "featured-article",
       "blocks": {
@@ -431,6 +546,7 @@
     "divider_about_1",
     "sliding_text_7jmM3c",
     "testimonials_pillars",
+    "banner_grid_EYpd88",
     "featured_article_about",
     "divider_about_2",
     "rich_text_about_cta"
