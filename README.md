@@ -12,7 +12,7 @@ Internal reference doc for the brainlube.com Shopify store. Covers brand identit
 | **Tagline** | "Sip Smarter" / "Live Brighter" |
 | **Category** | Nootropic / cognitive-support energy drink |
 | **Current SKU** | "Nootropics Energy Drink, OG Mango" — 12oz can, $30.00 USD, real mango juice |
-| **Founder** | Steven Land (IT professional). **Note:** one CMS block in `templates/index.json` calls him "S. Bradley Land" — confirm the correct name before publishing an About page. |
+| **Founder** | Steve Land (IT professional). The "S. Bradley Land" reference in `templates/index.json` (homepage founder-story block) is outdated/incorrect and should be corrected to Steve Land when content is next edited. |
 | **Origin story** | Land noticed sharper focus drinking an early commercial energy drink with natural adaptogens during long IT/computer-room shifts, then formulated his own after that product disappeared. ~2 years of development. |
 | **Blog** | "BRAiNWAVES" — science-adjacent brain-health content, 4 live posts |
 | **Required disclaimer** | "Not intended for children under 18 years of age, not recommended for people sensitive to caffeine, pregnant women or women who are nursing." (already in footer) |

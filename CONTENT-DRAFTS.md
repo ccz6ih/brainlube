@@ -2,7 +2,7 @@
 
 Draft copy for the gaps identified in `README.md`. Written to match the existing site voice (short, benefit-first, light wordplay, ingredient-science-adjacent). Treat as a first pass for review, not final legal/marketing copy — anything involving health claims should get a compliance pass before publishing, same as the existing FAQ disclaimers.
 
-Placeholder: **[FOUNDER NAME]** is used below wherever the copy needs the confirmed founder name (see README §4).
+Founder name confirmed as **Steve Land**.
 
 ---
 
@@ -17,7 +17,7 @@ Suggested template: reuse `page.json` (main-page + rich text), or build a light 
 ### Rich text — origin
 > BRAiNLUBE™ started with a problem, not a business plan.
 >
-> [FOUNDER NAME] spent years running on machine-dispensed coffee through long stretches in IT computer rooms — the kind of hours where your body's awake but your brain checked out an hour ago. Then he tried an early commercial energy drink built around natural adaptogens, and noticed something: sharper focus, smoother thinking, none of the usual jitter-and-crash.
+> Steve Land spent years running on machine-dispensed coffee through long stretches in IT computer rooms — the kind of hours where your body's awake but your brain checked out an hour ago. Then he tried an early commercial energy drink built around natural adaptogens, and noticed something: sharper focus, smoother thinking, none of the usual jitter-and-crash.
 >
 > Then that formula disappeared from shelves.
 >
@@ -36,7 +36,7 @@ Suggested template: reuse `page.json` (main-page + rich text), or build a light 
 - **Naturally Balanced Flavors** — like mango + citrus, for better taste and absorption
 
 ### Founder note (optional closing block, testimonial-style single quote)
-> "I didn't want to build another energy drink. I wanted the one I couldn't buy anymore." — [FOUNDER NAME], Founder
+> "I didn't want to build another energy drink. I wanted the one I couldn't buy anymore." — Steve Land, Founder
 
 ### Closing CTA (rich-text + buttons, matches homepage pattern)
 > **SUBTITLE:** READY TO TRY IT?
