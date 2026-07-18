@@ -431,7 +431,7 @@
         "content_width": "col-sm-max-5",
         "desktop_alignment": "sm-text-align-left",
         "sm_full_width_buttons": false,
-        "md_padding_top": 56,
+        "md_padding_top": 24,
         "md_padding_bottom": 40,
         "mobile_alignment": "text-align-center",
         "full_width_buttons": false,
