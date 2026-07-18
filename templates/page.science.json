@@ -460,7 +460,7 @@
             "title": "Adaptogens: help your body handle stress",
             "text": "<p>\"Adaptogen\" just means a natural ingredient that helps your body deal with stress instead of adding to it. We use <strong>ashwagandha</strong> and <strong>ginseng</strong> — plants people have leaned on for centuries. In simple terms: they help you stay calm and steady when the day gets loud, so your focus doesn't get hijacked by a racing mind.</p>",
             "media_type": "image",
-            "image": "shopify://shop_images/Ginkobiloba.jpg",
+            "image": "shopify://shop_images/8495bfd7-cd1b-43ed-852f-5f64b8bddc7c-2026-07-18.png",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
@@ -472,6 +472,7 @@
             "title": "Nootropics: support how you think and remember",
             "text": "<p>\"Nootropic\" is just a fancy word for something that supports your brain — focus, memory, mental clarity. We use <strong>bacopa</strong> (long known as the \"student's herb\" for supporting memory), <strong>ginkgo</strong> (known for supporting healthy blood flow to the brain), and <strong>L-tyrosine</strong> (which supports focus when you're under pressure). No magic, no hype — just ingredients chosen because they earn their spot.</p>",
             "media_type": "mixed_media",
+            "image": "shopify://shop_images/96ed3d1a-8dcb-4c51-b15c-133721a01b2c-2026-07-18.png",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
@@ -491,8 +492,8 @@
         "info_block_Mra9qW": {
           "type": "info_block",
           "settings": {
-            "title": "Button label",
-            "text": "<p>This is the on demand info shown when the Hotspot is clicked.</p>",
+            "title": "So what actually makes BRAiNLUBE different?",
+            "text": "<p>Here's the honest breakdown:</p><ul><li><strong>A regular energy drink</strong> gives you a big hit of synthetic caffeine and sugar. You spike, then you crash — and it does nothing for focus.</li><li><strong>Coffee</strong> gives you caffeine and not much else. Great, until the jitters and the afternoon slump show up.</li><li><strong>Focus pills and powders</strong> might have the good ingredients, but they're a chore, they taste like nothing, and you stop using them.</li><li><strong>BRAiNLUBE</strong> brings the focus ingredients, the calm ingredients, and just-enough clean caffeine together — in a drink you'll actually reach for. Energy that shows up, focus that sticks, and no crash waiting on the other side.</li></ul>",
             "media_type": "image",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
@@ -510,8 +511,8 @@
       "settings": {
         "color_scheme": "",
         "show_link_icon": true,
-        "title_style": "subheading flex gap-half-gutter",
-        "items_per_row_desktop": 4,
+        "title_style": "btn btn--secondary btn--full",
+        "items_per_row_desktop": 2,
         "enable_full_width": false,
         "sm_text_align": "center",
         "sm_size_multiplier": "sm-size--default",
