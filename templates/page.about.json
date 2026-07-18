@@ -116,107 +116,6 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_origin": {
-      "type": "rich-text",
-      "blocks": {
-        "text_origin": {
-          "type": "text",
-          "settings": {
-            "text": "<p>BRAiNLUBE™ started with a problem, not a business plan.</p><p>Founder Steve Land spent years running on machine-dispensed coffee through long stretches in IT computer rooms — the kind of hours where your body is awake but your brain checked out an hour ago. Then he tried an early commercial energy drink built around natural adaptogens, and noticed something: sharper focus, smoother thinking, none of the usual jitter-and-crash.</p><p>Then that formula disappeared from shelves.</p><p>So he pulled together a small team and spent two years building something better — not just replacing the drink he lost, but rethinking what an energy drink should actually do for your brain, not just your adrenaline.</p>",
-            "read_more": false,
-            "sm_size_multiplier": "sm-size--small",
-            "sm_margin_top": 0,
-            "size_multiplier": "size--small",
-            "margin_top": 0
-          }
-        },
-        "buttons_origin": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "SHOP BRAINLUBE",
-            "button_link_1": "shopify://collections/all",
-            "button_style_1": "",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "",
-            "button_label_3": "",
-            "button_link_3": "",
-            "button_style_3": "",
-            "sm_full_width_buttons": false,
-            "sm_size_multiplier": "sm-size--default",
-            "sm_margin_top": 24,
-            "full_width_buttons": false,
-            "size_multiplier": "size--default",
-            "margin_top": 24
-          }
-        }
-      },
-      "block_order": [
-        "text_origin",
-        "buttons_origin"
-      ],
-      "custom_css": [
-        "button {font-weight: bold;}"
-      ],
-      "settings": {
-        "color_scheme": "alternative-1",
-        "text_gradient_color": "",
-        "content_width": 75,
-        "desktop_content_alignment": "center",
-        "desktop_alignment": "sm-text-align-center",
-        "md_padding_top": 80,
-        "md_padding_bottom": 48,
-        "mobile_alignment": "text-align-center",
-        "padding_top": 48,
-        "padding_bottom": 40
-      }
-    },
-    "rich_text_philosophy": {
-      "type": "rich-text",
-      "blocks": {
-        "subtitle_philosophy": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle": "THE PHILOSOPHY",
-            "heading_tag": "h2",
-            "sm_size_multiplier": "sm-size--default",
-            "sm_margin_top": 0,
-            "size_multiplier": "size--default",
-            "margin_top": 0
-          }
-        },
-        "text_philosophy": {
-          "type": "text",
-          "settings": {
-            "text": "<p>BRAiNLUBE™ is a cognitive support drink with a splash of natural energy — powered by real roots, leaves, berries, and adaptogens, not chemicals. Every ingredient is chosen for one job: cross the blood-brain barrier and actually do something, in doses precise enough to build up in your system without overloading it.</p><p>Made by a small business. Just smart stuff inside.</p>",
-            "read_more": false,
-            "sm_size_multiplier": "sm-size--small",
-            "sm_margin_top": 0,
-            "size_multiplier": "size--small",
-            "margin_top": 0
-          }
-        }
-      },
-      "block_order": [
-        "subtitle_philosophy",
-        "text_philosophy"
-      ],
-      "custom_css": [
-        "h2 {font-weight: bold;}"
-      ],
-      "settings": {
-        "color_scheme": "default",
-        "text_gradient_color": "",
-        "content_width": 75,
-        "desktop_content_alignment": "center",
-        "desktop_alignment": "sm-text-align-center",
-        "md_padding_top": 48,
-        "md_padding_bottom": 48,
-        "mobile_alignment": "text-align-center",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "testimonials_pillars": {
       "type": "testimonials",
       "blocks": {
@@ -443,14 +342,60 @@
         "padding_top": 48,
         "padding_bottom": 64
       }
+    },
+    "faq_about_dropdowns": {
+      "type": "faq",
+      "blocks": {
+        "section_header_about": {
+          "type": "section_header",
+          "settings": {
+            "title": "<strong>Learn More</strong>",
+            "text": "<p>Two things worth knowing before you crack a can: who makes it, and why it actually works.</p>",
+            "text_alignment": "left",
+            "header_position": "column_media"
+          }
+        },
+        "question_company": {
+          "type": "question",
+          "settings": {
+            "title": "About The Company",
+            "text": "<p>BRAiNLUBE™ started with a problem, not a business plan.</p><p>Founder Steve Land spent years running on machine-dispensed coffee through long stretches in IT computer rooms — the kind of hours where your body is awake but your brain checked out an hour ago. Then he tried an early commercial energy drink built around natural adaptogens, and noticed something: sharper focus, smoother thinking, none of the usual jitter-and-crash.</p><p>Then that formula disappeared from shelves.</p><p>So he pulled together a small team and spent two years building something better — not just replacing the drink he lost, but rethinking what an energy drink should actually do for your brain, not just your adrenaline.</p><p>BRAiNLUBE™ is a cognitive support drink with a splash of natural energy — powered by real roots, leaves, berries, and adaptogens, not chemicals. Every ingredient is chosen for one job: cross the blood-brain barrier and actually do something, in doses precise enough to build up in your system without overloading it.</p><p>Made by a small business. Just smart stuff inside.</p>",
+            "custom_liquid": "",
+            "media_type": "image"
+          }
+        },
+        "question_science": {
+          "type": "question",
+          "settings": {
+            "title": "The Science — Why BRAiNLUBE Works",
+            "text": "<p>Most energy drinks are built around one thing: caffeine, and a lot of it, with sugar to make it palatable. That combination spikes you fast and drops you a few hours later — the familiar afternoon crash.</p><table><tr><th></th><th>Typical Energy Drink</th><th>BRAiNLUBE™</th></tr><tr><td>Caffeine source</td><td>Synthetic caffeine anhydrous</td><td>Caffeine + guarana seed extract + green coffee bean extract</td></tr><tr><td>Jitters &amp; crash</td><td>Common — caffeine unopposed</td><td>Buffered by L-theanine, a compound studied for smoothing out caffeine's edge</td></tr><tr><td>Cognitive support</td><td>None — energy only</td><td>Adaptogens (ashwagandha, ginseng) + nootropics (bacopa monnieri, ginkgo biloba)</td></tr><tr><td>Stress response</td><td>Not addressed</td><td>Ashwagandha and ginseng are studied for supporting the body's stress response</td></tr></table><h3>Why these ingredients, specifically</h3><ul><li><strong>Ashwagandha</strong> — one of the most-studied adaptogens; research has linked it to lower perceived stress and support for healthy cortisol levels.</li><li><strong>Bacopa Monnieri</strong> — used for centuries in Ayurvedic medicine; modern research has focused on its effects on memory formation and retention with regular use.</li><li><strong>Ginkgo Biloba</strong> — one of the most-researched botanicals for cognitive aging, studied for supporting circulation, including to the brain.</li><li><strong>Ginseng</strong> — studied for reducing mental fatigue and supporting cognitive performance under stress.</li><li><strong>L-Theanine + Caffeine</strong> — this pairing (also found naturally in tea) is one of the most well-documented combinations in the nootropic space for calm, focused alertness without the jitters of caffeine alone.</li><li><strong>L-Citrulline &amp; L-Tyrosine</strong> — amino acids studied for supporting blood flow and mental performance under fatigue, respectively.</li></ul><p>130mg of caffeine per can — about the same as a strong cup of coffee — delivered alongside ingredients chosen to support how your brain uses that energy, not just how fast it hits.</p><p><em>These statements have not been evaluated by the FDA. BRAiNLUBE™ is not intended to diagnose, treat, cure, or prevent any disease.</em></p>",
+            "custom_liquid": "",
+            "media_type": "image"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_about",
+        "question_company",
+        "question_science"
+      ],
+      "settings": {
+        "color_scheme": "alternative-2",
+        "title_style": "h3",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "md_padding_top": 56,
+        "md_padding_bottom": 56,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
     }
   },
   "order": [
     "main",
     "hero_about",
     "divider_about_1",
-    "rich_text_origin",
-    "rich_text_philosophy",
+    "faq_about_dropdowns",
     "testimonials_pillars",
     "featured_article_about",
     "divider_about_2",
