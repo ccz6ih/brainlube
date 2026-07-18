@@ -111,10 +111,90 @@
         "standard_about_1"
       ],
       "settings": {
-        "md_padding_top": 0,
+        "md_padding_top": 56,
         "md_padding_bottom": 0,
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "sliding_text_7jmM3c": {
+      "type": "sliding-text",
+      "blocks": {
+        "text_8wLXyb": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Ginseng.jpg",
+            "text": "Get-up-and-go, minus the jitters.",
+            "link": ""
+          }
+        },
+        "text_cLp3dR": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/bacopamonnieri.jpg",
+            "text": "The remembering herb.",
+            "link": ""
+          }
+        },
+        "text_D9XHJE": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/ashwagandha.jpg",
+            "text": "The calm inside your focus.",
+            "link": ""
+          }
+        },
+        "text_cC3KFD": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Guarana.jpg",
+            "text": "Slow-burn energy from the Amazon.",
+            "link": ""
+          }
+        },
+        "text_VY9LrV": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Ginkobiloba.jpg",
+            "text": "Ancient tree, modern clarity.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_8wLXyb",
+        "text_cLp3dR",
+        "text_D9XHJE",
+        "text_cC3KFD",
+        "text_VY9LrV"
+      ],
+      "custom_css": [
+        "h2 {font-weight: bold;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-6574f8cf-a893-4dc6-85d8-c70fa061005a",
+        "text_gradient_color": "linear-gradient(228deg, rgba(250, 166, 56, 1) 14%, rgba(13, 146, 210, 1) 83%)",
+        "content_order": "horizontal",
+        "font": "heading",
+        "direction": "normal",
+        "speed": 10,
+        "pause_on_hover": false,
+        "sm_size_multiplier": "sm-size--default",
+        "sm_item_gap": 48,
+        "sm_image_gap": 0,
+        "sm_image_width": 156,
+        "sm_rounded_corners": false,
+        "sm_padding": 68,
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "size_multiplier": "size--tiny",
+        "item_gap": 24,
+        "image_gap": 16,
+        "image_width": 60,
+        "rounded_corners": false,
+        "padding": 24,
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "testimonials_pillars": {
@@ -349,6 +429,7 @@
     "main",
     "hero_about",
     "divider_about_1",
+    "sliding_text_7jmM3c",
     "testimonials_pillars",
     "featured_article_about",
     "divider_about_2",
