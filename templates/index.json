@@ -271,6 +271,7 @@
           "settings": {
             "media_type": "image",
             "image": "shopify://shop_images/brainlube-website-imagery-single-can.png",
+            "video": "shopify://files/videos/Create_an_amazing_slow_motion.mp4",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "md_padding_top": 32,
