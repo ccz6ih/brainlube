@@ -238,50 +238,6 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_8F9YN9": {
-      "type": "rich-text",
-      "blocks": {
-        "title_wXnhrf": {
-          "type": "title",
-          "settings": {
-            "title": "BRAiNLUBE™ is more than just an energy drink. It’s a brain-support formula rooted in research. Our ingredients have been shown to help with:",
-            "heading_tag": "h2",
-            "sm_size_multiplier": "sm-size--default",
-            "sm_margin_top": 0,
-            "size_multiplier": "size--default",
-            "margin_top": 0
-          }
-        },
-        "text_UnQP97": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "read_more": false,
-            "sm_size_multiplier": "sm-size--default",
-            "sm_margin_top": 0,
-            "size_multiplier": "size--default",
-            "margin_top": 0
-          }
-        }
-      },
-      "block_order": [
-        "title_wXnhrf",
-        "text_UnQP97"
-      ],
-      "name": "t:sections.rich-text.name",
-      "settings": {
-        "color_scheme": "alternative-1",
-        "text_gradient_color": "",
-        "content_width": 100,
-        "desktop_content_alignment": "center",
-        "desktop_alignment": "sm-text-align-center",
-        "md_padding_top": 80,
-        "md_padding_bottom": 0,
-        "mobile_alignment": "text-align-center",
-        "padding_top": 80,
-        "padding_bottom": 0
-      }
-    },
     "image_with_hotspots_ingredients": {
       "type": "image-with-hotspots",
       "blocks": {
@@ -462,6 +418,50 @@
         "md_padding_bottom": 40,
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "rich_text_8F9YN9": {
+      "type": "rich-text",
+      "blocks": {
+        "title_wXnhrf": {
+          "type": "title",
+          "settings": {
+            "title": "BRAiNLUBE™ is more than just an energy drink. It’s a brain-support formula rooted in research. Our ingredients have been shown to help with:",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_UnQP97": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "read_more": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "title_wXnhrf",
+        "text_UnQP97"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "color_scheme": "alternative-1",
+        "text_gradient_color": "",
+        "content_width": 100,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 80,
+        "md_padding_bottom": 0,
+        "mobile_alignment": "text-align-center",
+        "padding_top": 80,
+        "padding_bottom": 0
       }
     },
     "banner_grid_GdCgCD": {
@@ -769,9 +769,9 @@
   "order": [
     "main",
     "divider_Tqdp6r",
-    "rich_text_8F9YN9",
     "image_with_hotspots_ingredients",
     "1784337049ed3d7b28",
+    "rich_text_8F9YN9",
     "banner_grid_GdCgCD",
     "sliding_text_8LbBG3",
     "the-product-recommendations",
