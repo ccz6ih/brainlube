@@ -477,7 +477,7 @@
             "title": "Memory Retention",
             "title_style": "h3",
             "content_alignment": "vertical-bottom horizontal-center",
-            "padding": 40
+            "padding": 80
           }
         },
         "image_dqYgaE": {
@@ -490,7 +490,7 @@
             "title": "Faster Thinking",
             "title_style": "h3",
             "content_alignment": "vertical-bottom horizontal-center",
-            "padding": 40
+            "padding": 80
           }
         },
         "image_zBkw8X": {
@@ -503,7 +503,7 @@
             "title": "Stress Reduction",
             "title_style": "h3",
             "content_alignment": "vertical-bottom horizontal-center",
-            "padding": 40
+            "padding": 80
           }
         },
         "image_DcRReR": {
@@ -516,7 +516,7 @@
             "title": "Long-Term Cognitive Support",
             "title_style": "h3",
             "content_alignment": "vertical-bottom horizontal-center",
-            "padding": 40
+            "padding": 80
           }
         }
       },
