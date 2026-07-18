@@ -111,10 +111,10 @@
           "card_background": "#c7e8e5",
           "card_background_gradient": "linear-gradient(127deg, rgba(254, 240, 81, 1), rgba(255, 70, 199, 1) 100%)",
           "overlay": "#ffffff",
-          "overlay_text": "#FFFFFF",
+          "overlay_text": "#0F0F0F",
           "overlay_button_background": "#FFFFFF",
           "overlay_button_foreground": "#000000",
-          "overlay_outlines": "#FFFFFF"
+          "overlay_outlines": "#0F0F0F"
         }
       },
       "alternative-2": {
