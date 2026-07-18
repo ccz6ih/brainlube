@@ -156,6 +156,59 @@
             "icon": "icon-caret__right",
             "margin_top": 0
           }
+        },
+        "text_trust_badges": {
+          "type": "text",
+          "settings": {
+            "text": "<p class=\"size--tiny\">✓ Third-Party Tested &nbsp; ✓ Made in USA &nbsp; ✓ Non-GMO</p>",
+            "read_more": false,
+            "style_boxed": false,
+            "margin_top": 16
+          }
+        },
+        "tab_whats_inside": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "What's Inside — And Why",
+            "content": "<p>Every can carries our <strong>BRAiNLUBE Energy Blend</strong>, chosen so each piece pulls its weight:</p><ul><li><strong>Clean energy:</strong> natural caffeine (130mg from all sources), guarana, green coffee bean, and taurine for a lift without the sugar-bomb spike.</li><li><strong>Focus &amp; clarity:</strong> L-theanine + L-tyrosine, plus bacopa monnieri and ginkgo biloba — the nootropic side that supports memory, attention, and smooth thinking. The L-theanine is the quiet MVP: paired with caffeine, it is one of the most well-documented ways to get alert focus <em>without</em> the jitters or the crash.</li><li><strong>Calm &amp; resilience:</strong> ashwagandha and ginseng — adaptogens that help your body handle stress instead of adding to it.</li></ul><p>No proprietary hand-waving — check the Supplement Facts panel in the product images for the full ingredient breakdown.</p>",
+            "page": "",
+            "open_as_drawer": false,
+            "icon": "icon-zap",
+            "margin_top": 0
+          }
+        },
+        "tab_what_youll_feel": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "What You'll Feel",
+            "content": "<ul><li><strong>A clean lift</strong> — alert in about 20 minutes, no chest-pounding jolt.</li><li><strong>Locked-in focus</strong> — the kind of clarity where the noise fades and the work gets easier.</li><li><strong>Calm, not wired</strong> — adaptogens keep the edge off while the caffeine keeps you sharp.</li><li><strong>A smooth landing</strong> — steady energy that tapers instead of collapsing into a crash.</li></ul>",
+            "page": "",
+            "open_as_drawer": false,
+            "icon": "icon-heart",
+            "margin_top": 0
+          }
+        },
+        "tab_who_its_for": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Who It's For",
+            "content": "<p>Founders and freelancers, students cramming, coders in the zone, creatives chasing a deadline, drivers with a long haul, and parents who just need their brain back for a few hours. If your day runs on focus, this is your can.</p>",
+            "page": "",
+            "open_as_drawer": false,
+            "icon": "icon-feather",
+            "margin_top": 0
+          }
+        },
+        "tab_the_details": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "The Details",
+            "content": "<p>Real clarified mango juice, lightly carbonated, no artificial colors. 130mg caffeine from all sources. Six 12oz cans per pack.</p><p><strong>Not for you?</strong> Reach out — we are a small business and we will make it right.</p>",
+            "page": "",
+            "open_as_drawer": false,
+            "icon": "icon-package",
+            "margin_top": 0
+          }
         }
       },
       "block_order": [
@@ -169,10 +222,15 @@
         "attribute_insights_crash",
         "6fc29670-ecc3-4bbf-bc13-6d7232b75085",
         "the-buy-buttons",
+        "text_trust_badges",
         "the-inventory-status",
         "the-pickup-availability",
         "the-sticky-buy-bar",
-        "75b14a74-c1c5-4fcc-932f-e2bfa017fba2"
+        "tab_whats_inside",
+        "tab_what_youll_feel",
+        "75b14a74-c1c5-4fcc-932f-e2bfa017fba2",
+        "tab_who_its_for",
+        "tab_the_details"
       ],
       "custom_css": [
         "h1 {text-transform: uppercase; font-weight: bold;}",
@@ -764,12 +822,55 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "rich_text_comparison": {
+      "type": "rich-text",
+      "blocks": {
+        "subtitle_comparison": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "BRAiNLUBE VS. THE USUAL OPTIONS",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_comparison": {
+          "type": "text",
+          "settings": {
+            "text": "<div style=\"overflow-x:auto;\"><table style=\"width:100%;border-collapse:collapse;min-width:480px;\"><thead><tr><th style=\"text-align:left;padding:8px;border-bottom:2px solid #ddd;\"> </th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">BRAiNLUBE</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Typical Energy Drink</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Coffee</th></tr></thead><tbody><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Clean lift, no crash</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">Depends</td></tr><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Nootropics for focus &amp; memory</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Adaptogens for calm &amp; stress</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Real fruit juice, no artificial colors</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td></tr><tr><td style=\"padding:8px;\">Moderate, balanced caffeine (130mg)</td><td style=\"text-align:center;padding:8px;\">✓</td><td style=\"text-align:center;padding:8px;\">Often too much</td><td style=\"text-align:center;padding:8px;\">Varies</td></tr></tbody></table></div>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 16,
+            "size_multiplier": "size--default",
+            "margin_top": 16
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_comparison",
+        "text_comparison"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "text_gradient_color": "",
+        "content_width": 100,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 64,
+        "md_padding_bottom": 64,
+        "mobile_alignment": "text-align-center",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
     }
   },
   "order": [
     "main",
     "divider_Tqdp6r",
     "image_with_hotspots_ingredients",
+    "rich_text_comparison",
     "1784337049ed3d7b28",
     "rich_text_8F9YN9",
     "banner_grid_GdCgCD",
