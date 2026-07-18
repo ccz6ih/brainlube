@@ -17,25 +17,18 @@
         "announcement-1": {
           "type": "announcement",
           "settings": {
-            "title": "SIP SMARTER"
-          }
-        },
-        "announcement-4": {
-          "type": "announcement",
-          "settings": {
-            "title": "FREE SHIPPING ON ORDERS OVER $50"
+            "title": "Clean, focused energy — no crash. Free shipping on orders over $50."
           }
         },
         "announcement-2": {
           "type": "announcement",
           "settings": {
-            "title": "LIVE BRIGHTER"
+            "title": "Made by a small team that reads every label. 🧠"
           }
         }
       },
       "block_order": [
         "announcement-1",
-        "announcement-4",
         "announcement-2"
       ],
       "settings": {
