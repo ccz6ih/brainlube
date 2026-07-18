@@ -481,9 +481,10 @@
         "info_block_KfeYGt": {
           "type": "info_block",
           "settings": {
-            "title": "Why a drink instead of a pill",
+            "title": "Why a drink instead of a pill?",
             "text": "<p>Pills and powders are easy to forget and easy to skip. A cold, actually-tasty drink is something you look forward to — so you'll actually use it. And because it's a liquid, there's nothing to choke down or mix up. Crack, sip, done.</p><p><strong>Our rule: enough to work, not enough to overload</strong></p><p>More isn't better — it's just more. We dose our ingredients so they absorb well and build up in your system over time, without the \"too much\" feeling. That's why you get clean energy, not a chemical buzz.</p>",
             "media_type": "image",
+            "image": "shopify://shop_images/4a63829b-7dbf-4120-ac39-52df4faf515e-2026-07-18.png",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
@@ -495,6 +496,7 @@
             "title": "So what actually makes BRAiNLUBE different?",
             "text": "<p>Here's the honest breakdown:</p><ul><li><strong>A regular energy drink</strong> gives you a big hit of synthetic caffeine and sugar. You spike, then you crash — and it does nothing for focus.</li><li><strong>Coffee</strong> gives you caffeine and not much else. Great, until the jitters and the afternoon slump show up.</li><li><strong>Focus pills and powders</strong> might have the good ingredients, but they're a chore, they taste like nothing, and you stop using them.</li><li><strong>BRAiNLUBE</strong> brings the focus ingredients, the calm ingredients, and just-enough clean caffeine together — in a drink you'll actually reach for. Energy that shows up, focus that sticks, and no crash waiting on the other side.</li></ul>",
             "media_type": "image",
+            "image": "shopify://shop_images/ed5dcad2-1517-4abd-a5b7-4c9614419ec8-2026-07-18.jpg",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
