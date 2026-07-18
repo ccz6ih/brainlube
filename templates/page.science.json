@@ -266,6 +266,76 @@
         "padding_bottom": 40
       }
     },
+    "image_with_text_FDwqxV": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_6tcBz9": {
+          "type": "image",
+          "settings": {
+            "media_aspect_ratio": "natural",
+            "media_link": "",
+            "media_type": "image",
+            "image": "shopify://shop_images/8d6fc1db-02ef-4f8f-ad45-6662122896f3-2026-07-18.jpg",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "subtitle_Pw6Pda": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "The Science (Minus the Headache)",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "title_GnwKjw": {
+          "type": "title",
+          "settings": {
+            "title": "You don't need a biology degree to understand why BRAiNLUBE works. Here's the whole thing in plain English.",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--small",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_mnHHRQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Most energy comes with a catch — caffeine wakes you up, but it also makes you jittery and anxious. So we didn't just throw in caffeine. We paired a moderate dose (130mg, about a strong coffee) with something called <strong>L-theanine</strong>, a natural compound found in tea. L-theanine takes the sharp, jittery edge off caffeine and turns it into smooth, steady focus. Think of caffeine as the gas pedal and L-theanine as the steering — together you go fast <em>and</em> stay in control. This combo is one of the most well-studied pairings in the focus world, and it's the heart of every can.<br/></p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_6tcBz9",
+        "subtitle_Pw6Pda",
+        "title_GnwKjw",
+        "text_mnHHRQ"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": true,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
     "banner_grid_EYpd88": {
       "type": "banner-grid",
       "blocks": {
@@ -379,6 +449,80 @@
         "autoplay": false,
         "autoplay_speed": 5,
         "sliding_behavior": "single"
+      }
+    },
+    "on_demand_info_mrDTy9": {
+      "type": "on-demand-info",
+      "blocks": {
+        "info_block_xAxwyD": {
+          "type": "info_block",
+          "settings": {
+            "title": "Adaptogens: help your body handle stress",
+            "text": "<p>\"Adaptogen\" just means a natural ingredient that helps your body deal with stress instead of adding to it. We use <strong>ashwagandha</strong> and <strong>ginseng</strong> — plants people have leaned on for centuries. In simple terms: they help you stay calm and steady when the day gets loud, so your focus doesn't get hijacked by a racing mind.</p>",
+            "media_type": "image",
+            "image": "shopify://shop_images/Ginkobiloba.jpg",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "info_block_gneeJw": {
+          "type": "info_block",
+          "settings": {
+            "title": "Button label",
+            "text": "<p>This is the on demand info shown when the Hotspot is clicked.</p>",
+            "media_type": "image",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "info_block_KfeYGt": {
+          "type": "info_block",
+          "settings": {
+            "title": "Button label",
+            "text": "<p>This is the on demand info shown when the Hotspot is clicked.</p>",
+            "media_type": "image",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "info_block_Mra9qW": {
+          "type": "info_block",
+          "settings": {
+            "title": "Button label",
+            "text": "<p>This is the on demand info shown when the Hotspot is clicked.</p>",
+            "media_type": "image",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        }
+      },
+      "block_order": [
+        "info_block_xAxwyD",
+        "info_block_gneeJw",
+        "info_block_KfeYGt",
+        "info_block_Mra9qW"
+      ],
+      "name": "t:sections.on-demand-info.name",
+      "settings": {
+        "color_scheme": "",
+        "show_link_icon": true,
+        "title_style": "subheading flex gap-half-gutter",
+        "items_per_row_desktop": 4,
+        "enable_full_width": false,
+        "sm_text_align": "center",
+        "sm_size_multiplier": "sm-size--default",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "items_per_row_tablet": 4,
+        "text_align": "center",
+        "size_multiplier": "size--default",
+        "items_per_row_mobile": 2,
+        "padding_top": 0,
+        "padding_bottom": 24
       }
     },
     "featured_article_about": {
@@ -546,7 +690,9 @@
     "divider_about_1",
     "sliding_text_7jmM3c",
     "testimonials_pillars",
+    "image_with_text_FDwqxV",
     "banner_grid_EYpd88",
+    "on_demand_info_mrDTy9",
     "featured_article_about",
     "divider_about_2",
     "rich_text_about_cta"
