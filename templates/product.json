@@ -101,6 +101,20 @@
             "margin_top": 12
           }
         },
+        "subscriptions_app_block_GNpiNE": {
+          "type": "shopify://apps/subscriptions/blocks/app-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+          "settings": {
+            "widget_style": "toggle",
+            "widget_style_card_selector": "radio_button",
+            "subscription_policy_url": "",
+            "color_text_body": "#000000",
+            "dividers_color": "#000000",
+            "background_color": "#8CDDE8",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "product": "{{product}}"
+          }
+        },
         "6fc29670-ecc3-4bbf-bc13-6d7232b75085": {
           "type": "quantity_selector",
           "disabled": true,
@@ -218,6 +232,7 @@
         "the-price",
         "attribute_insights_caffeine",
         "attribute_insights_crash",
+        "subscriptions_app_block_GNpiNE",
         "6fc29670-ecc3-4bbf-bc13-6d7232b75085",
         "the-buy-buttons",
         "text_trust_badges",
