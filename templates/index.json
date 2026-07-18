@@ -415,11 +415,11 @@
         "section_header_WWTWhx": {
           "type": "section_header",
           "settings": {
-            "subtitle": "",
+            "subtitle": "After lots of research (and a ton of bad-tasting supplement powders), BRAiNLUBE™ was formulated with:",
             "subtitle_tag": "h3",
             "title": "",
             "title_tag": "h6",
-            "text": "<p>After lots of research (and a ton of bad-tasting supplement powders), BRAiNLUBE™ was formulated with:</p>",
+            "text": "",
             "text_alignment": "text-align-center",
             "sm_size_multiplier": "sm-size--small",
             "size_multiplier": "size--default"
