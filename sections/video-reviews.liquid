@@ -1,0 +1,451 @@
+{{ 'section-video-reviews.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign header_block = section.blocks | where: 'type', 'section_header' | first
+  assign video_blocks = section.blocks | where: 'type', 'video_review'
+  assign full_width_mobile = section.settings.sm_down_edge_to_edge
+  assign full_width_desktop = section.settings.enable_full_width
+-%}
+
+<div
+  id="VideoReviews-{{ section.id }}"
+  class="container pt pb sm-pt sm-pb color-{{ section.settings.color_scheme }}{% if full_width_mobile %} sm-down-edge-to-edge{% endif %}{% if full_width_desktop %} edge-to-edge{% endif %}"
+  style="
+    --pt: {{ section.settings.padding_top | append: 'px' }};
+    --pb: {{ section.settings.padding_bottom | append: 'px' }};
+    --sm-pt: {{ section.settings.md_padding_top | append: 'px' }};
+    --sm-pb: {{ section.settings.md_padding_bottom | append: 'px' }};
+  ">
+
+  {%- if header_block != blank -%}
+    {% render 'section-header',
+      size_multiplier: header_block.settings.size_multiplier,
+      sm_size_multiplier: header_block.settings.sm_size_multiplier,
+      text_align: header_block.settings.text_alignment,
+      subtitle: header_block.settings.subtitle,
+      subtitle_tag: header_block.settings.subtitle_tag,
+      title: header_block.settings.title,
+      title_tag: header_block.settings.title_tag,
+      text: header_block.settings.text %}
+  {%- endif -%}
+
+  {%- if video_blocks.size > 0 -%}
+    <div
+      class="video-reviews-grid mt-32"
+      style="
+        --columns-mobile: {{ section.settings.columns_mobile }};
+        --columns-tablet: {{ section.settings.columns_tablet }};
+        --columns-desktop: {{ section.settings.columns_desktop }};
+        --gap: {{ section.settings.grid_gap | append: 'px' }};
+        --aspect-ratio: {{ section.settings.aspect_ratio | replace: ':', '/' }};
+        --radius: {{ section.settings.border_radius | append: 'px' }};
+      ">
+      {%- for block in video_blocks -%}
+        {%- liquid
+          assign poster_image = block.settings.poster_image
+          if poster_image == blank and block.settings.media_type == 'video' and block.settings.video != blank
+            assign poster_image = block.settings.video.preview_image
+          endif
+        -%}
+        <a href="#modal--video-reviews-{{ section.id }}?scroll=modal-item-{{ block.id }}" class="video-reviews-card" {{ block.shopify_attributes }}>
+          {%- if poster_image != blank -%}
+            <div class="video-reviews-card__poster">
+              {{ poster_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: '', widths: '400, 600, 800' }}
+            </div>
+          {%- elsif block.settings.media_type == 'external_video' and block.settings.external_video_url.type == 'youtube' -%}
+            <div class="video-reviews-card__poster">
+              <img src="https://i.ytimg.com/vi/{{ block.settings.external_video_url.id }}/hqdefault.jpg" alt="" loading="lazy">
+            </div>
+          {%- else -%}
+            <div class="video-reviews-card__placeholder"></div>
+          {%- endif -%}
+
+          <span class="video-reviews-card__play">{% render 'icon-play' %}</span>
+
+          {%- if block.settings.name != blank or block.settings.quote != blank or block.settings.rating > 0 -%}
+            <div class="video-reviews-card__meta">
+              {%- if block.settings.rating > 0 -%}
+                {% render 'rating', rating_value: block.settings.rating %}
+              {%- endif -%}
+              {%- if block.settings.quote != blank -%}
+                <p class="video-reviews-card__quote">&ldquo;{{ block.settings.quote }}&rdquo;</p>
+              {%- endif -%}
+              {%- if block.settings.name != blank -%}
+                <p class="video-reviews-card__name">{{ block.settings.name }}</p>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </a>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.cta_label != blank and section.settings.cta_link != blank -%}
+    <div class="video-reviews-cta">
+      <a href="{{ section.settings.cta_link }}" class="btn btn--primary">{{ section.settings.cta_label }}</a>
+    </div>
+  {%- endif -%}
+</div>
+
+{%- if video_blocks.size > 0 -%}
+  <div id="modal--video-reviews-{{ section.id }}" class="modal modal--fullscreen video-reviews-modal color-{{ settings.color_scheme_modals }}" data-modal data-parent>
+    <a href="#" class="btn btn--primary btn--round modal-close pos--absolute" data-modal-close data-close aria-label="{{ 'accessibility.close_something' | t: something: 'modal' }}">{% render 'icon-close' %}</a>
+    <div class="modal-dialog" data-contents data-modal-dialog role="dialog" aria-modal="true" tabindex="-1">
+      <div class="modal-body" data-modal-body>
+        <div class="video-reviews-modal__grid">
+          {%- for block in video_blocks -%}
+            <div id="modal-item-{{ block.id }}" class="video-reviews-modal__item">
+              {%- if block.settings.media_type == 'video' -%}
+                {%- render 'video-frame',
+                  video_default: block.settings.video,
+                  aspect_ratio: 'natural',
+                  sizing_rule: 'contain',
+                  controls: true,
+                  autoplay: true
+                -%}
+              {%- elsif block.settings.media_type == 'external_video' -%}
+                {%- render 'external-video',
+                  default_external_video: block.settings.external_video_url,
+                  default_external_video_aspect_ratio: section.settings.aspect_ratio,
+                  controls: true,
+                  autoplay: true
+                -%}
+              {%- endif -%}
+
+              {%- if block.settings.name != blank or block.settings.quote != blank or block.settings.rating > 0 -%}
+                <div class="video-reviews-modal__meta">
+                  {%- if block.settings.rating > 0 -%}
+                    {% render 'rating', rating_value: block.settings.rating %}
+                  {%- endif -%}
+                  {%- if block.settings.quote != blank -%}
+                    <p class="video-reviews-modal__quote">&ldquo;{{ block.settings.quote }}&rdquo;</p>
+                  {%- endif -%}
+                  {%- if block.settings.name != blank -%}
+                    <p class="video-reviews-modal__name">{{ block.settings.name }}</p>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "UGC video reviews",
+  "class": "section--video-reviews",
+  "disabled_on": {
+    "groups": ["header", "footer", "aside"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "A grid of customer/UGC video clips. Click a card to open it full-size in a lightbox. Add hosted videos (uploaded to Shopify) or paste a YouTube/Vimeo link per block."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "default",
+      "label": "t:sections.colors.color_scheme.label"
+    },
+    {
+      "type": "header",
+      "content": "Grid layout"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Video aspect ratio",
+      "default": "9:16",
+      "options": [
+        { "value": "9:16", "label": "Portrait (9:16) - typical UGC/phone clip" },
+        { "value": "4:5", "label": "Portrait (4:5)" },
+        { "value": "1:1", "label": "Square (1:1)" },
+        { "value": "16:9", "label": "Landscape (16:9)" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns (desktop)",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_tablet",
+      "label": "Columns (tablet)",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "label": "Columns (mobile)",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Grid gap",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Rounded corners",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Bottom call-to-action (optional)"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.headers.desktop_layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_full_width",
+      "label": "t:sections.layout.section_width.full_width",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "md_padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "label": "t:sections.layout.margin_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "md_padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "label": "t:sections.layout.margin_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.headers.mobile_layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "sm_down_edge_to_edge",
+      "label": "t:sections.layout.section_width.edge_to_edge",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "label": "t:sections.layout.margin_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "label": "t:sections.layout.margin_bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "name": "t:sections.blocks.section_header.name",
+      "type": "section_header",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "t:sections.inputs.text.subtitle"
+        },
+        {
+          "type": "select",
+          "id": "subtitle_tag",
+          "label": "t:sections.blocks.section_header.subtitle_tag",
+          "default": "h3",
+          "options": [
+            { "value": "h1", "label": "t:sections.typography.heading_tag.h1" },
+            { "value": "h2", "label": "t:sections.typography.heading_tag.h2" },
+            { "value": "h3", "label": "t:sections.typography.heading_tag.h3" },
+            { "value": "h4", "label": "t:sections.typography.heading_tag.h4" },
+            { "value": "h5", "label": "t:sections.typography.heading_tag.h5" },
+            { "value": "h6", "label": "t:sections.typography.heading_tag.h6" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.inputs.text.title",
+          "default": "Real people, real focus"
+        },
+        {
+          "type": "select",
+          "id": "title_tag",
+          "label": "t:sections.blocks.section_header.title_tag",
+          "default": "h2",
+          "options": [
+            { "value": "h1", "label": "t:sections.typography.heading_tag.h1" },
+            { "value": "h2", "label": "t:sections.typography.heading_tag.h2" },
+            { "value": "h3", "label": "t:sections.typography.heading_tag.h3" },
+            { "value": "h4", "label": "t:sections.typography.heading_tag.h4" },
+            { "value": "h5", "label": "t:sections.typography.heading_tag.h5" },
+            { "value": "h6", "label": "t:sections.typography.heading_tag.h6" }
+          ]
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.inputs.text.text"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "t:sections.typography.text_align",
+          "default": "text-align-center",
+          "options": [
+            { "value": "text-align-left", "label": "t:sections.layout.position.options.left" },
+            { "value": "text-align-center", "label": "t:sections.layout.position.options.center" },
+            { "value": "text-align-right", "label": "t:sections.layout.position.options.right" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "sm_size_multiplier",
+          "label": "t:sections.typography.size_options.label",
+          "default": "sm-size--default",
+          "options": [
+            { "value": "sm-size--small", "label": "t:sections.typography.size_options.small" },
+            { "value": "sm-size--default", "label": "t:sections.typography.size_options.default" },
+            { "value": "sm-size--large", "label": "t:sections.typography.size_options.large" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "size_multiplier",
+          "label": "t:sections.typography.size_options.label",
+          "default": "size--default",
+          "options": [
+            { "value": "size--small", "label": "t:sections.typography.size_options.small" },
+            { "value": "size--default", "label": "t:sections.typography.size_options.default" },
+            { "value": "size--large", "label": "t:sections.typography.size_options.large" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Video",
+      "type": "video_review",
+      "settings": [
+        {
+          "type": "select",
+          "id": "media_type",
+          "label": "t:common.video.source.label",
+          "default": "video",
+          "options": [
+            { "value": "video", "label": "t:common.video.source.options.shopify" },
+            { "value": "external_video", "label": "t:common.video.source.options.external" }
+          ]
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Hosted video",
+          "visible_if": "{{ block.settings.media_type == 'video' }}"
+        },
+        {
+          "type": "video_url",
+          "id": "external_video_url",
+          "label": "YouTube or Vimeo URL",
+          "accept": ["youtube", "vimeo"],
+          "visible_if": "{{ block.settings.media_type == 'external_video' }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster_image",
+          "label": "Cover image",
+          "info": "Optional. Hosted videos use their own preview frame automatically if left blank. YouTube videos fall back to the YouTube thumbnail."
+        },
+        {
+          "type": "header",
+          "content": "Reviewer details (optional)"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "id": "quote",
+          "label": "Short quote"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Star rating",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 0,
+          "info": "Set to 0 to hide stars."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "UGC video reviews",
+      "category": "t:sections.section_categories.visual_and_storytelling",
+      "blocks": [
+        { "type": "section_header" },
+        { "type": "video_review" },
+        { "type": "video_review" },
+        { "type": "video_review" },
+        { "type": "video_review" }
+      ]
+    }
+  ]
+}
+{% endschema %}
