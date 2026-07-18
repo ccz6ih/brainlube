@@ -696,9 +696,9 @@
         "custom_liquid": "<h2 class=\"text-align-center\">Try it. If it’s not for you, we’ll make it right.</h2><p class=\"text-align-center\" style=\"max-width:600px;margin:16px auto 0;\">We’re a small business, and we stand behind every can. Not feeling sharper? Return unopened cans within 30 days for a full refund.</p>",
         "enable_full_width": false,
         "md_padding_top": 64,
-        "md_padding_bottom": 64,
+        "md_padding_bottom": 56,
         "padding_top": 48,
-        "padding_bottom": 48
+        "padding_bottom": 72
       }
     },
     "divider-1": {
@@ -716,7 +716,7 @@
             "flip_vertical": false,
             "sm_graphics_height": 100,
             "sm_graphics_width": 100,
-            "graphics_height": 0,
+            "graphics_height": 70,
             "graphics_width": 100
           }
         }
