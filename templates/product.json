@@ -22,7 +22,7 @@
         "text_TCW8BA": {
           "type": "text",
           "settings": {
-            "text": "<h2>OG MANGO</h2>",
+            "text": "<h1>OG MANGO</h1>",
             "read_more": false,
             "style_boxed": false,
             "margin_top": 8
