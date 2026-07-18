@@ -29,15 +29,7 @@
         "the-title": {
           "type": "title",
           "settings": {
-            "margin_top": 12
-          }
-        },
-        "the-description": {
-          "type": "description",
-          "settings": {
-            "enable_collapsible": false,
-            "collapsible_type": "collapsible",
-            "margin_top": 24
+            "margin_top": 8
           }
         },
         "557a3a73-80c5-47b2-abb8-a78027516c90": {
@@ -131,6 +123,14 @@
             "add_multipliers": "",
             "add_multipliers_layout": "single-line",
             "margin_top": 28
+          }
+        },
+        "the-description": {
+          "type": "description",
+          "settings": {
+            "enable_collapsible": false,
+            "collapsible_type": "collapsible",
+            "margin_top": 24
           }
         },
         "text_trust_badges": {
@@ -227,7 +227,6 @@
         "2cb069aa-470f-47b0-97d9-b6a2c86aa996",
         "rating_Ccm9zT",
         "the-title",
-        "the-description",
         "557a3a73-80c5-47b2-abb8-a78027516c90",
         "the-price",
         "attribute_insights_caffeine",
@@ -235,6 +234,7 @@
         "subscriptions_app_block_GNpiNE",
         "6fc29670-ecc3-4bbf-bc13-6d7232b75085",
         "the-buy-buttons",
+        "the-description",
         "text_trust_badges",
         "the-inventory-status",
         "the-pickup-availability",
