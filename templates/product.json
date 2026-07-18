@@ -878,12 +878,98 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_dJA7HA": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_k3terD": {
+          "type": "image",
+          "settings": {
+            "media_aspect_ratio": "natural",
+            "media_link": "https://cdn.shopify.com/videos/c/o/v/612adeeeb1d74ffa9e5666e6cbff203c.mp4",
+            "media_type": "video",
+            "video": "shopify://files/videos/Create_a_second_long_video.mp4",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "subtitle_A3gWTM": {
+          "type": "subtitle",
+          "disabled": true,
+          "settings": {
+            "subtitle": "Subheading",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "title_UMhmV8": {
+          "type": "title",
+          "settings": {
+            "title": "Watch the 2PM crash disappear",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_X8AWk4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everybody knows the feeling — the afternoon wall, the coffee jitters, the energy drink that spikes you and drops you an hour later. BRAiNLUBE was built to do the opposite. Real adaptogens and nootropics team up with just enough clean caffeine (130mg) to give you focus that shows up fast and actually sticks around. No jitters, no nosedive — just a clear head for the part of your day that matters. Press play and see the switch for yourself.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 4,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "button_c7Qj6T": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_k3terD",
+        "subtitle_A3gWTM",
+        "title_UMhmV8",
+        "text_X8AWk4",
+        "button_c7Qj6T"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
     }
   },
   "order": [
     "main",
     "divider_Tqdp6r",
     "image_with_hotspots_NV4NA8",
+    "image_with_text_dJA7HA",
     "comparison_custom_liquid",
     "1784337049ed3d7b28",
     "rich_text_8F9YN9",
