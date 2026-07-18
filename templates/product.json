@@ -15,8 +15,17 @@
         "2cb069aa-470f-47b0-97d9-b6a2c86aa996": {
           "type": "badges",
           "settings": {
-            "badges_position": "over-media",
+            "badges_position": "text-column",
             "margin_top": 0
+          }
+        },
+        "text_TCW8BA": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>OG MANGO</h1>",
+            "read_more": false,
+            "style_boxed": false,
+            "margin_top": 8
           }
         },
         "rating_Ccm9zT": {
@@ -28,16 +37,9 @@
         },
         "the-title": {
           "type": "title",
+          "disabled": true,
           "settings": {
-            "margin_top": 12
-          }
-        },
-        "the-description": {
-          "type": "description",
-          "settings": {
-            "enable_collapsible": false,
-            "collapsible_type": "collapsible",
-            "margin_top": 24
+            "margin_top": 8
           }
         },
         "557a3a73-80c5-47b2-abb8-a78027516c90": {
@@ -101,6 +103,20 @@
             "margin_top": 12
           }
         },
+        "subscriptions_app_block_GNpiNE": {
+          "type": "shopify://apps/subscriptions/blocks/app-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+          "settings": {
+            "widget_style": "toggle",
+            "widget_style_card_selector": "radio_button",
+            "subscription_policy_url": "",
+            "color_text_body": "#000000",
+            "dividers_color": "#000000",
+            "background_color": "#faa638",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "product": "{{product}}"
+          }
+        },
         "6fc29670-ecc3-4bbf-bc13-6d7232b75085": {
           "type": "quantity_selector",
           "disabled": true,
@@ -117,6 +133,21 @@
             "add_multipliers": "",
             "add_multipliers_layout": "single-line",
             "margin_top": 28
+          }
+        },
+        "the-description": {
+          "type": "description",
+          "settings": {
+            "enable_collapsible": false,
+            "collapsible_type": "collapsible",
+            "margin_top": 24
+          }
+        },
+        "text_trust_badges": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p class=\"size--tiny text-align-center\">✓ Third-Party Tested &nbsp; ✓ Made in USA &nbsp; ✓ Non-GMO</p>",
+            "margin_top": 16
           }
         },
         "the-inventory-status": {
@@ -146,24 +177,6 @@
             "border_radius": 16
           }
         },
-        "75b14a74-c1c5-4fcc-932f-e2bfa017fba2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "title": "Ingredients",
-            "content": "<h6><strong>{{ product.metafields.custom.ingredients | metafield_tag }}</strong></h6>",
-            "page": "",
-            "open_as_drawer": false,
-            "icon": "icon-caret__right",
-            "margin_top": 0
-          }
-        },
-        "text_trust_badges": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<p class=\"size--tiny text-align-center\">✓ Third-Party Tested &nbsp; ✓ Made in USA &nbsp; ✓ Non-GMO</p>",
-            "margin_top": 16
-          }
-        },
         "tab_whats_inside": {
           "type": "collapsible_tab",
           "settings": {
@@ -183,6 +196,17 @@
             "page": "",
             "open_as_drawer": false,
             "icon": "icon-heart",
+            "margin_top": 0
+          }
+        },
+        "75b14a74-c1c5-4fcc-932f-e2bfa017fba2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Ingredients",
+            "content": "<h6><strong>{{ product.metafields.custom.ingredients | metafield_tag }}</strong></h6>",
+            "page": "",
+            "open_as_drawer": false,
+            "icon": "icon-caret__right",
             "margin_top": 0
           }
         },
@@ -211,15 +235,17 @@
       },
       "block_order": [
         "2cb069aa-470f-47b0-97d9-b6a2c86aa996",
+        "text_TCW8BA",
         "rating_Ccm9zT",
         "the-title",
-        "the-description",
         "557a3a73-80c5-47b2-abb8-a78027516c90",
         "the-price",
         "attribute_insights_caffeine",
         "attribute_insights_crash",
+        "subscriptions_app_block_GNpiNE",
         "6fc29670-ecc3-4bbf-bc13-6d7232b75085",
         "the-buy-buttons",
+        "the-description",
         "text_trust_badges",
         "the-inventory-status",
         "the-pickup-availability",
@@ -294,13 +320,13 @@
         "padding_bottom": 0
       }
     },
-    "image_with_hotspots_ingredients": {
+    "image_with_hotspots_NV4NA8": {
       "type": "image-with-hotspots",
       "blocks": {
-        "title_ingredients": {
+        "title_MXrQrQ": {
           "type": "title",
           "settings": {
-            "title": "WHAT'S INSIDE THIS CAN",
+            "title": "WHAT'S INSIDE",
             "heading_tag": "h2",
             "sm_size_multiplier": "sm-size--large",
             "sm_margin_top": 0,
@@ -308,17 +334,28 @@
             "margin_top": 0
           }
         },
-        "text_ingredients": {
+        "subtitle_bpAc7A": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "",
+            "heading_tag": "h1",
+            "sm_size_multiplier": "sm-size--small",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_6PcMbt": {
           "type": "text",
           "settings": {
-            "text": "<p>Six ingredients, all-natural, all pulling their weight. Tap each one to see why it made the cut.</p>",
+            "text": "<p>Everything in BRAiNLUBE™ comes from<br/>nature—roots, berries, leaves, and twigs. No synthetic additives. No chemicals.</p>",
             "sm_size_multiplier": "sm-size--small",
             "sm_margin_top": 8,
             "size_multiplier": "size--default",
             "margin_top": 0
           }
         },
-        "image_ingredients": {
+        "image_RDLXHM": {
           "type": "image",
           "settings": {
             "media_type": "image",
@@ -331,91 +368,96 @@
             "padding_bottom": 0
           }
         },
-        "hotspot_ashwagandha": {
+        "hotspot_Lfh9zF": {
           "type": "hotspot",
           "settings": {
             "title": "Ashwagandha",
             "title_position": "left",
             "vertical_position": 30,
             "horizontal_position": 39,
-            "text": "<p>adaptogen root herb with benefits for mental energy, stress resistance and mood; may also help with healthy brain aging</p>",
+            "text": "<p><strong>Ashwagandha</strong> — <em>The calm inside your focus.<br/></em>An ancient adaptogen root built for modern stress. Ashwagandha helps your body stay calm under pressure, so your focus doesn't get hijacked by a racing mind. It's a big reason BRAiNLUBE's energy feels steady instead of frantic. Clarity and calm, working the same shift.</p>",
             "media_type": "image",
-            "image": "shopify://shop_images/AdobeStock_816943394_Preview.jpg",
+            "image": "shopify://shop_images/ashwagandha.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
           }
         },
-        "hotspot_bacopa": {
+        "hotspot_kzmdRM": {
           "type": "hotspot",
           "settings": {
             "title": "Bacopa Monnieri",
             "title_position": "left",
             "vertical_position": 50,
             "horizontal_position": 39,
-            "text": "<p>best nootropic herb for students, shown to improve retention of knowledge and strengthen stress resistance</p>",
+            "text": "<p><strong>Bacopa Monnieri</strong> — <em>The remembering herb.</em></p><p><br/>The student's herb. Bacopa has both a long traditional track record and modern research behind it for supporting memory and helping your brain hold on to what it learns. It also leans calming, taking the edge off stress while it works. Better retention, less overwhelm — that's why it's in every can.<br/></p>",
             "media_type": "image",
+            "image": "shopify://shop_images/bacopamonnieri.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
           }
         },
-        "hotspot_caffeine": {
+        "hotspot_P3diAL": {
           "type": "hotspot",
           "settings": {
             "title": "Caffeine",
             "title_position": "left",
             "vertical_position": 70,
             "horizontal_position": 39,
-            "text": "<p>a stimulant that boosts alertness and almost always is accompanied by a subsequent crash</p>",
+            "text": "<p><strong>Caffeine</strong> — <em>The lift, without the letdown.</em></p><p>The one you already know — done right. BRAiNLUBE uses a moderate 130mg (about a strong coffee) for real alertness without the overload. The trick is pairing it with L-theanine, which smooths the ride into calm, focused energy instead of jitters. You get the lift, not the letdown<br/></p>",
             "media_type": "image",
+            "image": "shopify://shop_images/Caffeine.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
           }
         },
-        "hotspot_ginkgo": {
+        "hotspot_nRCWcf": {
           "type": "hotspot",
           "settings": {
             "title": "Ginkgo Biloba",
             "title_position": "right",
             "vertical_position": 30,
             "horizontal_position": 60,
-            "text": "<p>a nootropic that enhances brain circulation, strong reputation for helping with memory and age related cognitive performance</p>",
+            "text": "<p><strong>Ginkgo Biloba</strong> — <em>Ancient tree, modern clarity.</em><br/>One of the oldest tree species on earth — and one of the most-studied brain botanicals. Ginkgo is prized for supporting healthy blood flow to the brain, which ties to sharper memory and steadier mental performance. In BRAiNLUBE, it's here to keep you quick on your feet, word after word, hour after hour.</p>",
             "media_type": "image",
+            "image": "shopify://shop_images/Caffeine_1.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
           }
         },
-        "hotspot_ginseng": {
+        "hotspot_dpULtF": {
           "type": "hotspot",
           "settings": {
             "title": "Ginseng",
             "title_position": "right",
             "vertical_position": 50,
             "horizontal_position": 60,
-            "text": "<p>adaptogen that supports brain chemicals while countering stress; energizes mental and physical performance</p>",
+            "text": "<p><strong>Ginseng</strong> — <em>Get-up-and-go, minus the jitters.</em><br/>A legendary adaptogen that wakes up mind and body at once. Ginseng helps support the brain chemistry behind focus and drive while helping you push back on fatigue and stress. It's the classic get-up-and-go root — without the jittery edge. In BRAiNLUBE, it keeps your mental engine running clean.</p>",
             "media_type": "image",
+            "image": "shopify://shop_images/Ginseng.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
           }
         },
-        "hotspot_guarana": {
+        "hotspot_jqmMnM": {
           "type": "hotspot",
           "settings": {
             "title": "Guarana",
             "title_position": "right",
             "vertical_position": 70,
             "horizontal_position": 60,
-            "text": "<p>a berry that is one of the best natural sources of caffeine, traditionally used to boost mind energy and physical endurance</p>",
+            "text": "<p><strong>Guarana</strong> — <em>Slow-burn energy from the Amazon.<br/></em><br/>An Amazonian berry and one of nature's richest sources of caffeine. Guarana tends to release its energy more slowly than coffee, for a smoother, longer-lasting lift. Traditionally used to boost mental energy and stamina, it's how BRAiNLUBE keeps you going without a hard drop-off. Clean fuel, steady burn.</p>",
             "media_type": "image",
+            "image": "shopify://shop_images/Guarana.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
@@ -424,15 +466,19 @@
         }
       },
       "block_order": [
-        "title_ingredients",
-        "text_ingredients",
-        "image_ingredients",
-        "hotspot_ashwagandha",
-        "hotspot_bacopa",
-        "hotspot_caffeine",
-        "hotspot_ginkgo",
-        "hotspot_ginseng",
-        "hotspot_guarana"
+        "title_MXrQrQ",
+        "subtitle_bpAc7A",
+        "text_6PcMbt",
+        "image_RDLXHM",
+        "hotspot_Lfh9zF",
+        "hotspot_kzmdRM",
+        "hotspot_P3diAL",
+        "hotspot_nRCWcf",
+        "hotspot_dpULtF",
+        "hotspot_jqmMnM"
+      ],
+      "custom_css": [
+        "h2 {font-weight: bold;}"
       ],
       "settings": {
         "color_scheme": "alternative-1",
@@ -443,13 +489,110 @@
         "content_width": "col-sm-max-5",
         "desktop_alignment": "sm-text-align-left",
         "sm_full_width_buttons": false,
-        "md_padding_top": 24,
+        "md_padding_top": 48,
         "md_padding_bottom": 40,
         "mobile_alignment": "text-align-center",
         "full_width_buttons": false,
         "sm_down_hide_hotspot_titles": false,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "image_with_text_dJA7HA": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_k3terD": {
+          "type": "image",
+          "settings": {
+            "media_aspect_ratio": "natural",
+            "media_link": "https://cdn.shopify.com/videos/c/o/v/612adeeeb1d74ffa9e5666e6cbff203c.mp4",
+            "media_type": "video",
+            "video": "shopify://files/videos/Create_a_second_long_video.mp4",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "subtitle_A3gWTM": {
+          "type": "subtitle",
+          "disabled": true,
+          "settings": {
+            "subtitle": "Subheading",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "title_UMhmV8": {
+          "type": "title",
+          "settings": {
+            "title": "Watch the 2PM crash disappear",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_X8AWk4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everybody knows the feeling — the afternoon wall, the coffee jitters, the energy drink that spikes you and drops you an hour later. BRAiNLUBE was built to do the opposite. Real adaptogens and nootropics team up with just enough clean caffeine (130mg) to give you focus that shows up fast and actually sticks around. No jitters, no nosedive — just a clear head for the part of your day that matters. Press play and see the switch for yourself.</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 4,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "button_c7Qj6T": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_k3terD",
+        "subtitle_A3gWTM",
+        "title_UMhmV8",
+        "text_X8AWk4",
+        "button_c7Qj6T"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 64,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "comparison_custom_liquid": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "default",
+        "custom_liquid": "<h2 class=\"text-align-center\">BRAiNLUBE VS. THE USUAL OPTIONS</h2><div style=\"overflow-x:auto;\"><table style=\"width:100%;border-collapse:collapse;min-width:480px;margin-top:24px;\"><thead><tr><th style=\"text-align:left;padding:8px;border-bottom:2px solid #ddd;\"> </th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">BRAiNLUBE</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Typical Energy Drink</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Coffee</th></tr></thead><tbody><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Clean lift, no crash</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">Depends</td></tr><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Nootropics for focus &amp; memory</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Adaptogens for calm &amp; stress</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Real fruit juice, no artificial colors</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td></tr><tr><td style=\"padding:8px;\">Moderate, balanced caffeine (130mg)</td><td style=\"text-align:center;padding:8px;\">✓</td><td style=\"text-align:center;padding:8px;\">Often too much</td><td style=\"text-align:center;padding:8px;\">Varies</td></tr></tbody></table></div>",
+        "enable_full_width": false,
+        "md_padding_top": 64,
+        "md_padding_bottom": 64,
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "1784337049ed3d7b28": {
@@ -820,24 +963,13 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "comparison_custom_liquid": {
-      "type": "custom-liquid",
-      "settings": {
-        "color_scheme": "default",
-        "custom_liquid": "<h2 class=\"text-align-center\">BRAiNLUBE VS. THE USUAL OPTIONS</h2><div style=\"overflow-x:auto;\"><table style=\"width:100%;border-collapse:collapse;min-width:480px;margin-top:24px;\"><thead><tr><th style=\"text-align:left;padding:8px;border-bottom:2px solid #ddd;\"> </th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">BRAiNLUBE</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Typical Energy Drink</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Coffee</th></tr></thead><tbody><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Clean lift, no crash</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">Depends</td></tr><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Nootropics for focus &amp; memory</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Adaptogens for calm &amp; stress</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr><tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Real fruit juice, no artificial colors</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td></tr><tr><td style=\"padding:8px;\">Moderate, balanced caffeine (130mg)</td><td style=\"text-align:center;padding:8px;\">✓</td><td style=\"text-align:center;padding:8px;\">Often too much</td><td style=\"text-align:center;padding:8px;\">Varies</td></tr></tbody></table></div>",
-        "enable_full_width": false,
-        "md_padding_top": 64,
-        "md_padding_bottom": 64,
-        "padding_top": 48,
-        "padding_bottom": 48
-      }
     }
   },
   "order": [
     "main",
     "divider_Tqdp6r",
-    "image_with_hotspots_ingredients",
+    "image_with_hotspots_NV4NA8",
+    "image_with_text_dJA7HA",
     "comparison_custom_liquid",
     "1784337049ed3d7b28",
     "rich_text_8F9YN9",

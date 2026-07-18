@@ -1,0 +1,703 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "heading_text_align": "text-align-left",
+        "page_pixel_width_desktop": 650,
+        "sm_size_multiplier": "sm-size--default",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "size_multiplier": "size--default",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "hero_about": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_about": {
+          "type": "image",
+          "settings": {
+            "media_aspect_ratio": "natural",
+            "media_link": "",
+            "media_type": "video",
+            "image": "shopify://shop_images/brainlube-website-imagery-hero-image-of-three-cans-together.png",
+            "video": "shopify://files/videos/make_a_d_looking_video_with_t.mp4",
+            "external_video_url": "",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "subtitle_about": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "THE STORY BEHIND THE CAN",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "title_about": {
+          "type": "title",
+          "settings": {
+            "title": "WE BUILT THE ENERGY DRINK WE WISHED EXISTED",
+            "heading_tag": "h1",
+            "sm_size_multiplier": "sm-size--huge",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_about",
+        "subtitle_about",
+        "title_about"
+      ],
+      "custom_css": [
+        "h1 {font-weight: bold;}"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 32,
+        "md_padding_bottom": 56,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "divider_about_1": {
+      "type": "divider",
+      "blocks": {
+        "standard_about_1": {
+          "type": "standard",
+          "settings": {
+            "divider_graphics": "waves",
+            "top_part_color": "rgba(0,0,0,0)",
+            "middle_part_color": "linear-gradient(89deg, rgba(0, 110, 185, 1) 7%, rgba(32, 196, 244, 1) 94%)",
+            "bottom_part_color": "#ffffff",
+            "position": "in-between",
+            "flip_horizontal": false,
+            "flip_vertical": false,
+            "sm_graphics_height": 100,
+            "sm_graphics_width": 100,
+            "graphics_height": 100,
+            "graphics_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "standard_about_1"
+      ],
+      "settings": {
+        "md_padding_top": 56,
+        "md_padding_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "sliding_text_7jmM3c": {
+      "type": "sliding-text",
+      "blocks": {
+        "text_8wLXyb": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Ginseng.jpg",
+            "text": "Get-up-and-go, minus the jitters.",
+            "link": ""
+          }
+        },
+        "text_cLp3dR": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/bacopamonnieri.jpg",
+            "text": "The remembering herb.",
+            "link": ""
+          }
+        },
+        "text_D9XHJE": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/ashwagandha.jpg",
+            "text": "The calm inside your focus.",
+            "link": ""
+          }
+        },
+        "text_cC3KFD": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Guarana.jpg",
+            "text": "Slow-burn energy from the Amazon.",
+            "link": ""
+          }
+        },
+        "text_VY9LrV": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Ginkobiloba.jpg",
+            "text": "Ancient tree, modern clarity.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_8wLXyb",
+        "text_cLp3dR",
+        "text_D9XHJE",
+        "text_cC3KFD",
+        "text_VY9LrV"
+      ],
+      "custom_css": [
+        "h2 {font-weight: bold;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-6574f8cf-a893-4dc6-85d8-c70fa061005a",
+        "text_gradient_color": "linear-gradient(228deg, rgba(250, 166, 56, 1) 14%, rgba(13, 146, 210, 1) 83%)",
+        "content_order": "horizontal",
+        "font": "heading",
+        "direction": "normal",
+        "speed": 10,
+        "pause_on_hover": false,
+        "sm_size_multiplier": "sm-size--default",
+        "sm_item_gap": 16,
+        "sm_image_gap": 0,
+        "sm_image_width": 140,
+        "sm_rounded_corners": false,
+        "sm_padding": 68,
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "size_multiplier": "size--tiny",
+        "item_gap": 24,
+        "image_gap": 16,
+        "image_width": 60,
+        "rounded_corners": false,
+        "padding": 24,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "testimonials_pillars": {
+      "type": "testimonials",
+      "blocks": {
+        "section_header_pillars": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "",
+            "title_tag": "h6",
+            "text": "<p>After lots of research (and a ton of bad-tasting supplement powders), BRAiNLUBE™ was formulated with:</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--small",
+            "size_multiplier": "size--default"
+          }
+        },
+        "testimonial_pillar_1": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "title": "Carefully Chosen Ingredients",
+            "testimonial": "<p>that cross the blood-brain<br/>barrier and actually work</p>",
+            "author": ""
+          }
+        },
+        "testimonial_pillar_2": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "title": "Precise Ingredient Amounts",
+            "testimonial": "<p>so active ingredients absorb efficiently and build in your system over time—without overload</p>",
+            "author": ""
+          }
+        },
+        "testimonial_pillar_3": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "title": "Naturally Balanced Flavors",
+            "testimonial": "<p>(like mango + citrus) for better<br/>taste and absorption</p>",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "section_header_pillars",
+        "testimonial_pillar_1",
+        "testimonial_pillar_2",
+        "testimonial_pillar_3"
+      ],
+      "custom_css": [
+        "h3 {font-size: 30px; font-weight: bold;}",
+        "p {font-size: 16px;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "autoplay": false,
+        "autoplay_speed": 8,
+        "alignment": "center",
+        "icon": "stars",
+        "enable_full_width": true,
+        "items_per_row_desktop": 3,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "items_per_row_tablet": 2,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "image_with_text_FDwqxV": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_6tcBz9": {
+          "type": "image",
+          "settings": {
+            "media_aspect_ratio": "natural",
+            "media_link": "",
+            "media_type": "image",
+            "image": "shopify://shop_images/8d6fc1db-02ef-4f8f-ad45-6662122896f3-2026-07-18.jpg",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "subtitle_Pw6Pda": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "The Science (Minus the Headache)",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "title_GnwKjw": {
+          "type": "title",
+          "settings": {
+            "title": "You don't need a biology degree to understand why BRAiNLUBE works. Here's the whole thing in plain English.",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--small",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_mnHHRQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Most energy comes with a catch — caffeine wakes you up, but it also makes you jittery and anxious. So we didn't just throw in caffeine. We paired a moderate dose (130mg, about a strong coffee) with something called <strong>L-theanine</strong>, a natural compound found in tea. L-theanine takes the sharp, jittery edge off caffeine and turns it into smooth, steady focus. Think of caffeine as the gas pedal and L-theanine as the steering — together you go fast <em>and</em> stay in control. This combo is one of the most well-studied pairings in the focus world, and it's the heart of every can.<br/></p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_6tcBz9",
+        "subtitle_Pw6Pda",
+        "title_GnwKjw",
+        "text_mnHHRQ"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": true,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "banner_grid_EYpd88": {
+      "type": "banner-grid",
+      "blocks": {
+        "image_Egr6W6": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/43eca8d8-6576-4f0a-b242-4778389cd75b-2026-07-18.png",
+            "media_link": "",
+            "title": "",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-left",
+            "padding": 40
+          }
+        },
+        "text_PGWirb": {
+          "type": "text",
+          "settings": {
+            "svg": "",
+            "subtitle": "",
+            "title": "Sip smarter. Live brighter.",
+            "richtext": "<p>Give your brain the clean fuel it's been asking for. One can, twenty minutes, and a clearer head for the part of your day that matters most.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "color_scheme": "",
+            "padding": 40,
+            "text_position": "center",
+            "text_alignment": "text-align-center"
+          }
+        },
+        "image_3QtL9k": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/b1f96ba3-5068-44df-ae07-e3dbb121e62b-2026-07-18.png",
+            "media_link": "",
+            "title": "",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-left",
+            "padding": 40
+          }
+        },
+        "video_nYrmYg": {
+          "type": "video",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/f43e8723-bf0f-4c88-9056-03b002d1d1f5-2026-07-18.mp4",
+            "external_video_aspect_ratio": "16:9",
+            "media_link": "",
+            "title": "",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-left",
+            "padding": 40,
+            "color_scheme": "",
+            "overlay_opacity": 0
+          }
+        },
+        "product_YLcaTr": {
+          "type": "product",
+          "settings": {
+            "product": "nootropics-energy-drink-mango",
+            "color_scheme": "",
+            "product_card_content": "",
+            "text_alignment": ""
+          }
+        },
+        "image_kkBgAB": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/28e587ac-88f1-4944-8f89-5c4ef0d22f3e-2026-07-18.png",
+            "media_link": "",
+            "title": "",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-left",
+            "padding": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_Egr6W6",
+        "text_PGWirb",
+        "image_3QtL9k",
+        "video_nYrmYg",
+        "product_YLcaTr",
+        "image_kkBgAB"
+      ],
+      "name": "t:sections.banner-grid.name",
+      "settings": {
+        "block_aspect_ratio": "portrait",
+        "color_scheme": "",
+        "section_columns_desktop": 3,
+        "enable_full_width": false,
+        "sm_rounded_corners": false,
+        "layout_desktop": "grid",
+        "sm_grid_gap": 12,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "section_columns_tablet": 2,
+        "section_columns_mobile": 1,
+        "layout_mobile": "grid",
+        "sm_down_edge_to_edge": true,
+        "rounded_corners": false,
+        "grid_gap": 0,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    },
+    "on_demand_info_mrDTy9": {
+      "type": "on-demand-info",
+      "blocks": {
+        "info_block_xAxwyD": {
+          "type": "info_block",
+          "settings": {
+            "title": "Adaptogens: help your body handle stress",
+            "text": "<p>\"Adaptogen\" just means a natural ingredient that helps your body deal with stress instead of adding to it. We use <strong>ashwagandha</strong> and <strong>ginseng</strong> — plants people have leaned on for centuries. In simple terms: they help you stay calm and steady when the day gets loud, so your focus doesn't get hijacked by a racing mind.</p>",
+            "media_type": "image",
+            "image": "shopify://shop_images/8495bfd7-cd1b-43ed-852f-5f64b8bddc7c-2026-07-18.png",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "info_block_gneeJw": {
+          "type": "info_block",
+          "settings": {
+            "title": "Nootropics: support how you think and remember",
+            "text": "<p>\"Nootropic\" is just a fancy word for something that supports your brain — focus, memory, mental clarity. We use <strong>bacopa</strong> (long known as the \"student's herb\" for supporting memory), <strong>ginkgo</strong> (known for supporting healthy blood flow to the brain), and <strong>L-tyrosine</strong> (which supports focus when you're under pressure). No magic, no hype — just ingredients chosen because they earn their spot.</p>",
+            "media_type": "mixed_media",
+            "image": "shopify://shop_images/96ed3d1a-8dcb-4c51-b15c-133721a01b2c-2026-07-18.png",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "info_block_KfeYGt": {
+          "type": "info_block",
+          "settings": {
+            "title": "Why a drink instead of a pill?",
+            "text": "<p>Pills and powders are easy to forget and easy to skip. A cold, actually-tasty drink is something you look forward to — so you'll actually use it. And because it's a liquid, there's nothing to choke down or mix up. Crack, sip, done.</p><p><strong>Our rule: enough to work, not enough to overload</strong></p><p>More isn't better — it's just more. We dose our ingredients so they absorb well and build up in your system over time, without the \"too much\" feeling. That's why you get clean energy, not a chemical buzz.</p>",
+            "media_type": "image",
+            "image": "shopify://shop_images/4a63829b-7dbf-4120-ac39-52df4faf515e-2026-07-18.png",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "info_block_Mra9qW": {
+          "type": "info_block",
+          "settings": {
+            "title": "So what actually makes BRAiNLUBE different?",
+            "text": "<p>Here's the honest breakdown:</p><ul><li><strong>A regular energy drink</strong> gives you a big hit of synthetic caffeine and sugar. You spike, then you crash — and it does nothing for focus.</li><li><strong>Coffee</strong> gives you caffeine and not much else. Great, until the jitters and the afternoon slump show up.</li><li><strong>Focus pills and powders</strong> might have the good ingredients, but they're a chore, they taste like nothing, and you stop using them.</li><li><strong>BRAiNLUBE</strong> brings the focus ingredients, the calm ingredients, and just-enough clean caffeine together — in a drink you'll actually reach for. Energy that shows up, focus that sticks, and no crash waiting on the other side.</li></ul>",
+            "media_type": "image",
+            "image": "shopify://shop_images/ed5dcad2-1517-4abd-a5b7-4c9614419ec8-2026-07-18.jpg",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        }
+      },
+      "block_order": [
+        "info_block_xAxwyD",
+        "info_block_gneeJw",
+        "info_block_KfeYGt",
+        "info_block_Mra9qW"
+      ],
+      "name": "t:sections.on-demand-info.name",
+      "settings": {
+        "color_scheme": "",
+        "show_link_icon": true,
+        "title_style": "btn btn--secondary btn--full",
+        "items_per_row_desktop": 2,
+        "enable_full_width": false,
+        "sm_text_align": "center",
+        "sm_size_multiplier": "sm-size--default",
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "items_per_row_tablet": 4,
+        "text_align": "center",
+        "size_multiplier": "size--default",
+        "items_per_row_mobile": 2,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "featured_article_about": {
+      "type": "featured-article",
+      "blocks": {
+        "image_about_article": {
+          "type": "image",
+          "settings": {
+            "media_aspect_ratio": "natural"
+          }
+        },
+        "article_title_about": {
+          "type": "article_title",
+          "settings": {
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "details_about": {
+          "type": "details",
+          "settings": {
+            "show_author": true,
+            "show_date": true,
+            "sm_margin_top": 20,
+            "margin_top": 20
+          }
+        },
+        "article_body_about": {
+          "type": "article_body",
+          "settings": {
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 20,
+            "size_multiplier": "size--default",
+            "margin_top": 20
+          }
+        },
+        "button_about_article": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read the full story",
+            "button_style": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_about_article",
+        "article_title_about",
+        "details_about",
+        "article_body_about",
+        "button_about_article"
+      ],
+      "settings": {
+        "article": "brainwaves/the-brainlube-story",
+        "color_scheme": "default",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 96,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "divider_about_2": {
+      "type": "divider",
+      "blocks": {
+        "standard_about_2": {
+          "type": "standard",
+          "settings": {
+            "divider_graphics": "waves",
+            "top_part_color": "#ffffff",
+            "middle_part_color": "linear-gradient(284deg, rgba(199, 232, 229, 1), rgba(199, 232, 229, 1) 95.324%)",
+            "bottom_part_color": "#006eb9",
+            "position": "top-previous",
+            "flip_horizontal": false,
+            "flip_vertical": false,
+            "sm_graphics_height": 100,
+            "sm_graphics_width": 100,
+            "graphics_height": 0,
+            "graphics_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "standard_about_2"
+      ],
+      "disabled": true,
+      "settings": {
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_about_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "subtitle_about_cta": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "READY TO TRY IT?",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "buttons_about_cta": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP BRAINLUBE",
+            "button_link_1": "shopify://collections/all",
+            "button_style_1": "",
+            "button_label_2": "READ BRAiNWAVES",
+            "button_link_2": "shopify://blogs/brainwaves",
+            "button_style_2": "btn--secondary",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_about_cta",
+        "buttons_about_cta"
+      ],
+      "custom_css": [
+        "button {font-weight: bold;}"
+      ],
+      "settings": {
+        "color_scheme": "overlay-scheme",
+        "text_gradient_color": "",
+        "content_width": 75,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 80,
+        "md_padding_bottom": 80,
+        "mobile_alignment": "text-align-center",
+        "padding_top": 48,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_about",
+    "divider_about_1",
+    "sliding_text_7jmM3c",
+    "testimonials_pillars",
+    "image_with_text_FDwqxV",
+    "banner_grid_EYpd88",
+    "on_demand_info_mrDTy9",
+    "featured_article_about",
+    "divider_about_2",
+    "rich_text_about_cta"
+  ]
+}

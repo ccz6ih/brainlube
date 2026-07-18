@@ -72,7 +72,7 @@
         "color_scheme": "",
         "enable_full_width": false,
         "media_position": "media_last",
-        "content_width": "col-sm-max-4",
+        "content_width": "col-sm-max-5",
         "desktop_alignment": "sm-text-align-left",
         "sm_full_width_buttons": false,
         "md_padding_top": 32,
@@ -109,37 +109,37 @@
       "settings": {
         "md_padding_top": 0,
         "md_padding_bottom": 0,
-        "padding_top": 0,
+        "padding_top": 40,
         "padding_bottom": 0
       }
     },
     "the-rich-text": {
       "type": "rich-text",
       "blocks": {
-        "the-rich-text-text-1": {
-          "type": "text",
+        "subtitle_chNEnL": {
+          "type": "subtitle",
           "settings": {
-            "text": "<p>Small-batch. Clean ingredients. Ships in 24h.</p>",
-            "read_more": false,
-            "sm_size_multiplier": "sm-size--small",
+            "subtitle": "Small-batch. Clean ingredients. Ships in 24h.",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
             "sm_margin_top": 0,
-            "size_multiplier": "size--small",
+            "size_multiplier": "size--default",
             "margin_top": 0
           }
         },
         "buttons_qdhAF3": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop BRAiNLUBE — $30",
-            "button_link_1": "shopify://collections/all",
+            "button_label_1": "Shop BRAiNLUBE",
+            "button_link_1": "shopify://products/nootropics-energy-drink-mango",
             "button_style_1": "",
             "button_label_2": "See what’s inside →",
             "button_link_2": "shopify://products/nootropics-energy-drink-mango",
-            "button_style_2": "btn--secondary",
+            "button_style_2": "link",
             "button_label_3": "",
             "button_link_3": "",
             "button_style_3": "",
-            "sm_full_width_buttons": false,
+            "sm_full_width_buttons": true,
             "sm_size_multiplier": "sm-size--default",
             "sm_margin_top": 24,
             "full_width_buttons": false,
@@ -149,8 +149,8 @@
         }
       },
       "block_order": [
-        "buttons_qdhAF3",
-        "the-rich-text-text-1"
+        "subtitle_chNEnL",
+        "buttons_qdhAF3"
       ],
       "custom_css": [
         "button {font-weight: bold;}"
@@ -158,14 +158,26 @@
       "settings": {
         "color_scheme": "alternative-1",
         "text_gradient_color": "",
-        "content_width": 75,
+        "content_width": 100,
         "desktop_content_alignment": "center",
         "desktop_alignment": "sm-text-align-center",
-        "md_padding_top": 80,
-        "md_padding_bottom": 80,
+        "md_padding_top": 48,
+        "md_padding_bottom": 0,
         "mobile_alignment": "text-align-center",
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 80
+      }
+    },
+    "trust_bar_custom_liquid": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "alternative-1",
+        "custom_liquid": "<div class=\"grid grid-cols-2 md-grid-cols-4\" style=\"gap:32px;text-align:center;\">\n    <div><div style=\"font-size:32px;\">🌿</div><p style=\"margin-top:8px;\"><strong>Real adaptogens</strong><br>not synthetic stimulants</p></div>\n    <div><div style=\"font-size:32px;\">⚡</div><p style=\"margin-top:8px;\"><strong>130mg clean caffeine</strong><br>balanced with L-theanine</p></div>\n    <div><div style=\"font-size:32px;\">🧠</div><p style=\"margin-top:8px;\"><strong>Nootropics for focus</strong><br>memory, clarity, calm</p></div>\n    <div><div style=\"font-size:32px;\">🚫</div><p style=\"margin-top:8px;\"><strong>No artificial colors</strong><br>real fruit juice base</p></div>\n  </div>",
+        "enable_full_width": true,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "sliding_text": {
@@ -259,6 +271,7 @@
           "settings": {
             "media_type": "image",
             "image": "shopify://shop_images/brainlube-website-imagery-single-can.png",
+            "video": "shopify://files/videos/Create_an_amazing_slow_motion.mp4",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "md_padding_top": 32,
@@ -274,9 +287,9 @@
             "title_position": "left",
             "vertical_position": 30,
             "horizontal_position": 39,
-            "text": "<p>ASHWAGANDHA-<br/>adaptogen root herb with benefits for mental energy, stress resistance and mood; may also help with healthy brain aging</p>",
+            "text": "<p><strong>Ashwagandha</strong> — <em>The calm inside your focus.<br/></em>An ancient adaptogen root built for modern stress. Ashwagandha helps your body stay calm under pressure, so your focus doesn't get hijacked by a racing mind. It's a big reason BRAiNLUBE's energy feels steady instead of frantic. Clarity and calm, working the same shift.</p>",
             "media_type": "image",
-            "image": "shopify://shop_images/ginkgo-leaves-glowing-in-the-nighttime-darkness-2026-03-09-03-23-45-utc.jpg",
+            "image": "shopify://shop_images/ashwagandha.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
@@ -290,9 +303,9 @@
             "title_position": "left",
             "vertical_position": 50,
             "horizontal_position": 39,
-            "text": "<p>best nootropic herb for students, shown to improve retention of knowledge and strengthen stress resistance</p>",
+            "text": "<p><strong>Bacopa Monnieri</strong> — <em>The remembering herb.</em></p><p><br/>The student's herb. Bacopa has both a long traditional track record and modern research behind it for supporting memory and helping your brain hold on to what it learns. It also leans calming, taking the edge off stress while it works. Better retention, less overwhelm — that's why it's in every can.<br/></p>",
             "media_type": "image",
-            "image": "shopify://shop_images/white-flower-with-roots-on-a-black-background-2026-03-09-09-20-17-utc.jpg",
+            "image": "shopify://shop_images/bacopamonnieri.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
@@ -306,9 +319,9 @@
             "title_position": "left",
             "vertical_position": 70,
             "horizontal_position": 39,
-            "text": "<p>a stimulant that boosts alertness and almost always is accompanied by a subsequent crash</p>",
+            "text": "<p><strong>Caffeine</strong> — <em>The lift, without the letdown.</em></p><p>The one you already know — done right. BRAiNLUBE uses a moderate 130mg (about a strong coffee) for real alertness without the overload. The trick is pairing it with L-theanine, which smooths the ride into calm, focused energy instead of jitters. You get the lift, not the letdown<br/></p>",
             "media_type": "image",
-            "image": "shopify://shop_images/coffee-beans-and-ground-coffee-in-white-dish-2026-03-10-22-42-18-utc.jpg",
+            "image": "shopify://shop_images/Caffeine.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
@@ -322,9 +335,9 @@
             "title_position": "right",
             "vertical_position": 30,
             "horizontal_position": 60,
-            "text": "<p>a nootropic that enhances brain circulation, strong reputation for helping with memory and age related cognitive performance</p>",
+            "text": "<p><strong>Ginkgo Biloba</strong> — <em>Ancient tree, modern clarity.<br/></em><br/>One of the oldest tree species on earth — and one of the most-studied brain botanicals. Ginkgo is prized for supporting healthy blood flow to the brain, which ties to sharper memory and steadier mental performance. In BRAiNLUBE, it's here to keep you quick on your feet, word after word, hour after hour.</p>",
             "media_type": "image",
-            "image": "shopify://shop_images/person-holding-green-ginkgo-leaf-outdoors-in-dayli-2026-01-07-00-46-20-utc.jpg",
+            "image": "shopify://shop_images/Caffeine_1.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
@@ -338,9 +351,9 @@
             "title_position": "right",
             "vertical_position": 50,
             "horizontal_position": 60,
-            "text": "<p>adaptogen that supports brain chemicals while countering stress; energizes mental and physical performance</p>",
+            "text": "<p><strong>Ginseng</strong> — <em>Get-up-and-go, minus the jitters.</em><br/>A legendary adaptogen that wakes up mind and body at once. Ginseng helps support the brain chemistry behind focus and drive while helping you push back on fatigue and stress. It's the classic get-up-and-go root — without the jittery edge. In BRAiNLUBE, it keeps your mental engine running clean.</p>",
             "media_type": "image",
-            "image": "shopify://shop_images/young-hop-sprout-with-green-leaves-and-root-isola-2026-03-10-00-00-25-utc.jpg",
+            "image": "shopify://shop_images/Ginseng.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
@@ -354,9 +367,9 @@
             "title_position": "right",
             "vertical_position": 70,
             "horizontal_position": 60,
-            "text": "<p>a berry that is one of the best natural sources of caffeine, traditionally used to boost mind energy and physical endurance</p>",
+            "text": "<p><strong>Guarana</strong> — <em>Slow-burn energy from the Amazon.<br/></em><br/>An Amazonian berry and one of nature's richest sources of caffeine. Guarana tends to release its energy more slowly than coffee, for a smoother, longer-lasting lift. Traditionally used to boost mental energy and stamina, it's how BRAiNLUBE keeps you going without a hard drop-off. Clean fuel, steady burn.</p>",
             "media_type": "image",
-            "image": "shopify://shop_images/orange-autumn-persimmons-on-rusty-green-stone-bac-2026-01-07-07-24-59-utc.jpg",
+            "image": "shopify://shop_images/Guarana.jpg",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
@@ -403,13 +416,13 @@
         "section_header_WWTWhx": {
           "type": "section_header",
           "settings": {
-            "subtitle": "",
+            "subtitle": "After lots of research (and a ton of bad-tasting supplement powders), BRAiNLUBE™ was formulated with:",
             "subtitle_tag": "h3",
             "title": "",
             "title_tag": "h6",
-            "text": "<p>After lots of research (and a ton of bad-tasting supplement powders), BRAiNLUBE™ was formulated with:</p>",
+            "text": "",
             "text_alignment": "text-align-center",
-            "sm_size_multiplier": "sm-size--small",
+            "sm_size_multiplier": "sm-size--default",
             "size_multiplier": "size--default"
           }
         },
@@ -468,6 +481,18 @@
         "padding_bottom": 0
       }
     },
+    "the_difference_custom_liquid": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "default",
+        "custom_liquid": "<h2 class=\"text-align-center\">Coffee wakes you up. BRAiNLUBE wakes up your brain.</h2><div style=\"overflow-x:auto;\"><table style=\"width:100%;border-collapse:collapse;min-width:480px;margin-top:24px;\">\n    <thead><tr><th style=\"text-align:left;padding:8px;border-bottom:2px solid #ddd;\"> </th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">BRAiNLUBE</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Typical Energy Drink</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Coffee</th></tr></thead>\n    <tbody>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Clean lift, no crash</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">Depends</td></tr>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Nootropics for focus &amp; memory</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Adaptogens for calm &amp; stress</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Real fruit juice, no artificial colors</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td></tr>\n    <tr><td style=\"padding:8px;\">Moderate, balanced caffeine (130mg)</td><td style=\"text-align:center;padding:8px;\">✓</td><td style=\"text-align:center;padding:8px;\">Often too much</td><td style=\"text-align:center;padding:8px;\">Varies</td></tr>\n    </tbody></table></div>",
+        "enable_full_width": true,
+        "md_padding_top": 64,
+        "md_padding_bottom": 64,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
     "rich_text_NrEMGP": {
       "type": "rich-text",
       "blocks": {
@@ -509,6 +534,69 @@
         "mobile_alignment": "text-align-center",
         "padding_top": 0,
         "padding_bottom": 80
+      }
+    },
+    "hero_QdBTVP": {
+      "type": "hero",
+      "blocks": {
+        "image_dbk7TT": {
+          "type": "image",
+          "settings": {
+            "media_type": "video",
+            "cdn_video": "shopify://files/videos/Create_an_amazing_slow_motion.mp4",
+            "external_video_url_aspect_ratio": "16:9",
+            "external_video_url_mobile_aspect_ratio": "9:16",
+            "external_video_hide_branding": false
+          }
+        },
+        "title_nnxHnX": {
+          "type": "title",
+          "settings": {
+            "title": "",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--huge",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_bnyY6A": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 12,
+            "size_multiplier": "size--default",
+            "margin_top": 8
+          }
+        }
+      },
+      "block_order": [
+        "image_dbk7TT",
+        "title_nnxHnX",
+        "text_bnyY6A"
+      ],
+      "name": "t:sections.hero.name",
+      "settings": {
+        "color_scheme": "",
+        "overlay_opacity": 0,
+        "media_link": "",
+        "enable_full_width": true,
+        "section_height_desktop": "by_pixels",
+        "section_pixel_height_desktop": 610,
+        "section_fixed_ratio_desktop": "16 / 9",
+        "content_width": "",
+        "content_align_desktop": "sm-vertical-top sm-horizontal-left",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "section_height": "by_pixels",
+        "section_pixel_height": 400,
+        "section_fixed_ratio": "3 / 4",
+        "content_align_mobile": "contained",
+        "mobile_alignment": "text-align-right",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "featured_blog_fNqWeq": {
@@ -664,6 +752,18 @@
         "padding_bottom": 48
       }
     },
+    "guarantee_custom_liquid": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "overlay-scheme",
+        "custom_liquid": "<h2 class=\"text-align-center\">Try it. If it’s not for you, we’ll make it right.</h2><p class=\"text-align-center\" style=\"max-width:600px;margin:16px auto 0;\">We’re a small business, and we stand behind every can. Not feeling sharper? Return unopened cans within 30 days for a full refund.</p>",
+        "enable_full_width": false,
+        "md_padding_top": 64,
+        "md_padding_bottom": 56,
+        "padding_top": 48,
+        "padding_bottom": 72
+      }
+    },
     "divider-1": {
       "type": "divider",
       "blocks": {
@@ -679,7 +779,7 @@
             "flip_vertical": false,
             "sm_graphics_height": 100,
             "sm_graphics_width": 100,
-            "graphics_height": 0,
+            "graphics_height": 70,
             "graphics_width": 100
           }
         }
@@ -693,42 +793,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "trust_bar_custom_liquid": {
-      "type": "custom-liquid",
-      "settings": {
-        "color_scheme": "alternative-1",
-        "custom_liquid": "<div class=\"grid grid-cols-2 md-grid-cols-4\" style=\"gap:32px;text-align:center;\">\n    <div><div style=\"font-size:32px;\">🌿</div><p style=\"margin-top:8px;\"><strong>Real adaptogens</strong><br>not synthetic stimulants</p></div>\n    <div><div style=\"font-size:32px;\">⚡</div><p style=\"margin-top:8px;\"><strong>130mg clean caffeine</strong><br>balanced with L-theanine</p></div>\n    <div><div style=\"font-size:32px;\">🧠</div><p style=\"margin-top:8px;\"><strong>Nootropics for focus</strong><br>memory, clarity, calm</p></div>\n    <div><div style=\"font-size:32px;\">🚫</div><p style=\"margin-top:8px;\"><strong>No artificial colors</strong><br>real fruit juice base</p></div>\n  </div>",
-        "enable_full_width": false,
-        "md_padding_top": 40,
-        "md_padding_bottom": 40,
-        "padding_top": 32,
-        "padding_bottom": 32
-      }
-    },
-    "the_difference_custom_liquid": {
-      "type": "custom-liquid",
-      "settings": {
-        "color_scheme": "default",
-        "custom_liquid": "<h2 class=\"text-align-center\">Coffee wakes you up. BRAiNLUBE wakes up your brain.</h2><div style=\"overflow-x:auto;\"><table style=\"width:100%;border-collapse:collapse;min-width:480px;margin-top:24px;\">\n    <thead><tr><th style=\"text-align:left;padding:8px;border-bottom:2px solid #ddd;\"> </th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">BRAiNLUBE</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Typical Energy Drink</th><th style=\"text-align:center;padding:8px;border-bottom:2px solid #ddd;\">Coffee</th></tr></thead>\n    <tbody>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Clean lift, no crash</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">Depends</td></tr>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Nootropics for focus &amp; memory</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Adaptogens for calm &amp; stress</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td></tr>\n    <tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Real fruit juice, no artificial colors</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✗</td><td style=\"text-align:center;padding:8px;border-bottom:1px solid #eee;\">✓</td></tr>\n    <tr><td style=\"padding:8px;\">Moderate, balanced caffeine (130mg)</td><td style=\"text-align:center;padding:8px;\">✓</td><td style=\"text-align:center;padding:8px;\">Often too much</td><td style=\"text-align:center;padding:8px;\">Varies</td></tr>\n    </tbody></table></div>",
-        "enable_full_width": false,
-        "md_padding_top": 64,
-        "md_padding_bottom": 64,
-        "padding_top": 48,
-        "padding_bottom": 48
-      }
-    },
-    "guarantee_custom_liquid": {
-      "type": "custom-liquid",
-      "settings": {
-        "color_scheme": "overlay-scheme",
-        "custom_liquid": "<h2 class=\"text-align-center\">Try it. If it’s not for you, we’ll make it right.</h2><p class=\"text-align-center\" style=\"max-width:600px;margin:16px auto 0;\">We’re a small business, and we stand behind every can. Not feeling sharper? Return unopened cans within 30 days for a full refund.</p>",
-        "enable_full_width": false,
-        "md_padding_top": 64,
-        "md_padding_bottom": 64,
-        "padding_top": 48,
-        "padding_bottom": 48
-      }
     }
   },
   "order": [
@@ -741,6 +805,7 @@
     "testimonials_NR9JeF",
     "the_difference_custom_liquid",
     "rich_text_NrEMGP",
+    "hero_QdBTVP",
     "featured_blog_fNqWeq",
     "rich_text_zRUdAc",
     "rich_text_qpCEjt",
