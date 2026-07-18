@@ -1,0 +1,21 @@
+cart-recommendations {
+  display: grid;
+  grid-template-rows: 0fr; /* Collapsed state */
+  transition: grid-template-rows 1.2s ease-in-out;
+  overflow: hidden;
+}
+cart-recommendations.products-loaded {
+  grid-template-rows: 1fr; /* Expanded state */
+}
+.cart-recommendations-container {
+  min-height: 0;
+}
+.drawer cart-recommendations .card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+cart-recommendations .grid {
+  --gap: 8px;
+}

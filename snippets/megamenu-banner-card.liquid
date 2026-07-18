@@ -1,0 +1,46 @@
+{% comment %}
+  Single megamenu banner card.
+
+  accepts:
+    - image: {Image}
+    - title: {String}
+    - link: {String}
+    - aspect_ratio: {String}
+    - text_position: {String}
+    - title_style: {String}
+    - sizes: {String} optional
+    - shopify_attributes: {String} optional
+{% endcomment %}
+{%- liquid
+  assign card_text_align = 'text-align-center'
+  if text_position contains 'horizontal-left'
+    assign card_text_align = 'text-align-left'
+  elsif text_position contains 'horizontal-right'
+    assign card_text_align = 'text-align-right'
+  endif
+-%}
+<div
+  class="card card--banner megamenu-banner br-img"
+  style="--card-body-padding: 1.2rem;"
+  {{ shopify_attributes }}>
+  {% capture banner_content %}
+    {%- render 'img',
+      src: image,
+      aspect_ratio: aspect_ratio,
+      sizes: sizes,
+      lazyload: true
+    -%}
+    <div class="card-media-overlay flex {{ text_position }} {{ card_text_align }}">
+      <span class="{{ title_style }} size--small{% if title_style contains 'btn' and link == blank %} disabled{% endif %}">{{ title | replace: '[br]', '<br>' }}</span>
+    </div>
+  {% endcapture %}
+  {%- if link != blank -%}
+    <a class="card-media" href="{{ link }}">
+      {{ banner_content }}
+    </a>
+  {%- else -%}
+    <div class="card-media">
+      {{ banner_content }}
+    </div>
+  {%- endif -%}
+</div>
