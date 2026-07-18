@@ -15,8 +15,17 @@
         "2cb069aa-470f-47b0-97d9-b6a2c86aa996": {
           "type": "badges",
           "settings": {
-            "badges_position": "over-media",
+            "badges_position": "text-column",
             "margin_top": 0
+          }
+        },
+        "text_TCW8BA": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>OG MANGO</h2>",
+            "read_more": false,
+            "style_boxed": false,
+            "margin_top": 8
           }
         },
         "rating_Ccm9zT": {
@@ -28,6 +37,7 @@
         },
         "the-title": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "margin_top": 8
           }
@@ -101,7 +111,7 @@
             "subscription_policy_url": "",
             "color_text_body": "#000000",
             "dividers_color": "#000000",
-            "background_color": "#FAA638",
+            "background_color": "#faa638",
             "border_thickness": 1,
             "border_radius": 0,
             "product": "{{product}}"
@@ -225,6 +235,7 @@
       },
       "block_order": [
         "2cb069aa-470f-47b0-97d9-b6a2c86aa996",
+        "text_TCW8BA",
         "rating_Ccm9zT",
         "the-title",
         "557a3a73-80c5-47b2-abb8-a78027516c90",
