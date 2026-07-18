@@ -116,7 +116,7 @@
           "type": "attribute_insights",
           "settings": {
             "title": "Caffeine Level",
-            "value": "40",
+            "value": "62",
             "display_type": "fill",
             "border_radius": 12,
             "show_helper_splitters": true,
@@ -127,7 +127,7 @@
             "below_threshold_value": 34,
             "above_threshold_value": 66,
             "below_threshold_message": "",
-            "between_threshold_message": "Just enough to sharpen focus, without the jitters.",
+            "between_threshold_message": "Paired with L-theanine — a well-documented combo for alert focus without the jitters.",
             "above_threshold_message": "",
             "margin_top": 24
           }
@@ -146,7 +146,7 @@
             "show_messages": true,
             "below_threshold_value": 34,
             "above_threshold_value": 66,
-            "below_threshold_message": "Adaptogens buffer the caffeine, so energy builds steady and fades slow — no 2pm crash.",
+            "below_threshold_message": "L-theanine and adaptogens buffer the caffeine, so energy builds steady and fades slow — no 2pm crash.",
             "between_threshold_message": "",
             "above_threshold_message": "",
             "margin_top": 12
