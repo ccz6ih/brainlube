@@ -1,1 +1,628 @@
-{"sections":{"image_with_text_f8gn3t":{"type":"image-with-text","blocks":{"image_YXm3xE":{"type":"image","settings":{"media_aspect_ratio":"natural","media_link":"","image":"shopify://shop_images/brainlube-website-imagery-hero-image-of-three-cans-together.png"}},"subtitle_KFGWnq":{"type":"subtitle","settings":{"subtitle":"POWER UP YOUR BRAIN","heading_tag":"h2","sm_size_multiplier":"sm-size--default","sm_margin_top":0,"size_multiplier":"size--default","margin_top":0}},"title_hjUWCF":{"type":"title","settings":{"title":"WITH CLEAN, FOCUSED ENERGY","heading_tag":"h1","sm_size_multiplier":"sm-size--huge","sm_margin_top":0,"size_multiplier":"size--default","margin_top":0}}},"block_order":["image_YXm3xE","subtitle_KFGWnq","title_hjUWCF"],"custom_css":["h1 {font-weight: bold;}"],"name":"t:sections.image-with-text.name","settings":{"color_scheme":"","enable_full_width":false,"media_position":"media_last","content_width":"col-sm-max-4","desktop_alignment":"sm-text-align-left","sm_full_width_buttons":false,"md_padding_top":32,"md_padding_bottom":56,"mobile_alignment":"text-align-left","full_width_buttons":false,"padding_top":0,"padding_bottom":0}},"divider_fLiGBD":{"type":"divider","blocks":{"standard_tpTKrT":{"type":"standard","settings":{"divider_graphics":"waves","top_part_color":"rgba(0,0,0,0)","middle_part_color":"linear-gradient(89deg, rgba(0, 110, 185, 1) 7%, rgba(32, 196, 244, 1) 94%)","bottom_part_color":"#ffffff","position":"in-between","flip_horizontal":false,"flip_vertical":false,"sm_graphics_height":100,"sm_graphics_width":100,"graphics_height":100,"graphics_width":100}}},"block_order":["standard_tpTKrT"],"settings":{"md_padding_top":0,"md_padding_bottom":0,"padding_top":0,"padding_bottom":0}},"the-rich-text":{"type":"rich-text","blocks":{"the-rich-text-text-1":{"type":"text","settings":{"text":"<p>Most energy drinks spike you, then dump you an hour later. BRAiNLUBE™ was built to do the opposite: real roots, leaves, berries, and adaptogens — not a chemical stack — dosed to support memory, clarity, and calm, while giving your brain just enough caffeine to stay sharp for hours, not minutes.</p><p>Made by a small business that read too many ingredient labels and decided to write a better one. Just smart stuff inside.</p>","sm_size_multiplier":"sm-size--small","sm_margin_top":0,"size_multiplier":"size--small","margin_top":0}},"buttons_qdhAF3":{"type":"buttons","settings":{"button_label_1":"SHOP BRAINLUBE","button_link_1":"shopify://collections/all","button_style_1":"","button_label_2":"","button_link_2":"","button_style_2":"","button_label_3":"","button_link_3":"","button_style_3":"","sm_full_width_buttons":false,"sm_size_multiplier":"sm-size--default","sm_margin_top":24,"full_width_buttons":false,"size_multiplier":"size--default","margin_top":24}}},"block_order":["the-rich-text-text-1","buttons_qdhAF3"],"custom_css":["button {font-weight: bold;}"],"settings":{"color_scheme":"alternative-1","text_gradient_color":"","content_width":75,"desktop_content_alignment":"center","desktop_alignment":"sm-text-align-center","md_padding_top":80,"md_padding_bottom":80,"mobile_alignment":"text-align-center","padding_top":40,"padding_bottom":80}},"sliding_text":{"type":"sliding-text","blocks":{"item-03":{"type":"text","settings":{"text":"Brain Boosting Ingredients","link":""}},"item-01":{"type":"text","settings":{"text":"Backed By Nature","link":""}}},"block_order":["item-03","item-01"],"custom_css":["h2 {font-weight: bold;}"],"settings":{"color_scheme":"scheme-aee9bb5b-e48f-4813-8f25-ad9a89e25c5e","text_gradient_color":"linear-gradient(325deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)","content_order":"horizontal","font":"heading","direction":"normal","speed":10,"pause_on_hover":false,"sm_size_multiplier":"sm-size--tiny","sm_item_gap":104,"sm_padding":44,"md_padding_top":0,"md_padding_bottom":0,"size_multiplier":"size--tiny","item_gap":24,"padding":24,"padding_top":32,"padding_bottom":32}},"image_with_hotspots_aeUqWc":{"type":"image-with-hotspots","blocks":{"title_FBxJLb":{"type":"title","settings":{"title":"WHAT'S INSIDE","heading_tag":"h2","sm_size_multiplier":"sm-size--large","sm_margin_top":0,"size_multiplier":"size--default","margin_top":0}},"subtitle_X97e9Y":{"type":"subtitle","settings":{"subtitle":"","heading_tag":"h1","sm_size_multiplier":"sm-size--small","sm_margin_top":0,"size_multiplier":"size--default","margin_top":0}},"text_b7KTBk":{"type":"text","settings":{"text":"<p>Everything in BRAiNLUBE™ comes from<br/>nature—roots, berries, leaves, and twigs. No synthetic additives. No chemicals.</p>","sm_size_multiplier":"sm-size--small","sm_margin_top":8,"size_multiplier":"size--default","margin_top":0}},"image_ipK7Fh":{"type":"image","settings":{"image":"shopify://shop_images/brainlube-website-imagery-single-can.png","md_padding_top":32,"md_padding_bottom":32,"padding_top":0,"padding_bottom":0}},"hotspot_bizaaU":{"type":"hotspot","settings":{"title":"Ashwagandha","title_position":"left","vertical_position":30,"horizontal_position":39,"text":"<p>adaptogen root herb with benefits for mental energy, stress resistance and mood; may also help with healthy brain aging</p>","image":"shopify://shop_images/AdobeStock_816943394_Preview.jpg"}},"hotspot_tDXatt":{"type":"hotspot","settings":{"title":"Bacopa Monnieri","title_position":"left","vertical_position":50,"horizontal_position":39,"text":"<p>best nootropic herb for students, shown to improve retention of knowledge and strengthen stress resistance</p>"}},"hotspot_p8AGqq":{"type":"hotspot","settings":{"title":"Caffeine","title_position":"left","vertical_position":70,"horizontal_position":39,"text":"<p>a stimulant that boosts alertness and almost always is accompanied by a subsequent crash</p>"}},"hotspot_GxxGaW":{"type":"hotspot","settings":{"title":"Ginkgo Biloba","title_position":"right","vertical_position":30,"horizontal_position":60,"text":"<p>a nootropic that enhances brain circulation, strong reputation for helping with memory and age related cognitive performance</p>"}},"hotspot_qj8rWb":{"type":"hotspot","settings":{"title":"Ginseng","title_position":"right","vertical_position":50,"horizontal_position":60,"text":"<p>adaptogen that supports brain chemicals while countering stress; energizes mental and physical performance</p>"}},"hotspot_pj6J3a":{"type":"hotspot","settings":{"title":"Guarana","title_position":"right","vertical_position":70,"horizontal_position":60,"text":"<p>a berry that is one of the best natural sources of caffeine, traditionally used to boost mind energy and physical endurance</p>"}}},"block_order":["title_FBxJLb","subtitle_X97e9Y","text_b7KTBk","image_ipK7Fh","hotspot_bizaaU","hotspot_tDXatt","hotspot_p8AGqq","hotspot_GxxGaW","hotspot_qj8rWb","hotspot_pj6J3a"],"custom_css":["h2 {font-weight: bold;}"],"settings":{"color_scheme":"alternative-1","section_bg":"linear-gradient(0deg, rgba(255, 255, 255, 1) 15%, rgba(199, 232, 229, 1) 50%)","numbered_hotspots":false,"enable_full_width":false,"media_position":"media_last","content_width":"col-sm-max-5","desktop_alignment":"sm-text-align-left","sm_full_width_buttons":false,"md_padding_top":48,"md_padding_bottom":40,"mobile_alignment":"text-align-center","full_width_buttons":false,"sm_down_hide_hotspot_titles":false,"padding_top":0,"padding_bottom":48}},"testimonials_NR9JeF":{"type":"testimonials","blocks":{"section_header_WWTWhx":{"type":"section_header","settings":{"subtitle":"","subtitle_tag":"h3","title":"","title_tag":"h6","text":"<p>After lots of research (and a ton of bad-tasting supplement powders), BRAiNLUBE™ was formulated with:</p>","text_alignment":"text-align-center","sm_size_multiplier":"sm-size--small","size_multiplier":"size--default"}},"testimonial_KW93VW":{"type":"testimonial","settings":{"stars":5,"title":"Carefully Chosen Ingredients","testimonial":"<p>that cross the blood-brain<br/>barrier and actually work</p>","author":""}},"testimonial_rP6NRb":{"type":"testimonial","settings":{"stars":5,"title":"Precise Ingredient Amounts","testimonial":"<p>so active ingredients absorb efficiently and build in your system over time—without overload</p>","author":""}},"testimonial_kaiMpG":{"type":"testimonial","settings":{"stars":5,"title":"Naturally Balanced Flavors","testimonial":"<p>(like mango + citrus) for better<br/>taste and absorption</p>","author":""}}},"block_order":["section_header_WWTWhx","testimonial_KW93VW","testimonial_rP6NRb","testimonial_kaiMpG"],"custom_css":["h3 {font-size: 30px; font-weight: bold;}","p {font-size: 16px;}","span {}"],"name":"t:sections.testimonials.name","settings":{"color_scheme":"default","autoplay":false,"autoplay_speed":8,"alignment":"center","icon":"stars","enable_full_width":true,"items_per_row_desktop":3,"md_padding_top":80,"md_padding_bottom":0,"items_per_row_tablet":2,"padding_top":80,"padding_bottom":0}},"rich_text_NrEMGP":{"type":"rich-text","blocks":{"buttons_DBnPet":{"type":"buttons","settings":{"button_label_1":"SHOP BRAINLUBE","button_link_1":"shopify://collections/all","button_style_1":"","button_label_2":"","button_link_2":"","button_style_2":"","button_label_3":"","button_link_3":"","button_style_3":"","sm_full_width_buttons":false,"sm_size_multiplier":"sm-size--default","sm_margin_top":24,"full_width_buttons":false,"size_multiplier":"size--default","margin_top":24}}},"block_order":["buttons_DBnPet"],"custom_css":["button {font-weight: bold;}"],"settings":{"color_scheme":"default","text_gradient_color":"","content_width":75,"desktop_content_alignment":"center","desktop_alignment":"sm-text-align-center","md_padding_top":0,"md_padding_bottom":80,"mobile_alignment":"text-align-center","padding_top":0,"padding_bottom":80}},"featured_blog_fNqWeq":{"type":"featured-blog","blocks":{"section_header_mAbWdd":{"type":"section_header","settings":{"subtitle":"","subtitle_tag":"h1","title":"BRAiNWAVES","title_tag":"h1","text":"<p></p><p>Our BRAiNWAVES blog is your go-to source for science-backed insights, research, and everyday tips on supporting brain health, focus, and mental clarity.</p><p></p>","text_alignment":"text-align-center","sm_size_multiplier":"sm-size--small","size_multiplier":"size--default"}}},"block_order":["section_header_mAbWdd"],"custom_css":["h1 {font-size: 48px; font-weight: bold;}","h2 {font-size: 18px; font-weight: bold; font-family: rubik;}"],"name":"t:sections.featured-blog.name","settings":{"color_scheme":"alternative-1","blog":"brainwaves","article_limit":3,"view_all":true,"enable_full_width":false,"layout_desktop":"slide","articles_per_row_desktop":3,"md_padding_top":80,"md_padding_bottom":0,"articles_per_row_tablet":3,"layout_mobile":"slide","articles_per_row_mobile":1,"padding_top":64,"padding_bottom":0,"autoplay":false,"autoplay_speed":5,"sliding_behavior":"all"}},"rich_text_zRUdAc":{"type":"rich-text","blocks":{"buttons_fzNcQa":{"type":"buttons","settings":{"button_label_1":"Read BRAiNWAVES","button_link_1":"shopify://blogs/brainwaves","button_style_1":"","button_label_2":"","button_link_2":"","button_style_2":"","button_label_3":"","button_link_3":"","button_style_3":"","sm_full_width_buttons":false,"sm_size_multiplier":"sm-size--default","sm_margin_top":24,"full_width_buttons":false,"size_multiplier":"size--default","margin_top":24}}},"block_order":["buttons_fzNcQa"],"name":"t:sections.rich-text.name","settings":{"color_scheme":"alternative-1","text_gradient_color":"","content_width":100,"desktop_content_alignment":"center","desktop_alignment":"sm-text-align-center","md_padding_top":40,"md_padding_bottom":80,"mobile_alignment":"text-align-center","padding_top":0,"padding_bottom":48}},"rich_text_qpCEjt":{"type":"rich-text","blocks":{"subtitle_EKQFVy":{"type":"subtitle","settings":{"subtitle":"FROM BURNOUT TO BRAIN BOOST","heading_tag":"h2","sm_size_multiplier":"sm-size--default","sm_margin_top":0,"size_multiplier":"size--default","margin_top":0}},"text_JJt3E9":{"type":"text","settings":{"text":"<p>After noticing sharper focus and smoother thinking while drinking an early commercial energy drink built on natural adaptogens, founder Steve Land watched that formula disappear from shelves — and decided to build something even better himself.</p><p>Read the full BRAiNLUBE story on our <a href=\"/pages/about\" title=\"About\"><strong>About Page</strong></a>.</p>","sm_size_multiplier":"sm-size--small","sm_margin_top":0,"size_multiplier":"size--small","margin_top":0}}},"block_order":["subtitle_EKQFVy","text_JJt3E9"],"custom_css":["h2 {font-weight: bold; font-size: 36px;}"],"settings":{"color_scheme":"alternative-1","text_gradient_color":"","content_width":75,"desktop_content_alignment":"center","desktop_alignment":"sm-text-align-center","md_padding_top":80,"md_padding_bottom":80,"mobile_alignment":"text-align-center","padding_top":48,"padding_bottom":48}},"divider-1":{"type":"divider","blocks":{"divider-1--block-1":{"type":"standard","settings":{"divider_graphics":"waves","top_part_color":"#ffffff","middle_part_color":"linear-gradient(89deg, rgba(199, 232, 229, 1) 7%, rgba(199, 232, 229, 1) 100%)","bottom_part_color":"#006eb9","position":"in-between","flip_horizontal":false,"flip_vertical":false,"sm_graphics_height":100,"sm_graphics_width":100,"graphics_height":0,"graphics_width":100}}},"block_order":["divider-1--block-1"],"settings":{"md_padding_top":0,"md_padding_bottom":0,"padding_top":0,"padding_bottom":0}}},"order":["image_with_text_f8gn3t","divider_fLiGBD","the-rich-text","sliding_text","image_with_hotspots_aeUqWc","testimonials_NR9JeF","rich_text_NrEMGP","featured_blog_fNqWeq","rich_text_zRUdAc","rich_text_qpCEjt","divider-1"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_f8gn3t": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_YXm3xE": {
+          "type": "image",
+          "settings": {
+            "media_aspect_ratio": "natural",
+            "media_link": "",
+            "image": "shopify://shop_images/brainlube-website-imagery-hero-image-of-three-cans-together.png"
+          }
+        },
+        "subtitle_KFGWnq": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "POWER UP YOUR BRAIN",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "title_hjUWCF": {
+          "type": "title",
+          "settings": {
+            "title": "WITH CLEAN, FOCUSED ENERGY",
+            "heading_tag": "h1",
+            "sm_size_multiplier": "sm-size--huge",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_YXm3xE",
+        "subtitle_KFGWnq",
+        "title_hjUWCF"
+      ],
+      "custom_css": [
+        "h1 {font-weight: bold;}"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-4",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 32,
+        "md_padding_bottom": 56,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "divider_fLiGBD": {
+      "type": "divider",
+      "blocks": {
+        "standard_tpTKrT": {
+          "type": "standard",
+          "settings": {
+            "divider_graphics": "waves",
+            "top_part_color": "rgba(0,0,0,0)",
+            "middle_part_color": "linear-gradient(89deg, rgba(0, 110, 185, 1) 7%, rgba(32, 196, 244, 1) 94%)",
+            "bottom_part_color": "#ffffff",
+            "position": "in-between",
+            "flip_horizontal": false,
+            "flip_vertical": false,
+            "sm_graphics_height": 100,
+            "sm_graphics_width": 100,
+            "graphics_height": 100,
+            "graphics_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "standard_tpTKrT"
+      ],
+      "settings": {
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "the-rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "the-rich-text-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Most energy drinks spike you, then dump you an hour later. BRAiNLUBE™ was built to do the opposite: real roots, leaves, berries, and adaptogens — not a chemical stack — dosed to support memory, clarity, and calm, while giving your brain just enough caffeine to stay sharp for hours, not minutes.</p><p>Made by a small business that read too many ingredient labels and decided to write a better one. Just smart stuff inside.</p>",
+            "sm_size_multiplier": "sm-size--small",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--small",
+            "margin_top": 0
+          }
+        },
+        "buttons_qdhAF3": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP BRAINLUBE",
+            "button_link_1": "shopify://collections/all",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "the-rich-text-text-1",
+        "buttons_qdhAF3"
+      ],
+      "custom_css": [
+        "button {font-weight: bold;}"
+      ],
+      "settings": {
+        "color_scheme": "alternative-1",
+        "text_gradient_color": "",
+        "content_width": 75,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 80,
+        "md_padding_bottom": 80,
+        "mobile_alignment": "text-align-center",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "sliding_text": {
+      "type": "sliding-text",
+      "blocks": {
+        "item-03": {
+          "type": "text",
+          "settings": {
+            "text": "Brain Boosting Ingredients",
+            "link": ""
+          }
+        },
+        "item-01": {
+          "type": "text",
+          "settings": {
+            "text": "Backed By Nature",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item-03",
+        "item-01"
+      ],
+      "custom_css": [
+        "h2 {font-weight: bold;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-aee9bb5b-e48f-4813-8f25-ad9a89e25c5e",
+        "text_gradient_color": "linear-gradient(325deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
+        "content_order": "horizontal",
+        "font": "heading",
+        "direction": "normal",
+        "speed": 10,
+        "pause_on_hover": false,
+        "sm_size_multiplier": "sm-size--tiny",
+        "sm_item_gap": 104,
+        "sm_padding": 44,
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "size_multiplier": "size--tiny",
+        "item_gap": 24,
+        "padding": 24,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "image_with_hotspots_aeUqWc": {
+      "type": "image-with-hotspots",
+      "blocks": {
+        "title_FBxJLb": {
+          "type": "title",
+          "settings": {
+            "title": "WHAT'S INSIDE",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--large",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "subtitle_X97e9Y": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "",
+            "heading_tag": "h1",
+            "sm_size_multiplier": "sm-size--small",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_b7KTBk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everything in BRAiNLUBE™ comes from<br/>nature—roots, berries, leaves, and twigs. No synthetic additives. No chemicals.</p>",
+            "sm_size_multiplier": "sm-size--small",
+            "sm_margin_top": 8,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "image_ipK7Fh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/brainlube-website-imagery-single-can.png",
+            "md_padding_top": 32,
+            "md_padding_bottom": 32,
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "hotspot_bizaaU": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Ashwagandha",
+            "title_position": "left",
+            "vertical_position": 30,
+            "horizontal_position": 39,
+            "text": "<p>adaptogen root herb with benefits for mental energy, stress resistance and mood; may also help with healthy brain aging</p>",
+            "image": "shopify://shop_images/AdobeStock_816943394_Preview.jpg"
+          }
+        },
+        "hotspot_tDXatt": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Bacopa Monnieri",
+            "title_position": "left",
+            "vertical_position": 50,
+            "horizontal_position": 39,
+            "text": "<p>best nootropic herb for students, shown to improve retention of knowledge and strengthen stress resistance</p>"
+          }
+        },
+        "hotspot_p8AGqq": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Caffeine",
+            "title_position": "left",
+            "vertical_position": 70,
+            "horizontal_position": 39,
+            "text": "<p>a stimulant that boosts alertness and almost always is accompanied by a subsequent crash</p>"
+          }
+        },
+        "hotspot_GxxGaW": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Ginkgo Biloba",
+            "title_position": "right",
+            "vertical_position": 30,
+            "horizontal_position": 60,
+            "text": "<p>a nootropic that enhances brain circulation, strong reputation for helping with memory and age related cognitive performance</p>"
+          }
+        },
+        "hotspot_qj8rWb": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Ginseng",
+            "title_position": "right",
+            "vertical_position": 50,
+            "horizontal_position": 60,
+            "text": "<p>adaptogen that supports brain chemicals while countering stress; energizes mental and physical performance</p>"
+          }
+        },
+        "hotspot_pj6J3a": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Guarana",
+            "title_position": "right",
+            "vertical_position": 70,
+            "horizontal_position": 60,
+            "text": "<p>a berry that is one of the best natural sources of caffeine, traditionally used to boost mind energy and physical endurance</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_FBxJLb",
+        "subtitle_X97e9Y",
+        "text_b7KTBk",
+        "image_ipK7Fh",
+        "hotspot_bizaaU",
+        "hotspot_tDXatt",
+        "hotspot_p8AGqq",
+        "hotspot_GxxGaW",
+        "hotspot_qj8rWb",
+        "hotspot_pj6J3a"
+      ],
+      "custom_css": [
+        "h2 {font-weight: bold;}"
+      ],
+      "settings": {
+        "color_scheme": "alternative-1",
+        "section_bg": "linear-gradient(0deg, rgba(255, 255, 255, 1) 15%, rgba(199, 232, 229, 1) 50%)",
+        "numbered_hotspots": false,
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-5",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 48,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-center",
+        "full_width_buttons": false,
+        "sm_down_hide_hotspot_titles": false,
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "testimonials_NR9JeF": {
+      "type": "testimonials",
+      "blocks": {
+        "section_header_WWTWhx": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "",
+            "title_tag": "h6",
+            "text": "<p>After lots of research (and a ton of bad-tasting supplement powders), BRAiNLUBE™ was formulated with:</p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--small",
+            "size_multiplier": "size--default"
+          }
+        },
+        "testimonial_KW93VW": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "title": "Carefully Chosen Ingredients",
+            "testimonial": "<p>that cross the blood-brain<br/>barrier and actually work</p>",
+            "author": ""
+          }
+        },
+        "testimonial_rP6NRb": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "title": "Precise Ingredient Amounts",
+            "testimonial": "<p>so active ingredients absorb efficiently and build in your system over time—without overload</p>",
+            "author": ""
+          }
+        },
+        "testimonial_kaiMpG": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "title": "Naturally Balanced Flavors",
+            "testimonial": "<p>(like mango + citrus) for better<br/>taste and absorption</p>",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "section_header_WWTWhx",
+        "testimonial_KW93VW",
+        "testimonial_rP6NRb",
+        "testimonial_kaiMpG"
+      ],
+      "custom_css": [
+        "h3 {font-size: 30px; font-weight: bold;}",
+        "p {font-size: 16px;}",
+        "span {}"
+      ],
+      "name": "t:sections.testimonials.name",
+      "settings": {
+        "color_scheme": "default",
+        "autoplay": false,
+        "autoplay_speed": 8,
+        "alignment": "center",
+        "icon": "stars",
+        "enable_full_width": true,
+        "items_per_row_desktop": 3,
+        "md_padding_top": 80,
+        "md_padding_bottom": 0,
+        "items_per_row_tablet": 2,
+        "padding_top": 80,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_NrEMGP": {
+      "type": "rich-text",
+      "blocks": {
+        "buttons_DBnPet": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP BRAINLUBE",
+            "button_link_1": "shopify://collections/all",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "buttons_DBnPet"
+      ],
+      "custom_css": [
+        "button {font-weight: bold;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "text_gradient_color": "",
+        "content_width": 75,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 0,
+        "md_padding_bottom": 80,
+        "mobile_alignment": "text-align-center",
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "featured_blog_fNqWeq": {
+      "type": "featured-blog",
+      "blocks": {
+        "section_header_mAbWdd": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h1",
+            "title": "BRAiNWAVES",
+            "title_tag": "h1",
+            "text": "<p></p><p>Our BRAiNWAVES blog is your go-to source for science-backed insights, research, and everyday tips on supporting brain health, focus, and mental clarity.</p><p></p>",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--small",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_mAbWdd"
+      ],
+      "custom_css": [
+        "h1 {font-size: 48px; font-weight: bold;}",
+        "h2 {font-size: 18px; font-weight: bold; font-family: rubik;}"
+      ],
+      "name": "t:sections.featured-blog.name",
+      "settings": {
+        "color_scheme": "alternative-1",
+        "blog": "brainwaves",
+        "article_limit": 3,
+        "view_all": true,
+        "enable_full_width": false,
+        "layout_desktop": "slide",
+        "articles_per_row_desktop": 3,
+        "md_padding_top": 80,
+        "md_padding_bottom": 0,
+        "articles_per_row_tablet": 3,
+        "layout_mobile": "slide",
+        "articles_per_row_mobile": 1,
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "all"
+      }
+    },
+    "rich_text_zRUdAc": {
+      "type": "rich-text",
+      "blocks": {
+        "buttons_fzNcQa": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Read BRAiNWAVES",
+            "button_link_1": "shopify://blogs/brainwaves",
+            "button_style_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_style_3": "",
+            "sm_full_width_buttons": false,
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 24,
+            "full_width_buttons": false,
+            "size_multiplier": "size--default",
+            "margin_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "buttons_fzNcQa"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "color_scheme": "alternative-1",
+        "text_gradient_color": "",
+        "content_width": 100,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 40,
+        "md_padding_bottom": 80,
+        "mobile_alignment": "text-align-center",
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "rich_text_qpCEjt": {
+      "type": "rich-text",
+      "blocks": {
+        "subtitle_EKQFVy": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "FROM BURNOUT TO BRAIN BOOST",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_JJt3E9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After noticing sharper focus and smoother thinking while drinking an early commercial energy drink built on natural adaptogens, founder Steve Land watched that formula disappear from shelves — and decided to build something even better himself.</p><p>Read the full BRAiNLUBE story on our <a href=\"/pages/about\" title=\"About\"><strong>About Page</strong></a>.</p>",
+            "sm_size_multiplier": "sm-size--small",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--small",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_EKQFVy",
+        "text_JJt3E9"
+      ],
+      "custom_css": [
+        "h2 {font-weight: bold; font-size: 36px;}"
+      ],
+      "settings": {
+        "color_scheme": "alternative-1",
+        "text_gradient_color": "",
+        "content_width": 75,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 80,
+        "md_padding_bottom": 80,
+        "mobile_alignment": "text-align-center",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "divider-1": {
+      "type": "divider",
+      "blocks": {
+        "divider-1--block-1": {
+          "type": "standard",
+          "settings": {
+            "divider_graphics": "waves",
+            "top_part_color": "#ffffff",
+            "middle_part_color": "linear-gradient(89deg, rgba(199, 232, 229, 1) 7%, rgba(199, 232, 229, 1) 100%)",
+            "bottom_part_color": "#006eb9",
+            "position": "in-between",
+            "flip_horizontal": false,
+            "flip_vertical": false,
+            "sm_graphics_height": 100,
+            "sm_graphics_width": 100,
+            "graphics_height": 0,
+            "graphics_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "divider-1--block-1"
+      ],
+      "settings": {
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "image_with_text_f8gn3t",
+    "divider_fLiGBD",
+    "the-rich-text",
+    "sliding_text",
+    "image_with_hotspots_aeUqWc",
+    "testimonials_NR9JeF",
+    "rich_text_NrEMGP",
+    "featured_blog_fNqWeq",
+    "rich_text_zRUdAc",
+    "rich_text_qpCEjt",
+    "divider-1"
+  ]
+}

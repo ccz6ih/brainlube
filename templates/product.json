@@ -1,1 +1,696 @@
-{"sections":{"main":{"type":"main-product","blocks":{"2cb069aa-470f-47b0-97d9-b6a2c86aa996":{"type":"badges","disabled":false,"settings":{"badges_position":"over-media","margin_top":0}},"rating_Ccm9zT":{"type":"rating","disabled":true,"settings":{"margin_top":0}},"the-title":{"type":"title","settings":{"margin_top":12}},"the-description":{"type":"description","settings":{"enable_collapsible":false,"margin_top":24}},"557a3a73-80c5-47b2-abb8-a78027516c90":{"type":"variant_picker","settings":{"picker_type":"button","cross_out_unavailable":false,"margin_top":8}},"the-price":{"type":"price","settings":{"margin_top":8,"font_weight":"normal","sm_size_multiplier":"sm-size--huge","size_multiplier":"size--huge"}},"6fc29670-ecc3-4bbf-bc13-6d7232b75085":{"type":"quantity_selector","disabled":true,"settings":{"next_to_add_to_cart":true,"margin_top":12}},"the-buy-buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":false,"add_multipliers":"","add_multipliers_layout":"single-line","margin_top":28}},"the-inventory-status":{"type":"inventory_status","settings":{"inventory_threshold":12,"show_available_quantity":true,"inventory_transfers_enable":true,"additional__in_stock":"– 24h express shipping","additional__few_on_stock":"","additional__out_of_stock":"","additional__out_of_stock_continue_selling":"","margin_top":20}},"the-pickup-availability":{"type":"pickup_availability","settings":{"margin_top":24}},"the-sticky-buy-bar":{"type":"sticky_buy_bar","settings":{"color_scheme":"","overlay_str":10,"border_radius":16}},"75b14a74-c1c5-4fcc-932f-e2bfa017fba2":{"type":"collapsible_tab","settings":{"title":"Ingredients","content":"<h6><strong>{{ product.metafields.custom.ingredients | metafield_tag }}</strong></h6>","page":"","open_as_drawer":false,"icon":"icon-caret__right","margin_top":0}},"attribute_insights_caffeine":{"type":"attribute_insights","settings":{"title":"Caffeine Level","value":"40","display_type":"fill","border_radius":12,"show_helper_splitters":true,"start_label":"Mild","center_label":"Moderate","end_label":"High","show_messages":true,"below_threshold_value":34,"above_threshold_value":66,"below_threshold_message":"","between_threshold_message":"Just enough to sharpen focus, without the jitters.","above_threshold_message":"","margin_top":24}},"attribute_insights_crash":{"type":"attribute_insights","settings":{"title":"Crash Risk","value":"12","display_type":"segmented","amount_of_segments":5,"border_radius":8,"start_label":"Low","center_label":"Moderate","end_label":"High","show_messages":true,"below_threshold_value":34,"above_threshold_value":66,"below_threshold_message":"Adaptogens buffer the caffeine, so energy builds steady and fades slow — no 2pm crash.","between_threshold_message":"","above_threshold_message":"","margin_top":12}}},"block_order":["2cb069aa-470f-47b0-97d9-b6a2c86aa996","rating_Ccm9zT","the-title","the-description","557a3a73-80c5-47b2-abb8-a78027516c90","the-price","attribute_insights_caffeine","attribute_insights_crash","6fc29670-ecc3-4bbf-bc13-6d7232b75085","the-buy-buttons","the-inventory-status","the-pickup-availability","the-sticky-buy-bar","75b14a74-c1c5-4fcc-932f-e2bfa017fba2"],"custom_css":["h1 {text-transform: uppercase; font-weight: bold;}","span {font-weight: normal;}"],"settings":{"show_breadcrumb":false,"product_image_aspect_ratio":"portrait_alt","media_fill_rule":"contain","color_scheme":"default","section_bg":"","media_col_bg":"","content_col_bg":"","border_radius":0,"product_media_bg":"rgba(0,0,0,0)","media_border_radius":12,"enable_full_width":false,"sm-p":0,"media_layout":"traditional-below-as-grid","media_col_width":"wide","sm_media_zoom":"disabled","sm_media_gap":24,"md_padding_top":64,"md_padding_bottom":80,"enable_slider_peek":false,"show_thumbnails_sm_down":true,"media_zoom":"disabled","media_gap":0,"padding_top":0,"padding_bottom":40}},"divider_Tqdp6r":{"type":"divider","blocks":{"standard_WKrCb9":{"type":"standard","settings":{"divider_graphics":"waves","top_part_color":"rgba(0,0,0,0)","middle_part_color":"linear-gradient(89deg, rgba(0, 110, 185, 1) 7%, rgba(32, 196, 244, 1) 94%)","bottom_part_color":"#ffffff","position":"in-between","flip_horizontal":false,"flip_vertical":false,"sm_graphics_height":0,"sm_graphics_width":100,"graphics_height":0,"graphics_width":100}}},"block_order":["standard_WKrCb9"],"name":"t:sections.divider.name","settings":{"md_padding_top":0,"md_padding_bottom":0,"padding_top":0,"padding_bottom":0}},"rich_text_8F9YN9":{"type":"rich-text","blocks":{"text_UnQP97":{"type":"text","settings":{"text":"<p>BRAiNLUBE™ is more than just an energy drink. It’s a brain-support formula rooted in research. Our ingredients have been shown to help with:</p>","sm_size_multiplier":"sm-size--default","sm_margin_top":0,"size_multiplier":"size--default","margin_top":0}}},"block_order":["text_UnQP97"],"name":"t:sections.rich-text.name","settings":{"color_scheme":"alternative-1","text_gradient_color":"","content_width":100,"desktop_content_alignment":"center","desktop_alignment":"sm-text-align-center","md_padding_top":80,"md_padding_bottom":0,"mobile_alignment":"text-align-center","padding_top":80,"padding_bottom":0}},"banner_grid_GdCgCD":{"type":"banner-grid","blocks":{"image_UmpQb3":{"type":"image","settings":{"color_scheme":"alternative-1","overlay_opacity":0,"image":"shopify://shop_images/brainlube-website-icon-memory-retention_202c110b-3e0d-4000-ba55-e5bd89794d92.png","media_link":"","title":"Memory Retention","title_style":"h3","content_alignment":"vertical-bottom horizontal-center","padding":40}},"image_dqYgaE":{"type":"image","settings":{"color_scheme":"alternative-1","overlay_opacity":0,"image":"shopify://shop_images/brainlube-website-icon-stress-reduction_d7d7eb8f-4938-4206-93b5-aee2fb7e04d4.png","media_link":"","title":"Faster Thinking","title_style":"h3","content_alignment":"vertical-bottom horizontal-center","padding":40}},"image_zBkw8X":{"type":"image","settings":{"color_scheme":"alternative-1","overlay_opacity":0,"image":"shopify://shop_images/brainlube-website-icon-faster-thinking_e61c4818-efd3-490f-888c-3508ac28ed46.png","media_link":"","title":"Stress Reduction","title_style":"h3","content_alignment":"vertical-bottom horizontal-center","padding":40}},"image_DcRReR":{"type":"image","settings":{"color_scheme":"alternative-1","overlay_opacity":0,"image":"shopify://shop_images/brainlube-website-icon-long-term-cognitive-support_66577b84-fa8e-4291-b603-c9eac2dffce7.png","media_link":"","title":"Long-Term Cognitive Support","title_style":"h3","content_alignment":"vertical-bottom horizontal-center","padding":40}}},"block_order":["image_UmpQb3","image_dqYgaE","image_zBkw8X","image_DcRReR"],"custom_css":["@media screen and (max-width: 749px) {.banner-grid-section__item__heading.h3 {font-size: 40px; line-height: 1.2; position: relative; top: -50px; }}"],"name":"t:sections.banner-grid.name","settings":{"block_aspect_ratio":"portrait_alt","color_scheme":"alternative-1","section_columns_desktop":4,"enable_full_width":false,"sm_rounded_corners":false,"layout_desktop":"grid","sm_grid_gap":20,"md_padding_top":0,"md_padding_bottom":80,"section_columns_tablet":2,"section_columns_mobile":1,"layout_mobile":"slide","sm_down_edge_to_edge":true,"rounded_corners":false,"grid_gap":0,"padding_top":24,"padding_bottom":24,"autoplay":false,"autoplay_speed":5,"sliding_behavior":"single"}},"sliding_text_8LbBG3":{"type":"sliding-text","blocks":{"text_pRmJjw":{"type":"text","settings":{"text":"A smarter kind of energy drink","link":""}}},"block_order":["text_pRmJjw"],"name":"t:sections.sliding-text.name","settings":{"color_scheme":"scheme-aee9bb5b-e48f-4813-8f25-ad9a89e25c5e","text_gradient_color":"","content_order":"horizontal","font":"heading","direction":"normal","speed":30,"pause_on_hover":false,"sm_size_multiplier":"sm-size--tiny","sm_item_gap":104,"sm_padding":24,"md_padding_top":0,"md_padding_bottom":40,"size_multiplier":"size--tiny","item_gap":24,"padding":24,"padding_top":0,"padding_bottom":24}},"the-product-recommendations":{"type":"product-recommendations","blocks":{"9929005a-ce0f-4c79-aec7-6480a85f6eee":{"type":"section_header","settings":{"subtitle":"","subtitle_tag":"h3","title":"You might also like","title_tag":"h2","text":"","text_alignment":"text-align-center","sm_size_multiplier":"sm-size--default","size_multiplier":"size--default"}}},"block_order":["9929005a-ce0f-4c79-aec7-6480a85f6eee"],"disabled":true,"settings":{"product_limit":10,"color_scheme":"","enable_full_width":false,"layout_desktop":"slide","products_per_row_desktop":4,"sm_custom_gap":-1,"md_padding_top":40,"md_padding_bottom":40,"products_per_row_tablet":3,"layout_mobile":"slide","products_per_row_mobile":1,"custom_gap":-1,"padding_top":40,"padding_bottom":40,"autoplay":false,"autoplay_speed":5,"sliding_behavior":"all"}},"faq_eqhEyV":{"type":"faq","blocks":{"section_header_tLKznC":{"type":"section_header","settings":{"title":"<strong>BRAINLUBE 101:</strong>","text":"<p>Curious about what makes BRAiNLUBE™ different from your average energy drink? You're in the right place. Here's everything you need to know about how it works, what’s inside, and how it supports brain health naturally.</p>","text_alignment":"left","header_position":"column_media"}},"question_wbecVg":{"type":"question","settings":{"title":"How does BRAiNLUBE™ support brain function?","text":"<p>BRAiNLUBE was specially formulated to combine essential vitamins and minerals, adaptogens and nootropics together to target the full spectrum of cognitive functions. If your brain is tired, then your body is tired as well. Natural energy is supported in the brain first. If we enhance cognitive brain functions then the body will have natural energy with a feeling of calmness and wellbeing. The key elements to BRAiNLUBE are adaptogens and nootropics.</p>","custom_liquid":"","media_type":"image"}},"question_jwHxi4":{"type":"question","settings":{"title":"What are nootropics?","text":"<p>Nootropics are a broad category of substances, often called \"smart drugs,\" that enhance cognitive function, including memory, focus, and creativity. They range from prescription medications to over-the-counter supplements and natural compounds. BRAiNLUBE uses natural plant-based nootropics that are designed to improve human thinking, learning, and memory.</p>","custom_liquid":"","media_type":"image"}},"question_k94w4g":{"type":"question","settings":{"title":"What are adaptogens and why are they important?","text":"<p>Adaptogens are herbs, roots, or plants that helps reduce stress, fight fatigue, and improve concentration. More than 50 years ago, adaptogens were first used in professional sports to increase the body's resistance to stress and improve physical endurance. Adaptogens are believed to help the body cope with stress by: </p><ul><li>Regulating the body's stress response</li><li>Improving the body's ability to adapt to changes</li><li>Enhancing the body's resistance to fatigue and illness</li></ul>","custom_liquid":"","media_type":"image"}},"question_gRrp6X":{"type":"question","settings":{"title":"Is there caffeine in BRAiNLUBE™?","text":"<p>Because caffeine is considered to be a nootropic and has beneficial effects to the brain, yes there is some caffeine in BRAiNLUBE. Caffeine alone cannot produce natural energy. Caffeine however, can enhance the benefits of other supplements to work in conjunction to produce natural energy. BRAiNLUBE has just the right amount of caffeine to support natural energy that originates in the brain.</p>","custom_liquid":"","media_type":"image"}},"question_rmUijh":{"type":"question","settings":{"title":"How often should I drink BRAiNLUBE™?","text":"<p>It is recommended to not exceed two 12-ounce cans of BRAiNLUBE daily. It is best to consume one drink in the morning and one in the afternoon to allow full absorption of the vitamins, minerals, adaptogens and nootropics into the bloodstream and across the blood brain barrier.</p>","custom_liquid":"","media_type":"image"}},"question_daYdLp":{"type":"question","settings":{"title":"Are there any side effects?","text":"<p>As with any vitamin, mineral or supplement, your individual health guidelines regarding consumption should be reviewed by a certified medial professional. Overconsumption of any supplement including vitamins and minerals can pose health risks. Always consult your doctor or other certified medical professional before using supplements in your daily diet. Our recommendation is to limit consumption to no more than two cans per day.</p>","custom_liquid":"","media_type":"image"}},"question_dUtUdc":{"type":"question","settings":{"title":"What does BRAiNLUBE™ taste like?","text":"<p>The BRAiNLUBE Energy drink original flavor is Mango. We use real Mango juice to produce a great tasting slightly carbonated energy drink that is not only flavorful but supports your mind and body. Although real Mango will forever be the original flavor, we are excited to announce that we are in the development phase of new flavors.</p><p>Flavors such as Cerebral Citrus, Brilliant Berry and Proton Peach are in development now with an early-2027 release date.</p>","custom_liquid":"","media_type":"image"}}},"block_order":["section_header_tLKznC","question_wbecVg","question_jwHxi4","question_k94w4g","question_gRrp6X","question_rmUijh","question_daYdLp","question_dUtUdc"],"name":"t:sections.faq.name","settings":{"color_scheme":"alternative-2","title_style":"h3","enable_full_width":false,"media_position":"media_first","md_padding_top":72,"md_padding_bottom":72,"padding_top":56,"padding_bottom":56}},"divider_d9Kc6r":{"type":"divider","blocks":{"standard_hcDpPc":{"type":"standard","settings":{"divider_graphics":"waves","top_part_color":"rgba(0,0,0,0)","middle_part_color":"linear-gradient(89deg, rgba(255, 255, 255, 1) 7%, rgba(255, 255, 255, 1) 94%)","bottom_part_color":"#006eb9","position":"in-between","flip_horizontal":false,"flip_vertical":false,"sm_graphics_height":0,"sm_graphics_width":100,"graphics_height":0,"graphics_width":100}}},"block_order":["standard_hcDpPc"],"name":"t:sections.divider.name","settings":{"md_padding_top":0,"md_padding_bottom":0,"padding_top":0,"padding_bottom":0}},"image_with_hotspots_ingredients":{"type":"image-with-hotspots","blocks":{"title_ingredients":{"type":"title","settings":{"title":"WHAT'S INSIDE THIS CAN","heading_tag":"h2","sm_size_multiplier":"sm-size--large","sm_margin_top":0,"size_multiplier":"size--default","margin_top":0}},"text_ingredients":{"type":"text","settings":{"text":"<p>Six ingredients, all-natural, all pulling their weight. Tap each one to see why it made the cut.</p>","sm_size_multiplier":"sm-size--small","sm_margin_top":8,"size_multiplier":"size--default","margin_top":0}},"image_ingredients":{"type":"image","settings":{"image":"shopify://shop_images/brainlube-website-imagery-single-can.png","md_padding_top":32,"md_padding_bottom":32,"padding_top":0,"padding_bottom":0}},"hotspot_ashwagandha":{"type":"hotspot","settings":{"title":"Ashwagandha","title_position":"left","vertical_position":30,"horizontal_position":39,"text":"<p>adaptogen root herb with benefits for mental energy, stress resistance and mood; may also help with healthy brain aging</p>","image":"shopify://shop_images/AdobeStock_816943394_Preview.jpg"}},"hotspot_bacopa":{"type":"hotspot","settings":{"title":"Bacopa Monnieri","title_position":"left","vertical_position":50,"horizontal_position":39,"text":"<p>best nootropic herb for students, shown to improve retention of knowledge and strengthen stress resistance</p>"}},"hotspot_caffeine":{"type":"hotspot","settings":{"title":"Caffeine","title_position":"left","vertical_position":70,"horizontal_position":39,"text":"<p>a stimulant that boosts alertness and almost always is accompanied by a subsequent crash</p>"}},"hotspot_ginkgo":{"type":"hotspot","settings":{"title":"Ginkgo Biloba","title_position":"right","vertical_position":30,"horizontal_position":60,"text":"<p>a nootropic that enhances brain circulation, strong reputation for helping with memory and age related cognitive performance</p>"}},"hotspot_ginseng":{"type":"hotspot","settings":{"title":"Ginseng","title_position":"right","vertical_position":50,"horizontal_position":60,"text":"<p>adaptogen that supports brain chemicals while countering stress; energizes mental and physical performance</p>"}},"hotspot_guarana":{"type":"hotspot","settings":{"title":"Guarana","title_position":"right","vertical_position":70,"horizontal_position":60,"text":"<p>a berry that is one of the best natural sources of caffeine, traditionally used to boost mind energy and physical endurance</p>"}}},"block_order":["title_ingredients","text_ingredients","image_ingredients","hotspot_ashwagandha","hotspot_bacopa","hotspot_caffeine","hotspot_ginkgo","hotspot_ginseng","hotspot_guarana"],"settings":{"color_scheme":"alternative-1","section_bg":"linear-gradient(0deg, rgba(255, 255, 255, 1) 15%, rgba(199, 232, 229, 1) 50%)","numbered_hotspots":false,"enable_full_width":false,"media_position":"media_last","content_width":"col-sm-max-5","desktop_alignment":"sm-text-align-left","sm_full_width_buttons":false,"md_padding_top":56,"md_padding_bottom":40,"mobile_alignment":"text-align-center","full_width_buttons":false,"sm_down_hide_hotspot_titles":false,"padding_top":40,"padding_bottom":40}}},"order":["main","divider_Tqdp6r","rich_text_8F9YN9","image_with_hotspots_ingredients","banner_grid_GdCgCD","sliding_text_8LbBG3","the-product-recommendations","faq_eqhEyV","divider_d9Kc6r"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "2cb069aa-470f-47b0-97d9-b6a2c86aa996": {
+          "type": "badges",
+          "settings": {
+            "badges_position": "over-media",
+            "margin_top": 0
+          }
+        },
+        "rating_Ccm9zT": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {
+            "margin_top": 0
+          }
+        },
+        "the-title": {
+          "type": "title",
+          "settings": {
+            "margin_top": 12
+          }
+        },
+        "the-description": {
+          "type": "description",
+          "settings": {
+            "enable_collapsible": false,
+            "margin_top": 24
+          }
+        },
+        "557a3a73-80c5-47b2-abb8-a78027516c90": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "cross_out_unavailable": false,
+            "margin_top": 8
+          }
+        },
+        "the-price": {
+          "type": "price",
+          "settings": {
+            "margin_top": 8,
+            "font_weight": "normal",
+            "sm_size_multiplier": "sm-size--huge",
+            "size_multiplier": "size--huge"
+          }
+        },
+        "6fc29670-ecc3-4bbf-bc13-6d7232b75085": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "next_to_add_to_cart": true,
+            "margin_top": 12
+          }
+        },
+        "the-buy-buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "add_multipliers": "",
+            "add_multipliers_layout": "single-line",
+            "margin_top": 28
+          }
+        },
+        "the-inventory-status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 12,
+            "show_available_quantity": true,
+            "inventory_transfers_enable": true,
+            "additional__in_stock": "– 24h express shipping",
+            "additional__few_on_stock": "",
+            "additional__out_of_stock": "",
+            "additional__out_of_stock_continue_selling": "",
+            "margin_top": 20
+          }
+        },
+        "the-pickup-availability": {
+          "type": "pickup_availability",
+          "settings": {
+            "margin_top": 24
+          }
+        },
+        "the-sticky-buy-bar": {
+          "type": "sticky_buy_bar",
+          "settings": {
+            "color_scheme": "",
+            "overlay_str": 10,
+            "border_radius": 16
+          }
+        },
+        "75b14a74-c1c5-4fcc-932f-e2bfa017fba2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Ingredients",
+            "content": "<h6><strong>{{ product.metafields.custom.ingredients | metafield_tag }}</strong></h6>",
+            "page": "",
+            "open_as_drawer": false,
+            "icon": "icon-caret__right",
+            "margin_top": 0
+          }
+        },
+        "attribute_insights_caffeine": {
+          "type": "attribute_insights",
+          "settings": {
+            "title": "Caffeine Level",
+            "value": "40",
+            "display_type": "fill",
+            "border_radius": 12,
+            "show_helper_splitters": true,
+            "start_label": "Mild",
+            "center_label": "Moderate",
+            "end_label": "High",
+            "show_messages": true,
+            "below_threshold_value": 34,
+            "above_threshold_value": 66,
+            "below_threshold_message": "",
+            "between_threshold_message": "Just enough to sharpen focus, without the jitters.",
+            "above_threshold_message": "",
+            "margin_top": 24
+          }
+        },
+        "attribute_insights_crash": {
+          "type": "attribute_insights",
+          "settings": {
+            "title": "Crash Risk",
+            "value": "12",
+            "display_type": "segmented",
+            "border_radius": 8,
+            "amount_of_segments": 5,
+            "start_label": "Low",
+            "center_label": "Moderate",
+            "end_label": "High",
+            "show_messages": true,
+            "below_threshold_value": 34,
+            "above_threshold_value": 66,
+            "below_threshold_message": "Adaptogens buffer the caffeine, so energy builds steady and fades slow — no 2pm crash.",
+            "between_threshold_message": "",
+            "above_threshold_message": "",
+            "margin_top": 12
+          }
+        }
+      },
+      "block_order": [
+        "2cb069aa-470f-47b0-97d9-b6a2c86aa996",
+        "rating_Ccm9zT",
+        "the-title",
+        "the-description",
+        "557a3a73-80c5-47b2-abb8-a78027516c90",
+        "the-price",
+        "attribute_insights_caffeine",
+        "attribute_insights_crash",
+        "6fc29670-ecc3-4bbf-bc13-6d7232b75085",
+        "the-buy-buttons",
+        "the-inventory-status",
+        "the-pickup-availability",
+        "the-sticky-buy-bar",
+        "75b14a74-c1c5-4fcc-932f-e2bfa017fba2"
+      ],
+      "custom_css": [
+        "h1 {text-transform: uppercase; font-weight: bold;}",
+        "span {font-weight: normal;}"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "product_image_aspect_ratio": "portrait_alt",
+        "media_fill_rule": "contain",
+        "color_scheme": "default",
+        "section_bg": "",
+        "media_col_bg": "",
+        "content_col_bg": "",
+        "border_radius": 0,
+        "product_media_bg": "rgba(0,0,0,0)",
+        "media_border_radius": 12,
+        "enable_full_width": false,
+        "sm-p": 0,
+        "media_layout": "traditional-below-as-grid",
+        "media_col_width": "wide",
+        "sm_media_zoom": "disabled",
+        "sm_media_gap": 24,
+        "md_padding_top": 64,
+        "md_padding_bottom": 80,
+        "enable_slider_peek": false,
+        "show_thumbnails_sm_down": true,
+        "media_zoom": "disabled",
+        "media_gap": 0,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "divider_Tqdp6r": {
+      "type": "divider",
+      "blocks": {
+        "standard_WKrCb9": {
+          "type": "standard",
+          "settings": {
+            "divider_graphics": "waves",
+            "top_part_color": "rgba(0,0,0,0)",
+            "middle_part_color": "linear-gradient(89deg, rgba(0, 110, 185, 1) 7%, rgba(32, 196, 244, 1) 94%)",
+            "bottom_part_color": "#ffffff",
+            "position": "in-between",
+            "flip_horizontal": false,
+            "flip_vertical": false,
+            "sm_graphics_height": 0,
+            "sm_graphics_width": 100,
+            "graphics_height": 0,
+            "graphics_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "standard_WKrCb9"
+      ],
+      "name": "t:sections.divider.name",
+      "settings": {
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_8F9YN9": {
+      "type": "rich-text",
+      "blocks": {
+        "text_UnQP97": {
+          "type": "text",
+          "settings": {
+            "text": "<p>BRAiNLUBE™ is more than just an energy drink. It’s a brain-support formula rooted in research. Our ingredients have been shown to help with:</p>",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_UnQP97"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "color_scheme": "alternative-1",
+        "text_gradient_color": "",
+        "content_width": 100,
+        "desktop_content_alignment": "center",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 80,
+        "md_padding_bottom": 0,
+        "mobile_alignment": "text-align-center",
+        "padding_top": 80,
+        "padding_bottom": 0
+      }
+    },
+    "banner_grid_GdCgCD": {
+      "type": "banner-grid",
+      "blocks": {
+        "image_UmpQb3": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "alternative-1",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/brainlube-website-icon-memory-retention_202c110b-3e0d-4000-ba55-e5bd89794d92.png",
+            "media_link": "",
+            "title": "Memory Retention",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-center",
+            "padding": 40
+          }
+        },
+        "image_dqYgaE": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "alternative-1",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/brainlube-website-icon-stress-reduction_d7d7eb8f-4938-4206-93b5-aee2fb7e04d4.png",
+            "media_link": "",
+            "title": "Faster Thinking",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-center",
+            "padding": 40
+          }
+        },
+        "image_zBkw8X": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "alternative-1",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/brainlube-website-icon-faster-thinking_e61c4818-efd3-490f-888c-3508ac28ed46.png",
+            "media_link": "",
+            "title": "Stress Reduction",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-center",
+            "padding": 40
+          }
+        },
+        "image_DcRReR": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "alternative-1",
+            "overlay_opacity": 0,
+            "image": "shopify://shop_images/brainlube-website-icon-long-term-cognitive-support_66577b84-fa8e-4291-b603-c9eac2dffce7.png",
+            "media_link": "",
+            "title": "Long-Term Cognitive Support",
+            "title_style": "h3",
+            "content_alignment": "vertical-bottom horizontal-center",
+            "padding": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_UmpQb3",
+        "image_dqYgaE",
+        "image_zBkw8X",
+        "image_DcRReR"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.banner-grid-section__item__heading.h3 {font-size: 40px; line-height: 1.2; position: relative; top: -50px; }}"
+      ],
+      "name": "t:sections.banner-grid.name",
+      "settings": {
+        "block_aspect_ratio": "portrait_alt",
+        "color_scheme": "alternative-1",
+        "section_columns_desktop": 4,
+        "enable_full_width": false,
+        "sm_rounded_corners": false,
+        "layout_desktop": "grid",
+        "sm_grid_gap": 20,
+        "md_padding_top": 0,
+        "md_padding_bottom": 80,
+        "section_columns_tablet": 2,
+        "section_columns_mobile": 1,
+        "layout_mobile": "slide",
+        "sm_down_edge_to_edge": true,
+        "rounded_corners": false,
+        "grid_gap": 0,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
+      }
+    },
+    "sliding_text_8LbBG3": {
+      "type": "sliding-text",
+      "blocks": {
+        "text_pRmJjw": {
+          "type": "text",
+          "settings": {
+            "text": "A smarter kind of energy drink",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_pRmJjw"
+      ],
+      "name": "t:sections.sliding-text.name",
+      "settings": {
+        "color_scheme": "scheme-aee9bb5b-e48f-4813-8f25-ad9a89e25c5e",
+        "text_gradient_color": "",
+        "content_order": "horizontal",
+        "font": "heading",
+        "direction": "normal",
+        "speed": 30,
+        "pause_on_hover": false,
+        "sm_size_multiplier": "sm-size--tiny",
+        "sm_item_gap": 104,
+        "sm_padding": 24,
+        "md_padding_top": 0,
+        "md_padding_bottom": 40,
+        "size_multiplier": "size--tiny",
+        "item_gap": 24,
+        "padding": 24,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "the-product-recommendations": {
+      "type": "product-recommendations",
+      "blocks": {
+        "9929005a-ce0f-4c79-aec7-6480a85f6eee": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "You might also like",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "9929005a-ce0f-4c79-aec7-6480a85f6eee"
+      ],
+      "disabled": true,
+      "settings": {
+        "product_limit": 10,
+        "color_scheme": "",
+        "enable_full_width": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 4,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 3,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 1,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "all"
+      }
+    },
+    "faq_eqhEyV": {
+      "type": "faq",
+      "blocks": {
+        "section_header_tLKznC": {
+          "type": "section_header",
+          "settings": {
+            "title": "<strong>BRAINLUBE 101:</strong>",
+            "text": "<p>Curious about what makes BRAiNLUBE™ different from your average energy drink? You're in the right place. Here's everything you need to know about how it works, what’s inside, and how it supports brain health naturally.</p>",
+            "text_alignment": "left",
+            "header_position": "column_media"
+          }
+        },
+        "question_wbecVg": {
+          "type": "question",
+          "settings": {
+            "title": "How does BRAiNLUBE™ support brain function?",
+            "text": "<p>BRAiNLUBE was specially formulated to combine essential vitamins and minerals, adaptogens and nootropics together to target the full spectrum of cognitive functions. If your brain is tired, then your body is tired as well. Natural energy is supported in the brain first. If we enhance cognitive brain functions then the body will have natural energy with a feeling of calmness and wellbeing. The key elements to BRAiNLUBE are adaptogens and nootropics.</p>",
+            "custom_liquid": "",
+            "media_type": "image"
+          }
+        },
+        "question_jwHxi4": {
+          "type": "question",
+          "settings": {
+            "title": "What are nootropics?",
+            "text": "<p>Nootropics are a broad category of substances, often called \"smart drugs,\" that enhance cognitive function, including memory, focus, and creativity. They range from prescription medications to over-the-counter supplements and natural compounds. BRAiNLUBE uses natural plant-based nootropics that are designed to improve human thinking, learning, and memory.</p>",
+            "custom_liquid": "",
+            "media_type": "image"
+          }
+        },
+        "question_k94w4g": {
+          "type": "question",
+          "settings": {
+            "title": "What are adaptogens and why are they important?",
+            "text": "<p>Adaptogens are herbs, roots, or plants that helps reduce stress, fight fatigue, and improve concentration. More than 50 years ago, adaptogens were first used in professional sports to increase the body's resistance to stress and improve physical endurance. Adaptogens are believed to help the body cope with stress by: </p><ul><li>Regulating the body's stress response</li><li>Improving the body's ability to adapt to changes</li><li>Enhancing the body's resistance to fatigue and illness</li></ul>",
+            "custom_liquid": "",
+            "media_type": "image"
+          }
+        },
+        "question_gRrp6X": {
+          "type": "question",
+          "settings": {
+            "title": "Is there caffeine in BRAiNLUBE™?",
+            "text": "<p>Because caffeine is considered to be a nootropic and has beneficial effects to the brain, yes there is some caffeine in BRAiNLUBE. Caffeine alone cannot produce natural energy. Caffeine however, can enhance the benefits of other supplements to work in conjunction to produce natural energy. BRAiNLUBE has just the right amount of caffeine to support natural energy that originates in the brain.</p>",
+            "custom_liquid": "",
+            "media_type": "image"
+          }
+        },
+        "question_rmUijh": {
+          "type": "question",
+          "settings": {
+            "title": "How often should I drink BRAiNLUBE™?",
+            "text": "<p>It is recommended to not exceed two 12-ounce cans of BRAiNLUBE daily. It is best to consume one drink in the morning and one in the afternoon to allow full absorption of the vitamins, minerals, adaptogens and nootropics into the bloodstream and across the blood brain barrier.</p>",
+            "custom_liquid": "",
+            "media_type": "image"
+          }
+        },
+        "question_daYdLp": {
+          "type": "question",
+          "settings": {
+            "title": "Are there any side effects?",
+            "text": "<p>As with any vitamin, mineral or supplement, your individual health guidelines regarding consumption should be reviewed by a certified medial professional. Overconsumption of any supplement including vitamins and minerals can pose health risks. Always consult your doctor or other certified medical professional before using supplements in your daily diet. Our recommendation is to limit consumption to no more than two cans per day.</p>",
+            "custom_liquid": "",
+            "media_type": "image"
+          }
+        },
+        "question_dUtUdc": {
+          "type": "question",
+          "settings": {
+            "title": "What does BRAiNLUBE™ taste like?",
+            "text": "<p>The BRAiNLUBE Energy drink original flavor is Mango. We use real Mango juice to produce a great tasting slightly carbonated energy drink that is not only flavorful but supports your mind and body. Although real Mango will forever be the original flavor, we are excited to announce that we are in the development phase of new flavors.</p><p>Flavors such as Cerebral Citrus, Brilliant Berry and Proton Peach are in development now with an early-2027 release date.</p>",
+            "custom_liquid": "",
+            "media_type": "image"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_tLKznC",
+        "question_wbecVg",
+        "question_jwHxi4",
+        "question_k94w4g",
+        "question_gRrp6X",
+        "question_rmUijh",
+        "question_daYdLp",
+        "question_dUtUdc"
+      ],
+      "name": "t:sections.faq.name",
+      "settings": {
+        "color_scheme": "alternative-2",
+        "title_style": "h3",
+        "enable_full_width": false,
+        "media_position": "media_first",
+        "md_padding_top": 72,
+        "md_padding_bottom": 72,
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "divider_d9Kc6r": {
+      "type": "divider",
+      "blocks": {
+        "standard_hcDpPc": {
+          "type": "standard",
+          "settings": {
+            "divider_graphics": "waves",
+            "top_part_color": "rgba(0,0,0,0)",
+            "middle_part_color": "linear-gradient(89deg, rgba(255, 255, 255, 1) 7%, rgba(255, 255, 255, 1) 94%)",
+            "bottom_part_color": "#006eb9",
+            "position": "in-between",
+            "flip_horizontal": false,
+            "flip_vertical": false,
+            "sm_graphics_height": 0,
+            "sm_graphics_width": 100,
+            "graphics_height": 0,
+            "graphics_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "standard_hcDpPc"
+      ],
+      "name": "t:sections.divider.name",
+      "settings": {
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_hotspots_ingredients": {
+      "type": "image-with-hotspots",
+      "blocks": {
+        "title_ingredients": {
+          "type": "title",
+          "settings": {
+            "title": "WHAT'S INSIDE THIS CAN",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--large",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_ingredients": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Six ingredients, all-natural, all pulling their weight. Tap each one to see why it made the cut.</p>",
+            "sm_size_multiplier": "sm-size--small",
+            "sm_margin_top": 8,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "image_ingredients": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/brainlube-website-imagery-single-can.png",
+            "md_padding_top": 32,
+            "md_padding_bottom": 32,
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "hotspot_ashwagandha": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Ashwagandha",
+            "title_position": "left",
+            "vertical_position": 30,
+            "horizontal_position": 39,
+            "text": "<p>adaptogen root herb with benefits for mental energy, stress resistance and mood; may also help with healthy brain aging</p>",
+            "image": "shopify://shop_images/AdobeStock_816943394_Preview.jpg"
+          }
+        },
+        "hotspot_bacopa": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Bacopa Monnieri",
+            "title_position": "left",
+            "vertical_position": 50,
+            "horizontal_position": 39,
+            "text": "<p>best nootropic herb for students, shown to improve retention of knowledge and strengthen stress resistance</p>"
+          }
+        },
+        "hotspot_caffeine": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Caffeine",
+            "title_position": "left",
+            "vertical_position": 70,
+            "horizontal_position": 39,
+            "text": "<p>a stimulant that boosts alertness and almost always is accompanied by a subsequent crash</p>"
+          }
+        },
+        "hotspot_ginkgo": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Ginkgo Biloba",
+            "title_position": "right",
+            "vertical_position": 30,
+            "horizontal_position": 60,
+            "text": "<p>a nootropic that enhances brain circulation, strong reputation for helping with memory and age related cognitive performance</p>"
+          }
+        },
+        "hotspot_ginseng": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Ginseng",
+            "title_position": "right",
+            "vertical_position": 50,
+            "horizontal_position": 60,
+            "text": "<p>adaptogen that supports brain chemicals while countering stress; energizes mental and physical performance</p>"
+          }
+        },
+        "hotspot_guarana": {
+          "type": "hotspot",
+          "settings": {
+            "title": "Guarana",
+            "title_position": "right",
+            "vertical_position": 70,
+            "horizontal_position": 60,
+            "text": "<p>a berry that is one of the best natural sources of caffeine, traditionally used to boost mind energy and physical endurance</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_ingredients",
+        "text_ingredients",
+        "image_ingredients",
+        "hotspot_ashwagandha",
+        "hotspot_bacopa",
+        "hotspot_caffeine",
+        "hotspot_ginkgo",
+        "hotspot_ginseng",
+        "hotspot_guarana"
+      ],
+      "settings": {
+        "color_scheme": "alternative-1",
+        "section_bg": "linear-gradient(0deg, rgba(255, 255, 255, 1) 15%, rgba(199, 232, 229, 1) 50%)",
+        "numbered_hotspots": false,
+        "enable_full_width": false,
+        "media_position": "media_last",
+        "content_width": "col-sm-max-5",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 56,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-center",
+        "full_width_buttons": false,
+        "sm_down_hide_hotspot_titles": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "divider_Tqdp6r",
+    "rich_text_8F9YN9",
+    "image_with_hotspots_ingredients",
+    "banner_grid_GdCgCD",
+    "sliding_text_8LbBG3",
+    "the-product-recommendations",
+    "faq_eqhEyV",
+    "divider_d9Kc6r"
+  ]
+}
