@@ -536,6 +536,69 @@
         "padding_bottom": 80
       }
     },
+    "hero_QdBTVP": {
+      "type": "hero",
+      "blocks": {
+        "image_dbk7TT": {
+          "type": "image",
+          "settings": {
+            "media_type": "video",
+            "cdn_video": "shopify://files/videos/Create_an_amazing_slow_motion.mp4",
+            "external_video_url_aspect_ratio": "16:9",
+            "external_video_url_mobile_aspect_ratio": "9:16",
+            "external_video_hide_branding": false
+          }
+        },
+        "title_nnxHnX": {
+          "type": "title",
+          "settings": {
+            "title": "",
+            "heading_tag": "h2",
+            "sm_size_multiplier": "sm-size--huge",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_bnyY6A": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 12,
+            "size_multiplier": "size--default",
+            "margin_top": 8
+          }
+        }
+      },
+      "block_order": [
+        "image_dbk7TT",
+        "title_nnxHnX",
+        "text_bnyY6A"
+      ],
+      "name": "t:sections.hero.name",
+      "settings": {
+        "color_scheme": "",
+        "overlay_opacity": 0,
+        "media_link": "",
+        "enable_full_width": true,
+        "section_height_desktop": "by_pixels",
+        "section_pixel_height_desktop": 610,
+        "section_fixed_ratio_desktop": "16 / 9",
+        "content_width": "",
+        "content_align_desktop": "sm-vertical-top sm-horizontal-left",
+        "desktop_alignment": "sm-text-align-center",
+        "md_padding_top": 0,
+        "md_padding_bottom": 0,
+        "section_height": "by_pixels",
+        "section_pixel_height": 400,
+        "section_fixed_ratio": "3 / 4",
+        "content_align_mobile": "contained",
+        "mobile_alignment": "text-align-right",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "featured_blog_fNqWeq": {
       "type": "featured-blog",
       "blocks": {
@@ -742,6 +805,7 @@
     "testimonials_NR9JeF",
     "the_difference_custom_liquid",
     "rich_text_NrEMGP",
+    "hero_QdBTVP",
     "featured_blog_fNqWeq",
     "rich_text_zRUdAc",
     "rich_text_qpCEjt",
