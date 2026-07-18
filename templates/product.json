@@ -151,6 +151,15 @@
             "above_threshold_message": "",
             "margin_top": 12
           }
+        },
+        "text_trust_badges": {
+          "type": "text",
+          "settings": {
+            "text": "<p class=\"size--tiny\">✓ Third-Party Tested &nbsp; ✓ Made in USA &nbsp; ✓ Non-GMO</p>",
+            "read_more": false,
+            "style_boxed": false,
+            "margin_top": 16
+          }
         }
       },
       "block_order": [
@@ -164,6 +173,7 @@
         "attribute_insights_crash",
         "6fc29670-ecc3-4bbf-bc13-6d7232b75085",
         "the-buy-buttons",
+        "text_trust_badges",
         "the-inventory-status",
         "the-pickup-availability",
         "the-sticky-buy-bar",

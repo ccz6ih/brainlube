@@ -39,6 +39,26 @@ Pulled the actual product label image attached to the product (`Label_-_Can_...p
 
 ---
 
+## Follow-up: acting on your decisions
+
+- **Refund policy (30-day, return required):** drafted and attempted to publish directly, but the Shopify connector doesn't have the `write_legal_policies` permission scope, so it can't write policies via API — this one needs you to paste it in. Text is below, ready to go into **Admin → Settings → Policies → Refund policy**:
+
+  > We want you to feel confident buying BRAiNLUBE™. If you're not satisfied, you can return unopened cans within 30 days of delivery for a full refund.
+  >
+  > **How it works:** Contact us within 30 days of your delivery date to start a return. Ship the product back to us in its original packaging — you're responsible for return shipping unless the item arrived damaged or incorrect. Once we receive and inspect the return, we'll issue a refund to your original payment method.
+  >
+  > **Damaged or incorrect orders:** contact us within 30 days and we'll make it right at no cost to you — replacement or refund, your choice.
+  >
+  > Because these are consumable products, opened cans can't be returned unless defective.
+
+- **Shipping threshold — bigger finding than I first reported.** I initially said no rule backed the $50 free-shipping claim; that was wrong. It's a real, price-based shipping rate (Economy, $0, triggers at order total ≥ $50) — I just hadn't queried deep enough the first time. So the actual problem is exactly what the audit said: the rate exists, but with one $30 product it's unreachable. I updated the announcement bar copy to **"FREE SHIPPING ON ORDERS $30+"** to match your call, but I deliberately did **not** touch the live shipping rate itself — the mutation for editing delivery-profile conditions is large and deeply nested, and getting it wrong risks corrupting real shipping rates for real customers. This is a 30-second manual fix: **Admin → Settings → Shipping and delivery → Domestic → edit the "Economy" $0 rate's minimum order price from $50 to $30.** Please do that one directly rather than have me guess at it.
+
+- **Trust badges** (Third-Party Tested / Made in USA / Non-GMO) — added as a small line directly under the buy buttons on the product page (`templates/product.json`).
+
+- **Subscriptions — already fully wired, no theme work needed.** Checked the product directly: a "Subscribe and save" selling plan group exists with weekly and monthly options (15% off each), already attached to the OG Mango product. Also checked the theme's product form code (`product-buy-bar.liquid`, `product-template.liquid`) — it already has native `product.selling_plan_groups` support built in. This should just be showing up live already; if it isn't rendering, it's worth a quick look at the product page rather than a theme fix, since the plumbing is all there.
+
+---
+
 ## Note on the theme/Shopify connection
 
 The theme is now connected via GitHub, and the Shopify theme editor auto-commits back to this repo whenever it re-saves theme files (you'll see commits from `shopify[bot]` — that's expected, not a conflict). One real side-effect from the connect/first-sync: the second wave-divider on the About page (`divider_about_2`) came back from Shopify's sync marked disabled. Left it as-is rather than fighting the live state since it's a minor decorative element — flag it if you want it re-enabled.
