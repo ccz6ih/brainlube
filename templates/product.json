@@ -262,7 +262,7 @@
       ],
       "settings": {
         "show_breadcrumb": false,
-        "product_image_aspect_ratio": "portrait_alt",
+        "product_image_aspect_ratio": "square",
         "media_fill_rule": "contain",
         "variant_images": "all",
         "color_scheme": "default",
@@ -273,7 +273,7 @@
         "border_radius": 0,
         "product_media_bg": "rgba(0,0,0,0)",
         "media_border_radius": 12,
-        "enable_full_width": false,
+        "enable_full_width": true,
         "sm-p": 0,
         "media_layout": "traditional-below-as-grid",
         "media_col_width": "wide",
