@@ -717,13 +717,13 @@
         "enable_full_width": false,
         "md_padding_top": 64,
         "md_padding_bottom": 64,
-        "layout_mobile": "grid",
+        "layout_mobile": "slide",
         "sm_down_edge_to_edge": false,
         "padding_top": 40,
         "padding_bottom": 40,
         "autoplay": false,
         "autoplay_speed": 5,
-        "sliding_behavior": "single"
+        "sliding_behavior": "all"
       }
     },
     "1784337049ed3d7b28": {
