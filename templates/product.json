@@ -665,6 +665,17 @@
             "rating": 0
           }
         },
+        "video_review_6Fm9Da": {
+          "type": "video_review",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/Nootropics Energy Drink, OG Mango (5).mp4",
+            "external_video_url": "",
+            "name": "",
+            "quote": "",
+            "rating": 0
+          }
+        },
         "video_review_YBJyUR": {
           "type": "video_review",
           "settings": {
@@ -684,6 +695,7 @@
         "video_review_pkFAaR",
         "video_review_TQWfqV",
         "video_review_XR7mGb",
+        "video_review_6Fm9Da",
         "video_review_YBJyUR"
       ],
       "name": "UGC video reviews",
