@@ -53,14 +53,14 @@
     "badge_uppercase": true,
     "badge_border_radius": 200,
     "custom_badges": "Limited Edition:#111111:#ffffff",
-    "product_card_aspect_ratio": "portrait_alt",
+    "product_card_aspect_ratio": "square",
     "product_card_fill_rule": "cover",
     "product_card_options": "default",
     "product_card_text_alignment": "text-align-center",
     "product_card_badges": true,
-    "product_card_quick_buy": false,
+    "product_card_quick_buy": true,
     "show_variant_availability": false,
-    "collection_card_aspect_ratio": "portrait",
+    "collection_card_aspect_ratio": "square",
     "collection_card_options": "traditional:default:empty",
     "article_card_show_date": true,
     "article_card_show_content": true,
@@ -70,7 +70,7 @@
     "icon_stroke": 1.4,
     "slider_arrows_animations": true,
     "arrows_style": "default",
-    "css_animations": false,
+    "css_animations": true,
     "favicon": "shopify://shop_images/brainlube-website-favicon.jpg",
     "content_for_index": [],
     "blocks": {
@@ -93,10 +93,10 @@
           "card_background": "#ffffff",
           "card_background_gradient": "linear-gradient(127deg, rgba(254, 240, 81, 1), rgba(255, 70, 199, 1) 100%)",
           "overlay": "#ffffff",
-          "overlay_text": "#FFFFFF",
-          "overlay_button_background": "#FFFFFF",
+          "overlay_text": "#ffffff",
+          "overlay_button_background": "#ffffff",
           "overlay_button_foreground": "#000000",
-          "overlay_outlines": "#FFFFFF"
+          "overlay_outlines": "#ffffff"
         }
       },
       "alternative-1": {
@@ -111,10 +111,10 @@
           "card_background": "#c7e8e5",
           "card_background_gradient": "linear-gradient(127deg, rgba(254, 240, 81, 1), rgba(255, 70, 199, 1) 100%)",
           "overlay": "#ffffff",
-          "overlay_text": "#0F0F0F",
-          "overlay_button_background": "#FFFFFF",
+          "overlay_text": "#0f0f0f",
+          "overlay_button_background": "#ffffff",
           "overlay_button_foreground": "#000000",
-          "overlay_outlines": "#0F0F0F"
+          "overlay_outlines": "#0f0f0f"
         }
       },
       "alternative-2": {
@@ -129,10 +129,10 @@
           "card_background": "#e6fffe",
           "card_background_gradient": "#FFFFFF",
           "overlay": "#ffffff",
-          "overlay_text": "#FFFFFF",
-          "overlay_button_background": "#FFFFFF",
+          "overlay_text": "#ffffff",
+          "overlay_button_background": "#ffffff",
           "overlay_button_foreground": "#000000",
-          "overlay_outlines": "#FFFFFF"
+          "overlay_outlines": "#ffffff"
         }
       },
       "overlay-scheme": {
@@ -147,10 +147,10 @@
           "card_background": "#cc0095",
           "card_background_gradient": "#FFFFFF",
           "overlay": "#000000",
-          "overlay_text": "#FFFFFF",
-          "overlay_button_background": "#FFFFFF",
+          "overlay_text": "#ffffff",
+          "overlay_button_background": "#ffffff",
           "overlay_button_foreground": "#000000",
-          "overlay_outlines": "#FFFFFF"
+          "overlay_outlines": "#ffffff"
         }
       },
       "scheme-aee9bb5b-e48f-4813-8f25-ad9a89e25c5e": {
@@ -165,10 +165,10 @@
           "card_background": "#ffffff",
           "card_background_gradient": "linear-gradient(127deg, rgba(254, 240, 81, 1), rgba(255, 70, 199, 1) 100%)",
           "overlay": "#ffffff",
-          "overlay_text": "#FFFFFF",
-          "overlay_button_background": "#FFFFFF",
+          "overlay_text": "#ffffff",
+          "overlay_button_background": "#ffffff",
           "overlay_button_foreground": "#000000",
-          "overlay_outlines": "#FFFFFF"
+          "overlay_outlines": "#ffffff"
         }
       },
       "scheme-6574f8cf-a893-4dc6-85d8-c70fa061005a": {
@@ -183,10 +183,10 @@
           "card_background": "#ffffff",
           "card_background_gradient": "linear-gradient(127deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
           "overlay": "#ffffff",
-          "overlay_text": "#FFFFFF",
-          "overlay_button_background": "#FFFFFF",
+          "overlay_text": "#ffffff",
+          "overlay_button_background": "#ffffff",
           "overlay_button_foreground": "#000000",
-          "overlay_outlines": "#FFFFFF"
+          "overlay_outlines": "#ffffff"
         }
       }
     }
