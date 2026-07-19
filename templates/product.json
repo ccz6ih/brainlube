@@ -87,7 +87,7 @@
           "settings": {
             "title": "Crash Risk",
             "value": "12",
-            "display_type": "fill",
+            "display_type": "segmented",
             "border_radius": 8,
             "show_helper_splitters": true,
             "amount_of_segments": 5,
