@@ -57,8 +57,8 @@
           "settings": {
             "margin_top": 8,
             "font_weight": "normal",
-            "sm_size_multiplier": "sm-size--huge",
-            "size_multiplier": "size--huge"
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
           }
         },
         "attribute_insights_caffeine": {
