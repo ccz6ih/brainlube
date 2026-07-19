@@ -47,7 +47,7 @@
             assign poster_image = block.settings.video.preview_image
           endif
         -%}
-        <a href="#modal--video-reviews-{{ section.id }}?scroll=modal-item-{{ block.id }}" class="video-reviews-card" {{ block.shopify_attributes }}>
+        <a href="#modal--video-review-{{ block.id }}" class="video-reviews-card" {{ block.shopify_attributes }}>
           {%- if poster_image != blank -%}
             <div class="video-reviews-card__poster">
               {{ poster_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: '', widths: '400, 600, 800' }}
@@ -87,51 +87,47 @@
   {%- endif -%}
 </div>
 
-{%- if video_blocks.size > 0 -%}
-  <div id="modal--video-reviews-{{ section.id }}" class="modal modal--fullscreen video-reviews-modal color-{{ settings.color_scheme_modals }}" data-modal data-parent>
+{%- for block in video_blocks -%}
+  <div id="modal--video-review-{{ block.id }}" class="modal modal--fullscreen video-reviews-modal color-{{ settings.color_scheme_modals }}" data-modal data-parent>
     <a href="#" class="btn btn--primary btn--round modal-close pos--absolute" data-modal-close data-close aria-label="{{ 'accessibility.close_something' | t: something: 'modal' }}">{% render 'icon-close' %}</a>
     <div class="modal-dialog" data-contents data-modal-dialog role="dialog" aria-modal="true" tabindex="-1">
       <div class="modal-body" data-modal-body>
-        <div class="video-reviews-modal__grid">
-          {%- for block in video_blocks -%}
-            <div id="modal-item-{{ block.id }}" class="video-reviews-modal__item">
-              {%- if block.settings.media_type == 'video' -%}
-                {%- render 'video-frame',
-                  video_default: block.settings.video,
-                  aspect_ratio: 'natural',
-                  sizing_rule: 'contain',
-                  controls: true,
-                  autoplay: true
-                -%}
-              {%- elsif block.settings.media_type == 'external_video' -%}
-                {%- render 'external-video',
-                  default_external_video: block.settings.external_video_url,
-                  default_external_video_aspect_ratio: section.settings.aspect_ratio,
-                  controls: true,
-                  autoplay: true
-                -%}
-              {%- endif -%}
+        <div class="video-reviews-modal__content">
+          {%- if block.settings.media_type == 'video' -%}
+            {%- render 'video-frame',
+              video_default: block.settings.video,
+              aspect_ratio: 'natural',
+              sizing_rule: 'contain',
+              controls: true,
+              autoplay: false
+            -%}
+          {%- elsif block.settings.media_type == 'external_video' -%}
+            {%- render 'external-video',
+              default_external_video: block.settings.external_video_url,
+              default_external_video_aspect_ratio: section.settings.aspect_ratio,
+              controls: true,
+              autoplay: false
+            -%}
+          {%- endif -%}
 
-              {%- if block.settings.name != blank or block.settings.quote != blank or block.settings.rating > 0 -%}
-                <div class="video-reviews-modal__meta">
-                  {%- if block.settings.rating > 0 -%}
-                    {% render 'rating', rating_value: block.settings.rating %}
-                  {%- endif -%}
-                  {%- if block.settings.quote != blank -%}
-                    <p class="video-reviews-modal__quote">&ldquo;{{ block.settings.quote }}&rdquo;</p>
-                  {%- endif -%}
-                  {%- if block.settings.name != blank -%}
-                    <p class="video-reviews-modal__name">{{ block.settings.name }}</p>
-                  {%- endif -%}
-                </div>
+          {%- if block.settings.name != blank or block.settings.quote != blank or block.settings.rating > 0 -%}
+            <div class="video-reviews-modal__meta">
+              {%- if block.settings.rating > 0 -%}
+                {% render 'rating', rating_value: block.settings.rating %}
+              {%- endif -%}
+              {%- if block.settings.quote != blank -%}
+                <p class="video-reviews-modal__quote">&ldquo;{{ block.settings.quote }}&rdquo;</p>
+              {%- endif -%}
+              {%- if block.settings.name != blank -%}
+                <p class="video-reviews-modal__name">{{ block.settings.name }}</p>
               {%- endif -%}
             </div>
-          {%- endfor -%}
+          {%- endif -%}
         </div>
       </div>
     </div>
   </div>
-{%- endif -%}
+{%- endfor -%}
 
 {% schema %}
 {

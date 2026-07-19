@@ -127,16 +127,13 @@
   padding: 24px;
 }
 
-.video-reviews-modal__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+.video-reviews-modal__content {
   max-width: 480px;
   margin: 0 auto;
 }
 
-.video-reviews-modal__item video-frame,
-.video-reviews-modal__item external-video {
+.video-reviews-modal__content video-frame,
+.video-reviews-modal__content external-video {
   display: block;
   border-radius: 12px;
   overflow: hidden;
