@@ -5,6 +5,30 @@
   assign video_blocks = section.blocks | where: 'type', 'video_review'
   assign full_width_mobile = section.settings.sm_down_edge_to_edge
   assign full_width_desktop = section.settings.enable_full_width
+
+  assign ipr_desktop = section.settings.columns_desktop
+  assign ipr_tablet = section.settings.columns_tablet
+  assign ipr_mobile = section.settings.columns_mobile
+  assign slider_items_count = video_blocks | size
+  assign slider_mobile = false
+  assign slider_desktop = false
+  if section.settings.layout_mobile == 'slide'
+    assign slider_mobile = true
+  endif
+  if section.settings.layout_desktop == 'slide'
+    assign slider_desktop = true
+  endif
+
+  assign arrows_class = ''
+  if slider_items_count <= ipr_desktop
+    assign arrows_class = arrows_class | append: ' md-hide'
+  endif
+  if slider_items_count <= ipr_tablet
+    assign arrows_class = arrows_class | append: ' sm-to-md-hide'
+  endif
+  if slider_items_count <= ipr_mobile
+    assign arrows_class = arrows_class | append: ' sm-down-hide'
+  endif
 -%}
 
 <div
@@ -30,54 +54,68 @@
   {%- endif -%}
 
   {%- if video_blocks.size > 0 -%}
-    <div
-      class="video-reviews-grid mt-32"
-      style="
-        --columns-mobile: {{ section.settings.columns_mobile }};
-        --columns-tablet: {{ section.settings.columns_tablet }};
-        --columns-desktop: {{ section.settings.columns_desktop }};
-        --gap: {{ section.settings.grid_gap | append: 'px' }};
-        --aspect-ratio: {{ section.settings.aspect_ratio | replace: ':', '/' }};
-        --radius: {{ section.settings.border_radius | append: 'px' }};
-      ">
-      {%- for block in video_blocks -%}
-        {%- liquid
-          assign poster_image = block.settings.poster_image
-          if poster_image == blank and block.settings.media_type == 'video' and block.settings.video != blank
-            assign poster_image = block.settings.video.preview_image
-          endif
-        -%}
-        <a href="#modal--video-review-{{ block.id }}" class="video-reviews-card" {{ block.shopify_attributes }}>
-          {%- if poster_image != blank -%}
-            <div class="video-reviews-card__poster">
-              {{ poster_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: '', widths: '400, 600, 800' }}
-            </div>
-          {%- elsif block.settings.media_type == 'external_video' and block.settings.external_video_url.type == 'youtube' -%}
-            <div class="video-reviews-card__poster">
-              <img src="https://i.ytimg.com/vi/{{ block.settings.external_video_url.id }}/hqdefault.jpg" alt="" loading="lazy">
-            </div>
-          {%- else -%}
-            <div class="video-reviews-card__placeholder"></div>
-          {%- endif -%}
+    <gridy-slider
+      id="slider-{{ section.id }}"
+      class="gridy-slider mt-32"
+      data-mobile-enabled="{{ slider_mobile }}"
+      data-tablet-enabled="{{ slider_desktop }}"
+      data-desktop-enabled="{{ slider_desktop }}"
+      data-ipr-mobile="{{ ipr_mobile }}"
+      data-ipr-tablet="{{ ipr_tablet }}"
+      data-ipr-desktop="{{ ipr_desktop }}"
+      data-arrows="true"
+      data-sliding-behavior="{{ section.settings.sliding_behavior }}"
+      data-autoplay="{{ section.settings.autoplay }}"
+      data-autoplay-delay="{{ section.settings.autoplay_speed | times: 1000 }}">
 
-          <span class="video-reviews-card__play">{% render 'icon-play' %}</span>
+      <div
+        class="video-reviews-grid grid gridy-track scrollbar--hide sm-gap grid-cols-{{ ipr_mobile }} sm-grid-cols-{{ ipr_tablet }} md-grid-cols-{{ ipr_desktop }}"
+        style="
+          --gap: {{ section.settings.grid_gap }}px;
+          --sm-gap: {{ section.settings.grid_gap }}px;
+          --aspect-ratio: {{ section.settings.aspect_ratio | replace: ':', '/' }};
+          --radius: {{ section.settings.border_radius | append: 'px' }};
+        ">
+        {%- for block in video_blocks -%}
+          {%- liquid
+            assign poster_image = block.settings.poster_image
+            if poster_image == blank and block.settings.media_type == 'video' and block.settings.video != blank
+              assign poster_image = block.settings.video.preview_image
+            endif
+          -%}
+          <a href="#modal--video-reviews-{{ section.id }}" class="video-reviews-card" data-video-reviews-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            {%- if poster_image != blank -%}
+              <div class="video-reviews-card__poster">
+                {{ poster_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: '', widths: '400, 600, 800' }}
+              </div>
+            {%- elsif block.settings.media_type == 'external_video' and block.settings.external_video_url.type == 'youtube' -%}
+              <div class="video-reviews-card__poster">
+                <img src="https://i.ytimg.com/vi/{{ block.settings.external_video_url.id }}/hqdefault.jpg" alt="" loading="lazy">
+              </div>
+            {%- else -%}
+              <div class="video-reviews-card__placeholder"></div>
+            {%- endif -%}
 
-          {%- if block.settings.name != blank or block.settings.quote != blank or block.settings.rating > 0 -%}
-            <div class="video-reviews-card__meta">
-              {%- if block.settings.rating > 0 -%}
-                {% render 'rating', rating_value: block.settings.rating %}
-              {%- endif -%}
-              {%- if block.settings.quote != blank -%}
-                <p class="video-reviews-card__quote">&ldquo;{{ block.settings.quote }}&rdquo;</p>
-              {%- endif -%}
-              {%- if block.settings.name != blank -%}
-                <p class="video-reviews-card__name">{{ block.settings.name }}</p>
-              {%- endif -%}
-            </div>
-          {%- endif -%}
-        </a>
-      {%- endfor -%}
-    </div>
+            <span class="video-reviews-card__play">{% render 'icon-play' %}</span>
+
+            {%- if block.settings.name != blank or block.settings.quote != blank or block.settings.rating > 0 -%}
+              <div class="video-reviews-card__meta">
+                {%- if block.settings.rating > 0 -%}
+                  {% render 'rating', rating_value: block.settings.rating %}
+                {%- endif -%}
+                {%- if block.settings.quote != blank -%}
+                  <p class="video-reviews-card__quote">&ldquo;{{ block.settings.quote }}&rdquo;</p>
+                {%- endif -%}
+                {%- if block.settings.name != blank -%}
+                  <p class="video-reviews-card__name">{{ block.settings.name }}</p>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </a>
+        {%- endfor -%}
+      </div>
+      {% render 'gridy-arrows', class: arrows_class %}
+    </gridy-slider>
   {%- endif -%}
 
   {%- if section.settings.cta_label != blank and section.settings.cta_link != blank -%}
@@ -87,14 +125,21 @@
   {%- endif -%}
 </div>
 
-{%- for block in video_blocks -%}
-  <div id="modal--video-review-{{ block.id }}" class="modal modal--fullscreen video-reviews-modal color-{{ settings.color_scheme_modals }}" data-modal data-parent>
+{%- if video_blocks.size > 0 -%}
+  <div id="modal--video-reviews-{{ section.id }}" class="modal modal--fullscreen video-reviews-modal color-{{ settings.color_scheme_modals }}" data-modal data-parent>
     <a href="#" class="btn btn--primary btn--round modal-close pos--absolute" data-modal-close data-close aria-label="{{ 'accessibility.close_something' | t: something: 'modal' }}">{% render 'icon-close' %}</a>
     <div class="modal-dialog" data-contents data-modal-dialog role="dialog" aria-modal="true" tabindex="-1">
       <div class="modal-body" data-modal-body>
         <div class="video-reviews-modal__content">
-          <div class="video-reviews-modal__player" data-video-reviews-player></div>
-          <template data-video-reviews-template>
+          {%- if video_blocks.size > 1 -%}
+            <button type="button" class="video-reviews-modal__nav video-reviews-modal__nav--prev" data-video-reviews-prev aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-chevron-left' %}</button>
+            <button type="button" class="video-reviews-modal__nav video-reviews-modal__nav--next" data-video-reviews-next aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-chevron-right' %}</button>
+          {%- endif -%}
+          <div class="video-reviews-modal__stage" data-video-reviews-player></div>
+        </div>
+
+        {%- for block in video_blocks -%}
+          <template data-video-reviews-template data-video-reviews-index="{{ forloop.index0 }}">
             {%- if block.settings.media_type == 'video' -%}
               {%- render 'video-frame',
                 video_default: block.settings.video,
@@ -111,26 +156,26 @@
                 autoplay: false
               -%}
             {%- endif -%}
-          </template>
 
-          {%- if block.settings.name != blank or block.settings.quote != blank or block.settings.rating > 0 -%}
-            <div class="video-reviews-modal__meta">
-              {%- if block.settings.rating > 0 -%}
-                {% render 'rating', rating_value: block.settings.rating %}
-              {%- endif -%}
-              {%- if block.settings.quote != blank -%}
-                <p class="video-reviews-modal__quote">&ldquo;{{ block.settings.quote }}&rdquo;</p>
-              {%- endif -%}
-              {%- if block.settings.name != blank -%}
-                <p class="video-reviews-modal__name">{{ block.settings.name }}</p>
-              {%- endif -%}
-            </div>
-          {%- endif -%}
-        </div>
+            {%- if block.settings.name != blank or block.settings.quote != blank or block.settings.rating > 0 -%}
+              <div class="video-reviews-modal__meta">
+                {%- if block.settings.rating > 0 -%}
+                  {% render 'rating', rating_value: block.settings.rating %}
+                {%- endif -%}
+                {%- if block.settings.quote != blank -%}
+                  <p class="video-reviews-modal__quote">&ldquo;{{ block.settings.quote }}&rdquo;</p>
+                {%- endif -%}
+                {%- if block.settings.name != blank -%}
+                  <p class="video-reviews-modal__name">{{ block.settings.name }}</p>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </template>
+        {%- endfor -%}
       </div>
     </div>
   </div>
-{%- endfor -%}
+{%- endif -%}
 
 <script src="{{ 'component-video-reviews.js' | asset_url }}" defer="defer"></script>
 
@@ -144,7 +189,7 @@
   "settings": [
     {
       "type": "paragraph",
-      "content": "A grid of customer/UGC video clips. Click a card to open it full-size in a lightbox. Add hosted videos (uploaded to Shopify) or paste a YouTube/Vimeo link per block."
+      "content": "A grid or carousel of customer/UGC video clips. Click a card to open it full-size in a lightbox, with next/previous to browse without closing. Add hosted videos (uploaded to Shopify) or paste a YouTube/Vimeo link per block."
     },
     {
       "type": "color_scheme",
@@ -154,7 +199,7 @@
     },
     {
       "type": "header",
-      "content": "Grid layout"
+      "content": "Layout"
     },
     {
       "type": "select",
@@ -234,6 +279,16 @@
       "content": "t:sections.headers.desktop_layout"
     },
     {
+      "type": "select",
+      "id": "layout_desktop",
+      "label": "t:sections.layout.display_type.label",
+      "default": "grid",
+      "options": [
+        { "value": "grid", "label": "t:sections.layout.display_type.grid" },
+        { "value": "slide", "label": "t:sections.layout.display_type.slider" }
+      ]
+    },
+    {
       "type": "checkbox",
       "id": "enable_full_width",
       "label": "t:sections.layout.section_width.full_width",
@@ -264,6 +319,16 @@
       "content": "t:sections.headers.mobile_layout"
     },
     {
+      "type": "select",
+      "id": "layout_mobile",
+      "label": "t:sections.layout.display_type.label",
+      "default": "grid",
+      "options": [
+        { "value": "grid", "label": "t:sections.layout.display_type.grid" },
+        { "value": "slide", "label": "t:sections.layout.display_type.slider" }
+      ]
+    },
+    {
       "type": "checkbox",
       "id": "sm_down_edge_to_edge",
       "label": "t:sections.layout.section_width.edge_to_edge",
@@ -288,6 +353,38 @@
       "unit": "px",
       "label": "t:sections.layout.margin_bottom",
       "default": 40
+    },
+    {
+      "type": "header",
+      "content": "t:sections.headers.sliders"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "t:sections.sliders.enable_autoplay.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "t:sections.sliders.autoplay_speed.label",
+      "info": "t:sections.sliders.autoplay_speed.info",
+      "default": 5,
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "unit": "s"
+    },
+    {
+      "type": "select",
+      "id": "sliding_behavior",
+      "label": "t:sections.sliders.sliding_behavior.label",
+      "default": "single",
+      "info": "t:sections.sliders.sliding_behavior.info",
+      "options": [
+        { "value": "single", "label": "t:sections.sliders.sliding_behavior.options.single" },
+        { "value": "all", "label": "t:sections.sliders.sliding_behavior.options.all" }
+      ]
     }
   ],
   "blocks": [

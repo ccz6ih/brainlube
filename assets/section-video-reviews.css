@@ -1,20 +1,6 @@
-.video-reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(var(--columns-mobile), 1fr);
-  gap: var(--gap);
-}
-
-@media screen and (min-width: 750px) and (max-width: 989px) {
-  .video-reviews-grid {
-    grid-template-columns: repeat(var(--columns-tablet), 1fr);
-  }
-}
-
-@media screen and (min-width: 990px) {
-  .video-reviews-grid {
-    grid-template-columns: repeat(var(--columns-desktop), 1fr);
-  }
-}
+/* Column count and gap come from the theme's own .grid / .grid-cols-N /
+   gridy-slider system (grid mode and slide mode both read the same
+   --gap / --sm-gap custom properties set inline on .video-reviews-grid). */
 
 .video-reviews-card {
   position: relative;
@@ -128,15 +114,61 @@
 }
 
 .video-reviews-modal__content {
+  position: relative;
   max-width: 480px;
   margin: 0 auto;
 }
 
-.video-reviews-modal__content video-frame,
-.video-reviews-modal__content external-video {
+.video-reviews-modal__stage video-frame,
+.video-reviews-modal__stage external-video {
   display: block;
   border-radius: 12px;
   overflow: hidden;
+}
+
+.video-reviews-modal__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: #111111;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.video-reviews-modal__nav:hover {
+  background: #ffffff;
+}
+
+.video-reviews-modal__nav svg {
+  width: 20px;
+  height: 20px;
+}
+
+.video-reviews-modal__nav--prev {
+  left: -8px;
+}
+
+.video-reviews-modal__nav--next {
+  right: -8px;
+}
+
+@media screen and (max-width: 749px) {
+  .video-reviews-modal__nav--prev {
+    left: 4px;
+  }
+
+  .video-reviews-modal__nav--next {
+    right: 4px;
+  }
 }
 
 .video-reviews-modal__meta {
