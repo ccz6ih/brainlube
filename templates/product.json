@@ -639,6 +639,7 @@
           "settings": {
             "media_type": "video",
             "video": "shopify://files/videos/Nootropics Energy Drink, OG Mango (1).mp4",
+            "external_video_url": "",
             "name": "Mandy Reagan",
             "quote": "I have the best focus and energy now!",
             "rating": 5
@@ -649,6 +650,7 @@
           "settings": {
             "media_type": "video",
             "video": "shopify://files/videos/output.mp4",
+            "external_video_url": "",
             "poster_image": "shopify://shop_images/bafc63ea.jpg",
             "name": "Ain C.",
             "quote": "This drink is great for school",
@@ -660,6 +662,7 @@
           "settings": {
             "media_type": "video",
             "video": "shopify://files/videos/Nootropics Energy Drink, OG Mango.mp4",
+            "external_video_url": "",
             "name": "",
             "quote": "",
             "rating": 0
@@ -681,6 +684,7 @@
           "settings": {
             "media_type": "video",
             "video": "shopify://files/videos/create_the_ultimate_UGC_video.mp4",
+            "external_video_url": "",
             "poster_image": "shopify://shop_images/19944916.jpg",
             "name": "",
             "quote": "",
@@ -709,12 +713,17 @@
         "border_radius": 12,
         "cta_label": "",
         "cta_link": "",
+        "layout_desktop": "slide",
         "enable_full_width": true,
         "md_padding_top": 64,
         "md_padding_bottom": 64,
+        "layout_mobile": "grid",
         "sm_down_edge_to_edge": false,
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "single"
       }
     },
     "1784337049ed3d7b28": {
