@@ -508,6 +508,7 @@
             "media_link": "https://cdn.shopify.com/videos/c/o/v/612adeeeb1d74ffa9e5666e6cbff203c.mp4",
             "media_type": "video",
             "video": "shopify://files/videos/Create_a_second_long_video.mp4",
+            "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
@@ -593,6 +594,89 @@
         "md_padding_bottom": 64,
         "padding_top": 48,
         "padding_bottom": 48
+      }
+    },
+    "video_reviews_JeRNb3": {
+      "type": "video-reviews",
+      "blocks": {
+        "section_header_x63AC4": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "Real people, real focus",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        },
+        "video_review_pkFAaR": {
+          "type": "video_review",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/Nootropics Energy Drink, OG Mango (1).mp4",
+            "name": "",
+            "quote": "",
+            "rating": 0
+          }
+        },
+        "video_review_TQWfqV": {
+          "type": "video_review",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/output.mp4",
+            "poster_image": "shopify://shop_images/bafc63ea.jpg",
+            "name": "",
+            "quote": "",
+            "rating": 0
+          }
+        },
+        "video_review_XR7mGb": {
+          "type": "video_review",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/Nootropics Energy Drink, OG Mango.mp4",
+            "name": "",
+            "quote": "",
+            "rating": 0
+          }
+        },
+        "video_review_YBJyUR": {
+          "type": "video_review",
+          "settings": {
+            "media_type": "video",
+            "name": "",
+            "quote": "",
+            "rating": 0
+          }
+        }
+      },
+      "block_order": [
+        "section_header_x63AC4",
+        "video_review_pkFAaR",
+        "video_review_TQWfqV",
+        "video_review_XR7mGb",
+        "video_review_YBJyUR"
+      ],
+      "name": "UGC video reviews",
+      "settings": {
+        "color_scheme": "",
+        "aspect_ratio": "9:16",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 12,
+        "border_radius": 12,
+        "cta_label": "",
+        "cta_link": "",
+        "enable_full_width": false,
+        "md_padding_top": 64,
+        "md_padding_bottom": 64,
+        "sm_down_edge_to_edge": false,
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "1784337049ed3d7b28": {
@@ -971,6 +1055,7 @@
     "image_with_hotspots_NV4NA8",
     "image_with_text_dJA7HA",
     "comparison_custom_liquid",
+    "video_reviews_JeRNb3",
     "1784337049ed3d7b28",
     "rich_text_8F9YN9",
     "banner_grid_GdCgCD",
