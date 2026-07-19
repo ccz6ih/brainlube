@@ -626,6 +626,7 @@
           "type": "video_review",
           "settings": {
             "media_type": "video",
+            "video": "shopify://files/videos/output.mp4",
             "poster_image": "shopify://shop_images/bafc63ea.jpg",
             "name": "",
             "quote": "",
@@ -636,6 +637,7 @@
           "type": "video_review",
           "settings": {
             "media_type": "video",
+            "video": "shopify://files/videos/Nootropics Energy Drink, OG Mango.mp4",
             "name": "",
             "quote": "",
             "rating": 0
