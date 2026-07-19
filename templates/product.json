@@ -617,9 +617,9 @@
           "settings": {
             "media_type": "video",
             "video": "shopify://files/videos/Nootropics Energy Drink, OG Mango (1).mp4",
-            "name": "",
-            "quote": "",
-            "rating": 0
+            "name": "Mandy Reagan",
+            "quote": "I have the best focus and energy now!",
+            "rating": 5
           }
         },
         "video_review_TQWfqV": {
@@ -628,9 +628,9 @@
             "media_type": "video",
             "video": "shopify://files/videos/output.mp4",
             "poster_image": "shopify://shop_images/bafc63ea.jpg",
-            "name": "",
-            "quote": "",
-            "rating": 0
+            "name": "Ain C.",
+            "quote": "This drink is great for school",
+            "rating": 5
           }
         },
         "video_review_XR7mGb": {
@@ -647,6 +647,8 @@
           "type": "video_review",
           "settings": {
             "media_type": "video",
+            "video": "shopify://files/videos/create_the_ultimate_UGC_video.mp4",
+            "poster_image": "shopify://shop_images/19944916.jpg",
             "name": "",
             "quote": "",
             "rating": 0
