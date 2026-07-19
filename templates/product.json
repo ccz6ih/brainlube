@@ -718,10 +718,10 @@
         "md_padding_top": 64,
         "md_padding_bottom": 64,
         "layout_mobile": "slide",
-        "sm_down_edge_to_edge": false,
+        "sm_down_edge_to_edge": true,
         "padding_top": 40,
         "padding_bottom": 40,
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_speed": 5,
         "sliding_behavior": "all"
       }
