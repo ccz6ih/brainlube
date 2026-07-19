@@ -706,7 +706,7 @@
       "settings": {
         "color_scheme": "",
         "aspect_ratio": "9:16",
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 12,
