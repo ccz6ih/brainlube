@@ -714,7 +714,7 @@
         "cta_label": "",
         "cta_link": "",
         "layout_desktop": "slide",
-        "enable_full_width": true,
+        "enable_full_width": false,
         "md_padding_top": 64,
         "md_padding_bottom": 64,
         "layout_mobile": "grid",
