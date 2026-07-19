@@ -709,7 +709,7 @@
         "border_radius": 12,
         "cta_label": "",
         "cta_link": "",
-        "enable_full_width": false,
+        "enable_full_width": true,
         "md_padding_top": 64,
         "md_padding_bottom": 64,
         "sm_down_edge_to_edge": false,
