@@ -93,22 +93,25 @@
     <div class="modal-dialog" data-contents data-modal-dialog role="dialog" aria-modal="true" tabindex="-1">
       <div class="modal-body" data-modal-body>
         <div class="video-reviews-modal__content">
-          {%- if block.settings.media_type == 'video' -%}
-            {%- render 'video-frame',
-              video_default: block.settings.video,
-              aspect_ratio: 'natural',
-              sizing_rule: 'contain',
-              controls: true,
-              autoplay: false
-            -%}
-          {%- elsif block.settings.media_type == 'external_video' -%}
-            {%- render 'external-video',
-              default_external_video: block.settings.external_video_url,
-              default_external_video_aspect_ratio: section.settings.aspect_ratio,
-              controls: true,
-              autoplay: false
-            -%}
-          {%- endif -%}
+          <div class="video-reviews-modal__player" data-video-reviews-player></div>
+          <template data-video-reviews-template>
+            {%- if block.settings.media_type == 'video' -%}
+              {%- render 'video-frame',
+                video_default: block.settings.video,
+                aspect_ratio: 'natural',
+                sizing_rule: 'contain',
+                controls: true,
+                autoplay: false
+              -%}
+            {%- elsif block.settings.media_type == 'external_video' -%}
+              {%- render 'external-video',
+                default_external_video: block.settings.external_video_url,
+                default_external_video_aspect_ratio: section.settings.aspect_ratio,
+                controls: true,
+                autoplay: false
+              -%}
+            {%- endif -%}
+          </template>
 
           {%- if block.settings.name != blank or block.settings.quote != blank or block.settings.rating > 0 -%}
             <div class="video-reviews-modal__meta">
@@ -128,6 +131,8 @@
     </div>
   </div>
 {%- endfor -%}
+
+<script src="{{ 'component-video-reviews.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {
