@@ -119,6 +119,18 @@
     "faq_about_dropdowns": {
       "type": "faq",
       "blocks": {
+        "image_LXa6Eh": {
+          "type": "image",
+          "settings": {
+            "media_aspect_ratio": "natural",
+            "media_type": "image",
+            "image": "shopify://shop_images/brainlube-website-imagery-hero-image-of-three-cans-together.png",
+            "external_video_url": "",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
         "section_header_about": {
           "type": "section_header",
           "settings": {
@@ -148,6 +160,7 @@
         }
       },
       "block_order": [
+        "image_LXa6Eh",
         "section_header_about",
         "question_company",
         "question_science"
@@ -155,7 +168,7 @@
       "settings": {
         "color_scheme": "alternative-2",
         "title_style": "h3",
-        "enable_full_width": false,
+        "enable_full_width": true,
         "media_position": "media_first",
         "md_padding_top": 56,
         "md_padding_bottom": 56,
