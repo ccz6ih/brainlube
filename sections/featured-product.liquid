@@ -1,0 +1,266 @@
+{%- liquid
+  assign product = section.settings.product
+  assign full_width = section.settings.enable_full_width
+  assign variant = product.selected_or_first_available_variant
+  assign product_form_id = 'product-form-' | append: section.id
+
+  capture sizes
+    render 'img_sizes', full_width: full_width, ipr_mobile: 1, ipr_tablet: 2, ipr_desktop: 2
+  endcapture
+-%}
+
+<div
+  id="{{ section.id }}"
+  class="pt pb sm-pt sm-pb container sm-down-edge-to-edge{% if full_width %} full-width{% endif %} color-{{ section.settings.color_scheme }}"
+  style="
+    --pt: {{ section.settings.padding_top | append: 'px' }};
+    --pb: {{ section.settings.padding_bottom | append: 'px' }};
+    --sm-pt: {{ section.settings.md_padding_top | append: 'px' }};
+    --sm-pb: {{ section.settings.md_padding_bottom | append: 'px' }};
+  ">
+  {%- if product == blank -%}
+    <div class="p-page text-align-center">
+      <p>Select a product to feature it here.</p>
+    </div>
+  {%- else -%}
+    <div class="media-with-text grid grid-cols-1 sm-grid-cols-2 col-align-items-center col-justify-items-center">
+      <div class="sm-br-img{% if section.settings.media_position == 'media_last' %} col-sm-order-2{% endif %}">
+        <a class="media-link" href="{{ product.url }}">
+          {%- render 'img',
+            src: product.featured_image,
+            aspect_ratio: section.settings.media_aspect_ratio,
+            sizes: sizes,
+            lazyload: true -%}
+        </a>
+      </div>
+      <div class="p-page pt-12 pb-24 sm-p-0 sm-pt-24 sm-pb-24 col-sm-max-4 {{ section.settings.mobile_alignment }} {{ section.settings.desktop_alignment }}">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="subheading size--tiny mb-8">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+
+        <h2 class="h2">
+          <a href="{{ product.url }}" class="unstyled-link">{{ product.title }}</a>
+        </h2>
+
+        {%- if section.settings.show_price -%}
+          {%- render 'price', product: product, use_variant: true -%}
+        {%- endif -%}
+
+        {%- if section.settings.description != blank -%}
+          <div class="rte mt-16">{{ section.settings.description }}</div>
+        {%- else -%}
+          <div class="rte mt-16">
+            <p>{{ product.description | strip_html | truncatewords: 40 }}</p>
+          </div>
+        {%- endif -%}
+
+        <div class="mt-24">
+          {%- form 'product', product, id: product_form_id, novalidate: 'novalidate' -%}
+            <input type="hidden" name="id" value="{{ variant.id }}">
+            <input type="hidden" name="quantity" value="1">
+            {%- if variant.available -%}
+              {%- render 'button', label: section.settings.button_label, tag: 'button', style: 'primary' -%}
+            {%- else -%}
+              {%- render 'button', label: 'products.product.sold_out' | t, tag: 'button', style: 'secondary' -%}
+            {%- endif -%}
+          {%- endform -%}
+
+          <div class="mt-12">
+            <a href="{{ product.url }}" class="link size--small">View full details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Featured product",
+  "class": "section--featured-product",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer",
+      "aside"
+    ]
+  },
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "default",
+      "label": "t:sections.colors.color_scheme.label"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "THE NOOTROPIC ENERGY DRINK"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show price",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "info": "Leave blank to use the product's own description (trimmed)."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.headers.desktop_layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_full_width",
+      "label": "t:sections.layout.section_width.full_width",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "t:sections.layout.media_position.label",
+      "options": [
+        {
+          "value": "media_first",
+          "label": "t:sections.layout.media_position.media_first"
+        },
+        {
+          "value": "media_last",
+          "label": "t:sections.layout.media_position.media_last"
+        }
+      ],
+      "default": "media_first"
+    },
+    {
+      "type": "select",
+      "id": "media_aspect_ratio",
+      "label": "t:common.aspect_ratio.label_for_media",
+      "options": [
+        {
+          "value": "natural",
+          "label": "t:common.aspect_ratio.value.natural"
+        },
+        {
+          "value": "portrait",
+          "label": "t:common.aspect_ratio.value.2_3"
+        },
+        {
+          "value": "portrait_alt",
+          "label": "t:common.aspect_ratio.value.3_4"
+        },
+        {
+          "value": "square",
+          "label": "t:common.aspect_ratio.value.1_1"
+        },
+        {
+          "value": "landscape",
+          "label": "t:common.aspect_ratio.value.4_3"
+        },
+        {
+          "value": "landscape_alt",
+          "label": "t:common.aspect_ratio.value.16_9"
+        }
+      ],
+      "default": "square"
+    },
+    {
+      "type": "select",
+      "id": "desktop_alignment",
+      "label": "t:sections.typography.text_align",
+      "options": [
+        {
+          "value": "sm-text-align-left",
+          "label": "t:sections.layout.position.options.left"
+        },
+        {
+          "value": "sm-text-align-center",
+          "label": "t:sections.layout.position.options.center"
+        }
+      ],
+      "default": "sm-text-align-left"
+    },
+    {
+      "type": "range",
+      "id": "md_padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "label": "t:sections.layout.margin_top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "md_padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "label": "t:sections.layout.margin_bottom",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "t:sections.headers.mobile_layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_alignment",
+      "label": "t:sections.typography.text_align",
+      "options": [
+        {
+          "value": "text-align-left",
+          "label": "t:sections.layout.position.options.left"
+        },
+        {
+          "value": "text-align-center",
+          "label": "t:sections.layout.position.options.center"
+        }
+      ],
+      "default": "text-align-left"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "label": "t:sections.layout.margin_top",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "label": "t:sections.layout.margin_bottom",
+      "default": 32
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured product",
+      "category": "t:sections.section_categories.product_and_collection_promotion"
+    }
+  ]
+}
+{% endschema %}
