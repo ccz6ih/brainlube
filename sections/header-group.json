@@ -47,7 +47,7 @@
         "color_scheme": "default",
         "drawer_menu": "main-menu",
         "shortcut_limit": 4,
-        "drawer_secondary_menu": "",
+        "drawer_secondary_menu": "main-menu",
         "desktop_submenu_type": "drawer",
         "desktop_submenu_width": "full",
         "enable_full_width": true,
