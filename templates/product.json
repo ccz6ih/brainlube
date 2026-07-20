@@ -146,7 +146,7 @@
         "text_trust_badges": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<p class=\"size--tiny text-align-center\">✓ Third-Party Tested &nbsp; ✓ Made in USA &nbsp; ✓ Non-GMO</p>",
+            "custom_liquid": "<p class=\"size--tiny text-align-center\">✓ Third-Party Tested &nbsp; ✓ Made in USA &nbsp; ✓ Non-GMO &nbsp; ✓ 100% Plant-Based</p>",
             "margin_top": 16
           }
         },
@@ -181,10 +181,21 @@
           "type": "collapsible_tab",
           "settings": {
             "title": "What's Inside — And Why",
-            "content": "<p>Every can carries our <strong>BRAiNLUBE Energy Blend</strong>, chosen so each piece pulls its weight:</p><ul><li><strong>Clean energy:</strong> natural caffeine (130mg from all sources), guarana, green coffee bean, and taurine for a lift without the sugar-bomb spike.</li><li><strong>Focus &amp; clarity:</strong> L-theanine + L-tyrosine, plus bacopa monnieri and ginkgo biloba — the nootropic side that supports memory, attention, and smooth thinking. The L-theanine is the quiet MVP: paired with caffeine, it is one of the most well-documented ways to get alert focus <em>without</em> the jitters or the crash.</li><li><strong>Calm &amp; resilience:</strong> ashwagandha and ginseng — adaptogens that help your body handle stress instead of adding to it.</li></ul><p>No proprietary hand-waving — check the Supplement Facts panel in the product images for the full ingredient breakdown.</p>",
+            "content": "<p>Every can carries our <strong>BRAiNLUBE Energy Blend</strong>, chosen so each piece pulls its weight:</p><ul><li><strong>Clean energy:</strong> natural caffeine (130mg from all sources), guarana, green coffee bean, and taurine for a lift without the sugar-bomb spike.</li><li><strong>Focus &amp; clarity:</strong> L-theanine + L-tyrosine, plus bacopa monnieri and ginkgo biloba — the nootropic side that supports memory, attention, and smooth thinking. The L-theanine is the quiet MVP: paired with caffeine, it is one of the most well-documented ways to get alert focus <em>without</em> the jitters or the crash.</li><li><strong>Calm &amp; resilience:</strong> ashwagandha and ginseng — adaptogens that help your body handle stress instead of adding to it.</li><li><strong>Full-spectrum support:</strong> rounded out with Vitamins C, D3, E, B6 &amp; B12, Niacin, Thiamin, Riboflavin, Pantothenic Acid, Magnesium, and Zinc.</li></ul><p>100% plant-based — no animal products, ever. No proprietary hand-waving — check the Supplement Facts panel in the product images for the full ingredient breakdown.</p>",
             "page": "",
             "open_as_drawer": false,
             "icon": "icon-zap",
+            "margin_top": 0
+          }
+        },
+        "tab_vitamins_minerals": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Vitamins & Minerals",
+            "content": "<p>Beyond the Energy Blend, every can rounds things out with a full spread of vitamins and minerals:</p><ul><li>Vitamin C, D3 &amp; E</li><li>Vitamin B6 &amp; B12</li><li>Niacin, Thiamin HCl &amp; Riboflavin</li><li>Pantothenic Acid</li><li>Magnesium Citrate</li><li>Zinc Gluconate</li></ul><p>100% plant-based — no animal products, ever.</p>",
+            "page": "",
+            "open_as_drawer": false,
+            "icon": "icon-plant",
             "margin_top": 0
           }
         },
@@ -251,6 +262,7 @@
         "the-pickup-availability",
         "the-sticky-buy-bar",
         "tab_whats_inside",
+        "tab_vitamins_minerals",
         "tab_what_youll_feel",
         "75b14a74-c1c5-4fcc-932f-e2bfa017fba2",
         "tab_who_its_for",
