@@ -19,6 +19,7 @@
             "media_link": "",
             "media_type": "image",
             "image": "{{ article.image }}",
+            "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
             "video_autoplay": true
@@ -160,11 +161,57 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "featured_collection_or_products_NNN8D9": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "section_header_CBykE7": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "subtitle_tag": "h3",
+            "title": "",
+            "title_tag": "h2",
+            "text": "",
+            "text_alignment": "text-align-center",
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_CBykE7"
+      ],
+      "name": "t:sections.featured-collection-or-products.name",
+      "settings": {
+        "color_scheme": "",
+        "collection": "nootropic-energy-drinks",
+        "product_list": [],
+        "product_limit": 1,
+        "view_all": true,
+        "enable_card_thumbnail": false,
+        "enable_full_width": false,
+        "layout_desktop": "slide",
+        "products_per_row_desktop": 2,
+        "sm_custom_gap": -1,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "products_per_row_tablet": 4,
+        "layout_mobile": "slide",
+        "products_per_row_mobile": 1,
+        "custom_gap": -1,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "all"
+      }
     }
   },
   "order": [
     "image_with_text_bmcedR",
     "main",
-    "article-navigation"
+    "article-navigation",
+    "featured_collection_or_products_NNN8D9"
   ]
 }
