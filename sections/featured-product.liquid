@@ -2,7 +2,7 @@
   assign product = section.settings.product
   assign full_width = section.settings.enable_full_width
   assign variant = product.selected_or_first_available_variant
-  assign product_form_id = 'product-form-' | append: section.id
+  assign product_form_id = 'featured-product-form-' | append: section.id
 
   capture sizes
     render 'img_sizes', full_width: full_width, ipr_mobile: 1, ipr_tablet: 2, ipr_desktop: 2
@@ -55,15 +55,36 @@
         {%- endif -%}
 
         <div class="mt-24">
-          {%- form 'product', product, id: product_form_id, novalidate: 'novalidate' -%}
-            <input type="hidden" name="id" value="{{ variant.id }}">
-            <input type="hidden" name="quantity" value="1">
-            {%- if variant.available -%}
-              {%- render 'button', label: section.settings.button_label, tag: 'button', style: 'primary' -%}
-            {%- else -%}
-              {%- render 'button', label: 'products.product.sold_out' | t, tag: 'button', style: 'secondary' -%}
-            {%- endif -%}
-          {%- endform -%}
+          <product-form class="product-form">
+            {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+              <input type="hidden" name="id" value="{{ variant.id }}" disabled>
+
+              <div class="product-form__buttons flex horizontal vertical-center" style="gap: 12px; flex-wrap: wrap;">
+                {%- if section.settings.show_quantity_selector -%}
+                  {%- render 'quantity-input', input_min_value: 1, input_value: 1, input_form: product_form_id -%}
+                {%- else -%}
+                  <input class="quantity__input" type="hidden" name="quantity" min="1" value="1" form="{{ product_form_id }}">
+                {%- endif -%}
+
+                <button
+                  type="submit"
+                  name="add"
+                  class="product-form__submit btn btn--primary"
+                  {% if variant == nil or variant.available == false %}disabled{% endif %}
+                  {% if settings.cart_type == 'drawer' %}aria-haspopup="dialog"{% endif %}>
+                  <span>
+                    {%- if variant == nil or variant.available == false -%}
+                      {{- 'products.product.sold_out' | t -}}
+                    {%- elsif section.settings.button_label != blank -%}
+                      {{- section.settings.button_label -}}
+                    {%- else -%}
+                      {{- 'products.product.add_to_cart' | t -}}
+                    {%- endif -%}
+                  </span>
+                </button>
+              </div>
+            {%- endform -%}
+          </product-form>
 
           <div class="mt-12">
             <a href="{{ product.url }}" class="link size--small">View full details</a>
@@ -114,6 +135,12 @@
       "id": "description",
       "label": "Description",
       "info": "Leave blank to use the product's own description (trimmed)."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quantity_selector",
+      "label": "Show quantity selector",
+      "default": true
     },
     {
       "type": "text",
