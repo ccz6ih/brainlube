@@ -39,7 +39,7 @@
           "type": "title",
           "settings": {
             "title": "{{ article.title }}",
-            "heading_tag": "h2",
+            "heading_tag": "h1",
             "sm_size_multiplier": "sm-size--default",
             "sm_margin_top": 0,
             "size_multiplier": "size--default",
