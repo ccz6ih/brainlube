@@ -16,7 +16,7 @@
           "type": "featured_image",
           "settings": {
             "enable_full_width": false,
-            "media_aspect_ratio": "square",
+            "media_aspect_ratio": "landscape_alt",
             "margin_top": 0
           }
         },
