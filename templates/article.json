@@ -66,9 +66,9 @@
       "name": "t:sections.image-with-text.name",
       "settings": {
         "color_scheme": "",
-        "enable_full_width": false,
+        "enable_full_width": true,
         "media_position": "media_first",
-        "content_width": "col-sm-max-4",
+        "content_width": "col-sm-max-5",
         "desktop_alignment": "sm-text-align-left",
         "sm_full_width_buttons": false,
         "md_padding_top": 40,
