@@ -149,6 +149,47 @@
         "padding_bottom": 0
       }
     },
+    "featured_product_article": {
+      "type": "featured-collection-or-products",
+      "blocks": {
+        "section_header": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "THE NOOTROPIC ENERGY DRINK",
+            "subtitle_tag": "h3",
+            "title": "Fuel Your Next Focus Session",
+            "title_tag": "h2",
+            "text": "<p>Clean, focused energy — no crash. Grab a 6-pack and see what the blend feels like.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "section_header"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "collection": "",
+        "product_list": [],
+        "product_limit": 1,
+        "view_all": false,
+        "enable_card_thumbnail": false,
+        "enable_full_width": false,
+        "layout_desktop": "grid",
+        "products_per_row_desktop": 3,
+        "sm_custom_gap": -1,
+        "md_padding_top": 60,
+        "md_padding_bottom": 60,
+        "products_per_row_tablet": 2,
+        "layout_mobile": "grid",
+        "products_per_row_mobile": 1,
+        "custom_gap": -1,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "sliding_behavior": "all"
+      }
+    },
     "article-navigation": {
       "type": "article-navigation",
       "settings": {
@@ -165,6 +206,7 @@
   "order": [
     "image_with_text_bmcedR",
     "main",
+    "featured_product_article",
     "article-navigation"
   ]
 }
