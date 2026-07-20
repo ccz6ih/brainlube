@@ -122,9 +122,9 @@
         "image_LXa6Eh": {
           "type": "image",
           "settings": {
-            "media_aspect_ratio": "natural",
+            "media_aspect_ratio": "square",
             "media_type": "image",
-            "image": "shopify://shop_images/brainlube-website-imagery-hero-image-of-three-cans-together.png",
+            "image": "shopify://shop_images/Stamp_v1.png",
             "external_video_url": "",
             "external_video_aspect_ratio": "16:9",
             "video_controls": false,
