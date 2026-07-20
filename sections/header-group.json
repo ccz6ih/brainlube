@@ -46,9 +46,10 @@
       "settings": {
         "color_scheme": "default",
         "drawer_menu": "main-menu",
-        "shortcut_limit": 3,
+        "shortcut_limit": 4,
         "drawer_secondary_menu": "",
         "desktop_submenu_type": "drawer",
+        "desktop_submenu_width": "full",
         "enable_full_width": true,
         "header_layout": "logo-center__menu-left",
         "header_sticky_behavior": "scroll",
@@ -63,7 +64,9 @@
         "overlay_index": false,
         "overlay_collection": false,
         "overlay_handles": "",
-        "overlay_text_color": "use-background"
+        "overlay_text_color": "use-background",
+        "drawer_logo": "none",
+        "drawer_logo_max_width": 100
       }
     }
   },
