@@ -1,12 +1,92 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "image_with_text_bmcedR": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_AxKT4X": {
+          "type": "image",
+          "settings": {
+            "media_aspect_ratio": "natural",
+            "media_link": "",
+            "media_type": "image",
+            "image": "{{ article.image }}",
+            "external_video_aspect_ratio": "16:9",
+            "video_controls": false,
+            "video_autoplay": true
+          }
+        },
+        "subtitle_YN9pcn": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "",
+            "heading_tag": "h3",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "title_cqNfYc": {
+          "type": "title",
+          "settings": {
+            "title": "{{ article.title }}",
+            "heading_tag": "h1",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        },
+        "text_dCRNbX": {
+          "type": "text",
+          "settings": {
+            "text": "{{ article.excerpt }}",
+            "sm_size_multiplier": "sm-size--default",
+            "sm_margin_top": 0,
+            "size_multiplier": "size--default",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_AxKT4X",
+        "subtitle_YN9pcn",
+        "title_cqNfYc",
+        "text_dCRNbX"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "enable_full_width": true,
+        "media_position": "media_first",
+        "content_width": "col-sm-max-5",
+        "desktop_alignment": "sm-text-align-left",
+        "sm_full_width_buttons": false,
+        "md_padding_top": 40,
+        "md_padding_bottom": 40,
+        "mobile_alignment": "text-align-left",
+        "full_width_buttons": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
     "main": {
       "type": "main-article",
       "blocks": {
         "featured_image": {
           "type": "featured_image",
+          "disabled": true,
           "settings": {
-            "enable_full_width": true,
+            "enable_full_width": false,
             "media_aspect_ratio": "landscape_alt",
             "margin_top": 0
           }
@@ -21,6 +101,7 @@
         },
         "title": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "margin_top": 8
           }
@@ -60,6 +141,8 @@
         "tags"
       ],
       "settings": {
+        "color_scheme": "",
+        "article_pixel_width_desktop": 1170,
         "md_padding_top": 0,
         "md_padding_bottom": 0,
         "padding_top": 0,
@@ -80,6 +163,7 @@
     }
   },
   "order": [
+    "image_with_text_bmcedR",
     "main",
     "article-navigation"
   ]

@@ -57,8 +57,8 @@
           "settings": {
             "margin_top": 8,
             "font_weight": "normal",
-            "sm_size_multiplier": "sm-size--huge",
-            "size_multiplier": "size--huge"
+            "sm_size_multiplier": "sm-size--default",
+            "size_multiplier": "size--default"
           }
         },
         "attribute_insights_caffeine": {
@@ -79,7 +79,7 @@
             "below_threshold_message": "",
             "between_threshold_message": "Paired with L-theanine — a well-documented combo for alert focus without the jitters.",
             "above_threshold_message": "",
-            "margin_top": 24
+            "margin_top": 8
           }
         },
         "attribute_insights_crash": {
@@ -100,7 +100,7 @@
             "below_threshold_message": "L-theanine and adaptogens buffer the caffeine, so energy builds steady and fades slow — no 2pm crash.",
             "between_threshold_message": "",
             "above_threshold_message": "",
-            "margin_top": 12
+            "margin_top": 0
           }
         },
         "subscriptions_app_block_GNpiNE": {
@@ -274,7 +274,7 @@
       ],
       "settings": {
         "show_breadcrumb": false,
-        "product_image_aspect_ratio": "portrait_alt",
+        "product_image_aspect_ratio": "square",
         "media_fill_rule": "contain",
         "variant_images": "all",
         "color_scheme": "default",
@@ -285,7 +285,7 @@
         "border_radius": 0,
         "product_media_bg": "rgba(0,0,0,0)",
         "media_border_radius": 12,
-        "enable_full_width": false,
+        "enable_full_width": true,
         "sm-p": 0,
         "media_layout": "traditional-below-as-grid",
         "media_col_width": "wide",
@@ -626,7 +626,7 @@
           "type": "video_review",
           "settings": {
             "media_type": "video",
-            "video": "shopify://files/videos/Nootropics Energy Drink, OG Mango (2).mp4",
+            "video": "shopify://files/videos/Nootropics Energy Drink, OG Mango (6).mp4",
             "external_video_url": "",
             "name": "",
             "quote": "",
@@ -730,10 +730,10 @@
         "md_padding_top": 64,
         "md_padding_bottom": 64,
         "layout_mobile": "slide",
-        "sm_down_edge_to_edge": false,
+        "sm_down_edge_to_edge": true,
         "padding_top": 40,
         "padding_bottom": 40,
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_speed": 5,
         "sliding_behavior": "all"
       }
