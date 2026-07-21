@@ -78,6 +78,29 @@
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "greeting_message": "",
+          "show_featured_products": true,
+          "featured_products": [
+            "nootropics-energy-drink-mango"
+          ],
+          "background_color": "#c7e8e5",
+          "font_color": "#111111",
+          "button_color": "#faa638",
+          "secondary_color": "#111111",
+          "ternary_color": "#6A6A6A",
+          "button_icon": "hand_wave",
+          "button_text": "chat_with_us",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "agent_inherit_fonts": true,
+          "agent_font": "system_ui_n4",
+          "agent_border_radius": 16
+        }
       }
     },
     "color_schemes": {
