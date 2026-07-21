@@ -15,7 +15,7 @@
         "image_AxKT4X": {
           "type": "image",
           "settings": {
-            "media_aspect_ratio": "natural",
+            "media_aspect_ratio": "square",
             "media_link": "",
             "media_type": "image",
             "image": "{{ article.image }}",
