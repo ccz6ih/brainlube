@@ -226,8 +226,8 @@
           "type": "testimonial",
           "settings": {
             "stars": 5,
-            "title": "Precise Ingredient Amounts",
-            "testimonial": "<p>so active ingredients absorb efficiently and build in your system over time—without overload</p>",
+            "title": "Thoughtfully Balanced Ratios",
+            "testimonial": "<p>ingredients balanced to work together over time—without overload</p>",
             "author": ""
           }
         },
@@ -482,7 +482,7 @@
           "type": "info_block",
           "settings": {
             "title": "Why a drink instead of a pill?",
-            "text": "<p>Pills and powders are easy to forget and easy to skip. A cold, actually-tasty drink is something you look forward to — so you'll actually use it. And because it's a liquid, there's nothing to choke down or mix up. Crack, sip, done.</p><p><strong>Our rule: enough to work, not enough to overload</strong></p><p>More isn't better — it's just more. We dose our ingredients so they absorb well and build up in your system over time, without the \"too much\" feeling. That's why you get clean energy, not a chemical buzz.</p>",
+            "text": "<p>Pills and powders are easy to forget and easy to skip. A cold, actually-tasty drink is something you look forward to — so you'll actually use it. And because it's a liquid, there's nothing to choke down or mix up. Crack, sip, done.</p><p><strong>Our rule: enough to work, not enough to overload</strong></p><p>More isn't better — it's just more. We balance our ingredients so they work well together over time, without the \"too much\" feeling. That's why you get clean energy, not a chemical buzz.</p>",
             "media_type": "image",
             "image": "shopify://shop_images/4a63829b-7dbf-4120-ac39-52df4faf515e-2026-07-18.png",
             "external_video_aspect_ratio": "16:9",
