@@ -1,0 +1,264 @@
+{%- comment -%}
+  BRAiNLUBE — Daily Caffeine Audit
+  Lives on a page via templates/page.caffeine-audit.json.
+  Tap items to build today's tally against the 400mg FDA guideline.
+{%- endcomment -%}
+
+<div id="au-{{ section.id }}" class="au-root" data-guideline="{{ section.settings.guideline }}">
+
+<style>
+  #au-{{ section.id }}{--i:#0F1A2E;--b:#2E86B8;--g:#EDB143;--t:#E8F4FB;--m:#52657C;--r:#DCE6EF;--bone:#FAF7F2;
+    --ok:#2E9E5B;--warn:#D98A1E;--bad:#C0392B;
+    max-width:{{ section.settings.max_width }}px;margin:0 auto;padding:{{ section.settings.pad_top }}px 20px {{ section.settings.pad_bottom }}px;
+    color:var(--i);line-height:1.6;}
+  #au-{{ section.id }} .au-h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;line-height:1.2;margin:0 0 10px;}
+  #au-{{ section.id }} .au-sub{font-size:1.05rem;color:var(--m);margin:0 0 26px;max-width:58ch;}
+  #au-{{ section.id }} .au-cats{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;}
+  #au-{{ section.id }} .au-cat{background:#fff;border:1px solid var(--r);border-radius:99px;padding:7px 15px;
+    font-size:.86rem;font-weight:600;color:var(--m);cursor:pointer;transition:all .15s ease;}
+  #au-{{ section.id }} .au-cat:hover{border-color:var(--b);color:var(--b);}
+  #au-{{ section.id }} .au-cat.is-active{background:var(--i);border-color:var(--i);color:#fff;}
+  #au-{{ section.id }} .au-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:0 0 24px;}
+  #au-{{ section.id }} .au-item{background:var(--bone);border:1px solid transparent;border-radius:10px;padding:11px 13px;
+    text-align:left;cursor:pointer;transition:transform .12s ease,border-color .12s ease;font:inherit;}
+  #au-{{ section.id }} .au-item:hover{border-color:var(--b);}
+  #au-{{ section.id }} .au-item:active{transform:scale(.97);}
+  #au-{{ section.id }} .au-item-name{display:block;font-size:.88rem;font-weight:600;margin:0 0 2px;}
+  #au-{{ section.id }} .au-item-mg{display:block;font-size:.78rem;color:var(--m);font-variant-numeric:tabular-nums;}
+  #au-{{ section.id }} .au-item.au-custom .au-item-name{color:var(--b);}
+
+  #au-{{ section.id }} .au-list-wrap{margin:0 0 24px;}
+  #au-{{ section.id }} .au-list-label{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--b);margin:0 0 10px;display:block;}
+  #au-{{ section.id }} .au-empty{color:var(--m);font-size:.92rem;font-style:italic;}
+  #au-{{ section.id }} .au-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--r);}
+  #au-{{ section.id }} .au-row-name{flex:1;font-size:.92rem;font-weight:600;}
+  #au-{{ section.id }} .au-row-mg{font-size:.86rem;color:var(--m);font-variant-numeric:tabular-nums;white-space:nowrap;}
+  #au-{{ section.id }} .au-step{display:flex;align-items:center;gap:6px;}
+  #au-{{ section.id }} .au-step button{width:26px;height:26px;border-radius:6px;border:1px solid var(--r);background:#fff;
+    color:var(--i);font-size:1rem;line-height:1;cursor:pointer;padding:0;}
+  #au-{{ section.id }} .au-step button:hover{border-color:var(--b);color:var(--b);}
+  #au-{{ section.id }} .au-step span{min-width:18px;text-align:center;font-size:.88rem;font-weight:700;font-variant-numeric:tabular-nums;}
+  #au-{{ section.id }} .au-row-x{background:none;border:0;color:var(--m);cursor:pointer;font-size:1.1rem;padding:2px 4px;}
+  #au-{{ section.id }} .au-row-x:hover{color:var(--bad);}
+
+  #au-{{ section.id }} .au-out{background:#0F1A2E;border-radius:16px;padding:28px;color:#fff;margin-bottom:20px;
+    transition:box-shadow .3s ease;}
+  #au-{{ section.id }} .au-eyebrow{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#6E8BA8;margin:0 0 14px;transition:color .3s ease;}
+  #au-{{ section.id }} .au-gauge-wrap{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+  #au-{{ section.id }} .au-big{font-size:clamp(2.2rem,7vw,3rem);font-weight:700;line-height:1;margin:0;color:var(--g);
+    transition:transform .15s ease;}
+  #au-{{ section.id }} .au-big.au-shake{animation:au-shake .4s ease;}
+  @keyframes au-shake{0%,100%{transform:translateX(0);}20%{transform:translateX(-4px);}40%{transform:translateX(4px);}
+    60%{transform:translateX(-3px);}80%{transform:translateX(3px);}}
+  #au-{{ section.id }} .au-of{font-size:1rem;color:#8FA6BC;font-weight:400;}
+  #au-{{ section.id }} .au-verdict{font-size:1.02rem;line-height:1.55;margin:18px 0 0;color:#C8D6E4;}
+  #au-{{ section.id }} .au-legal{font-size:.8rem;color:#7A889A;border-top:1px solid var(--r);margin-top:26px;padding-top:16px;}
+
+  #au-{{ section.id }} svg.au-arc-bg{stroke:#1B2B44;}
+  #au-{{ section.id }} svg.au-arc-fill{transition:stroke-dashoffset .5s cubic-bezier(.4,0,.2,1),stroke .4s ease;}
+</style>
+
+<h1 class="au-h1">{{ section.settings.heading }}</h1>
+<p class="au-sub">{{ section.settings.subheading }}</p>
+
+<div class="au-cats" id="au-cats-{{ section.id }}"></div>
+<div class="au-grid" id="au-grid-{{ section.id }}"></div>
+
+<div class="au-list-wrap">
+  <span class="au-list-label">Today's tally</span>
+  <div id="au-list-{{ section.id }}"><p class="au-empty">Nothing yet — tap something above.</p></div>
+</div>
+
+<div class="au-out">
+  <p class="au-eyebrow" id="au-eyebrow-{{ section.id }}">Today's total</p>
+  <div class="au-gauge-wrap">
+    <svg width="120" height="120" viewBox="0 0 120 120" style="flex-shrink:0;" role="img" aria-label="Progress toward daily guideline">
+      <circle class="au-arc-bg" cx="60" cy="60" r="52" fill="none" stroke-width="12"/>
+      <circle class="au-arc-fill" id="au-arc-{{ section.id }}" cx="60" cy="60" r="52" fill="none" stroke="#2E9E5B" stroke-width="12"
+        stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)"/>
+    </svg>
+    <div>
+      <p class="au-big" id="au-mg-{{ section.id }}">0<span class="au-of">mg</span></p>
+      <p class="au-of" id="au-pct-{{ section.id }}">0% of the {{ section.settings.guideline }}mg guideline</p>
+    </div>
+  </div>
+  <p class="au-verdict" id="au-verdict-{{ section.id }}">Add what you've had today and we'll total it up.</p>
+</div>
+
+<p class="au-legal">{{ section.settings.legal }}</p>
+</div>
+
+{% raw %}
+<script>
+(function(){
+  document.querySelectorAll('.au-root:not([data-au-init])').forEach(function(root){
+    root.setAttribute('data-au-init','1');
+    var sid=root.id.replace('au-','');
+    var $=function(p){return document.getElementById('au-'+p+'-'+sid);};
+    var GUIDE=+root.dataset.guideline||400;
+    var CIRC=2*Math.PI*52;
+
+    var CATALOG=[
+      {cat:'Coffee',n:'Brewed coffee, 8oz',mg:95},
+      {cat:'Coffee',n:'Espresso, single shot',mg:63},
+      {cat:'Coffee',n:'Latte or cappuccino',mg:126},
+      {cat:'Coffee',n:'Cold brew, 12oz',mg:205},
+      {cat:'Coffee',n:'Instant coffee, 8oz',mg:62},
+      {cat:'Tea',n:'Black tea, 8oz',mg:47},
+      {cat:'Tea',n:'Green tea, 8oz',mg:28},
+      {cat:'Tea',n:'Matcha, 8oz',mg:70},
+      {cat:'Tea',n:'Chai latte, 8oz',mg:50},
+      {cat:'Soda',n:'Cola, 12oz',mg:34},
+      {cat:'Soda',n:'Diet cola, 12oz',mg:46},
+      {cat:'Soda',n:'Mountain Dew, 12oz',mg:55},
+      {cat:'Soda',n:'Dr Pepper, 12oz',mg:43},
+      {cat:'Energy drinks',n:'BRAiNLUBE, 12oz',mg:130},
+      {cat:'Energy drinks',n:'Red Bull, 8.4oz',mg:80},
+      {cat:'Energy drinks',n:'Monster, 16oz',mg:160},
+      {cat:'Energy drinks',n:'Celsius, 12oz',mg:200},
+      {cat:'Energy drinks',n:'Bang / Reign, 16oz',mg:300},
+      {cat:'Energy drinks',n:'5-Hour Energy, 2oz',mg:200},
+      {cat:'Chocolate',n:'Dark chocolate, 1oz',mg:12},
+      {cat:'Chocolate',n:'Milk chocolate, 1oz',mg:6},
+      {cat:'Chocolate',n:'Choc-covered espresso beans, 6',mg:70},
+      {cat:'Chocolate',n:'Hot chocolate, 8oz',mg:5},
+      {cat:'Pre-workout & other',n:'Pre-workout scoop, standard',mg:200},
+      {cat:'Pre-workout & other',n:'Pre-workout scoop, high-stim',mg:300},
+      {cat:'Pre-workout & other',n:'Caffeine pill, standard',mg:200},
+      {cat:'Pre-workout & other',n:'Excedrin Extra Strength, 2 tabs',mg:130},
+      {cat:'Pre-workout & other',n:'Custom amount…',mg:0}
+    ];
+    var CATS=['All'];
+    CATALOG.forEach(function(c){if(CATS.indexOf(c.cat)===-1){CATS.push(c.cat);}});
+    var activeCat='All';
+    var tally=[]; // {n, mg, qty}
+    var crossedGuideline=false;
+
+    function renderCats(){
+      $('cats').innerHTML=CATS.map(function(c){
+        return '<button type="button" class="au-cat'+(c===activeCat?' is-active':'')+'" data-cat="'+c+'">'+c+'</button>';
+      }).join('');
+      $('cats').querySelectorAll('.au-cat').forEach(function(b){
+        b.addEventListener('click',function(){activeCat=b.dataset.cat;renderCats();renderGrid();});
+      });
+    }
+
+    function renderGrid(){
+      var items=activeCat==='All'?CATALOG:CATALOG.filter(function(c){return c.cat===activeCat;});
+      $('grid').innerHTML=items.map(function(it,i){
+        var idx=CATALOG.indexOf(it);
+        var custom=it.mg===0?' au-custom':'';
+        return '<button type="button" class="au-item'+custom+'" data-idx="'+idx+'">'+
+          '<span class="au-item-name">'+it.n+'</span>'+
+          '<span class="au-item-mg">'+(it.mg?it.mg+'mg':'Enter amount')+'</span></button>';
+      }).join('');
+      $('grid').querySelectorAll('.au-item').forEach(function(btn){
+        btn.addEventListener('click',function(){addItem(CATALOG[+btn.dataset.idx]);});
+      });
+    }
+
+    function addItem(def){
+      var mg=def.mg;
+      if(mg===0){
+        var custom=window.prompt('How many mg of caffeine? (check the label)');
+        mg=parseFloat(custom);
+        if(isNaN(mg)||mg<=0){return;}
+      }
+      var existing=tally.find(function(t){return t.n===def.n&&t.mg===mg;});
+      if(existing){existing.qty++;}
+      else{tally.push({n:def.n,mg:mg,qty:1});}
+      renderList();
+      calc();
+    }
+
+    function renderList(){
+      if(!tally.length){
+        $('list').innerHTML='<p class="au-empty">Nothing yet — tap something above.</p>';
+        return;
+      }
+      $('list').innerHTML=tally.map(function(t,i){
+        return '<div class="au-row" data-i="'+i+'">'+
+          '<span class="au-row-name">'+t.n+'</span>'+
+          '<span class="au-row-mg">'+(t.mg*t.qty)+'mg</span>'+
+          '<span class="au-step">'+
+            '<button type="button" data-act="dec" aria-label="Remove one">&minus;</button>'+
+            '<span>'+t.qty+'</span>'+
+            '<button type="button" data-act="inc" aria-label="Add one">+</button>'+
+          '</span>'+
+          '<button type="button" class="au-row-x" data-act="del" aria-label="Remove entirely">&times;</button>'+
+        '</div>';
+      }).join('');
+      $('list').querySelectorAll('[data-act]').forEach(function(btn){
+        btn.addEventListener('click',function(){
+          var i=+btn.closest('.au-row').dataset.i;
+          if(btn.dataset.act==='inc'){tally[i].qty++;}
+          else if(btn.dataset.act==='dec'){tally[i].qty--;if(tally[i].qty<=0){tally.splice(i,1);}}
+          else if(btn.dataset.act==='del'){tally.splice(i,1);}
+          renderList();calc();
+        });
+      });
+    }
+
+    function calc(){
+      var total=tally.reduce(function(s,t){return s+t.mg*t.qty;},0);
+      var pct=Math.min(total/GUIDE,1.5);
+      var offset=CIRC*(1-Math.min(pct,1));
+      var arc=$('arc');
+      arc.style.strokeDashoffset=offset;
+
+      var color= total<GUIDE*0.5 ? '#2E9E5B' : total<GUIDE ? '#D98A1E' : '#C0392B';
+      arc.style.stroke=color;
+
+      var wasOver=crossedGuideline;
+      crossedGuideline=total>=GUIDE;
+
+      var mgEl=$('mg');
+      mgEl.innerHTML=total+'<span class="au-of">mg</span>';
+      if(crossedGuideline&&!wasOver&&total>0){
+        mgEl.classList.remove('au-shake');
+        void mgEl.offsetWidth;
+        mgEl.classList.add('au-shake');
+      }
+
+      $('pct').textContent=Math.round(total/GUIDE*100)+'% of the '+GUIDE+'mg guideline';
+      $('eyebrow').style.color=crossedGuideline?'#EDB143':'#6E8BA8';
+      $('eyebrow').textContent=crossedGuideline?'Over the daily guideline':"Today's total";
+
+      var v;
+      if(total===0){v="Add what you've had today and we'll total it up.";}
+      else if(total<150){v='Modest so far. Plenty of room if you have more planned.';}
+      else if(total<GUIDE*0.5){v='Comfortably moderate. Most people feel fine at this level.';}
+      else if(total<GUIDE*0.85){v="Getting up there. You're most of the way to the daily guideline — worth noticing what else is coming later.";}
+      else if(total<GUIDE){v="Right at the edge of the FDA's 400mg guideline for healthy adults. One more coffee and you're over it."; }
+      else if(total<GUIDE*1.5){v='Over the guideline. This is the point people are often surprised by — it adds up faster than it feels like it should.';}
+      else{v="Well past the guideline. If this is a regular day, it's worth spreading things out or trading a couple of the bigger hits for something more moderate.";}
+      $('verdict').textContent=v;
+    }
+
+    renderCats();
+    renderGrid();
+    renderList();
+    calc();
+  });
+})();
+</script>
+{% endraw %}
+
+{% schema %}
+{
+  "name": "Caffeine audit",
+  "tag": "section",
+  "class": "bl-caffeine-audit",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Daily Caffeine Audit" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Tap everything you've had today — coffee, tea, soda, energy drinks, chocolate, pre-workout. Most people underestimate their real total by a lot." },
+    { "type": "range", "id": "guideline", "min": 200, "max": 600, "step": 10, "unit": "mg", "label": "Daily guideline", "default": 400 },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "max_width", "min": 600, "max": 1100, "step": 20, "unit": "px", "label": "Max width", "default": 760 },
+    { "type": "range", "id": "pad_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 48 },
+    { "type": "range", "id": "pad_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 48 },
+    { "type": "textarea", "id": "legal", "label": "Disclaimer", "default": "General information, not medical advice. Figures are typical averages and vary by brand, preparation, and serving size — check your own labels where it matters. The FDA considers up to 400mg of caffeine per day safe for most healthy adults; if you're pregnant, nursing, or have a heart condition, anxiety disorder, or sleep disorder, talk to your doctor about your own limit." }
+  ],
+  "presets": [{ "name": "Caffeine audit" }]
+}
+{% endschema %}

@@ -1,0 +1,217 @@
+{%- comment -%}
+  BRAiNLUBE — Spot the Pixie-Dusted Label
+  Lives on a page via templates/page.pixie-dust-quiz.json.
+  Four fictional supplement-facts panels per round (3 fully dosed,
+  1 hiding amounts behind a "blend" total) pulled from a larger pool
+  so replays don't repeat the same set. Product names are invented —
+  not references to any real brand.
+{%- endcomment -%}
+
+<div id="pd-{{ section.id }}" class="pd-root">
+
+<style>
+  #pd-{{ section.id }}{--i:#0F1A2E;--b:#2E86B8;--g:#EDB143;--t:#E8F4FB;--m:#52657C;--r:#DCE6EF;--bone:#FAF7F2;
+    --ok:#2E9E5B;--bad:#C0392B;
+    max-width:{{ section.settings.max_width }}px;margin:0 auto;padding:{{ section.settings.pad_top }}px 20px {{ section.settings.pad_bottom }}px;
+    color:var(--i);line-height:1.6;}
+  #pd-{{ section.id }} .pd-h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;line-height:1.2;margin:0 0 10px;}
+  #pd-{{ section.id }} .pd-sub{font-size:1.05rem;color:var(--m);margin:0 0 8px;max-width:60ch;}
+  #pd-{{ section.id }} .pd-score{font-size:.86rem;color:var(--b);font-weight:700;margin:0 0 22px;}
+  #pd-{{ section.id }} .pd-prompt{font-size:1rem;font-weight:700;margin:0 0 16px;}
+
+  #pd-{{ section.id }} .pd-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:0 0 22px;}
+  @media(min-width:680px){#pd-{{ section.id }} .pd-grid{grid-template-columns:1fr 1fr;}}
+
+  #pd-{{ section.id }} .pd-card{background:#fff;border:2px solid var(--i);border-radius:4px;padding:0;cursor:pointer;
+    text-align:left;font:inherit;transition:transform .12s ease,box-shadow .12s ease;overflow:hidden;}
+  #pd-{{ section.id }} .pd-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(15,26,46,.12);}
+  #pd-{{ section.id }} .pd-card:disabled{cursor:default;}
+  #pd-{{ section.id }} .pd-card:disabled:hover{transform:none;box-shadow:none;}
+  #pd-{{ section.id }} .pd-card.pd-correct{border-color:var(--ok);box-shadow:0 0 0 3px rgba(46,158,91,.2);}
+  #pd-{{ section.id }} .pd-card.pd-wrong{border-color:var(--bad);}
+  #pd-{{ section.id }} .pd-card.pd-dim{opacity:.45;}
+
+  #pd-{{ section.id }} .pd-name{background:var(--i);color:#fff;padding:9px 14px;font-weight:700;font-size:.92rem;
+    letter-spacing:.02em;display:flex;justify-content:space-between;align-items:center;}
+  #pd-{{ section.id }} .pd-badge{font-size:1.1rem;line-height:1;}
+  #pd-{{ section.id }} .pd-facts{padding:12px 14px 14px;}
+  #pd-{{ section.id }} .pd-facts-title{font-weight:800;font-size:1rem;border-bottom:6px solid var(--i);padding-bottom:5px;margin:0 0 6px;}
+  #pd-{{ section.id }} .pd-facts-sub{font-size:.72rem;color:var(--m);border-bottom:1px solid #999;padding-bottom:5px;margin:0 0 6px;}
+  #pd-{{ section.id }} .pd-facts-row{display:flex;justify-content:space-between;gap:10px;font-size:.82rem;
+    padding:3px 0;border-bottom:1px solid #ddd;}
+  #pd-{{ section.id }} .pd-facts-row b{font-weight:700;}
+  #pd-{{ section.id }} .pd-blend-row{padding:3px 0;font-size:.82rem;font-weight:700;border-bottom:1px solid #ddd;
+    display:flex;justify-content:space-between;}
+  #pd-{{ section.id }} .pd-blend-list{font-size:.76rem;color:var(--m);font-style:italic;padding-top:4px;line-height:1.5;}
+
+  #pd-{{ section.id }} .pd-explain{background:var(--bone);border-radius:14px;padding:20px 22px;display:none;margin-bottom:20px;}
+  #pd-{{ section.id }} .pd-explain.is-shown{display:block;}
+  #pd-{{ section.id }} .pd-explain-h{font-weight:700;font-size:1.02rem;margin:0 0 8px;}
+  #pd-{{ section.id }} .pd-explain-h.pd-right{color:var(--ok);}
+  #pd-{{ section.id }} .pd-explain-h.pd-miss{color:var(--bad);}
+  #pd-{{ section.id }} .pd-explain p{margin:0 0 10px;font-size:.94rem;color:var(--i);}
+  #pd-{{ section.id }} .pd-explain p:last-child{margin-bottom:0;}
+  #pd-{{ section.id }} .pd-again{font:inherit;font-size:.9rem;font-weight:600;padding:11px 18px;border-radius:8px;
+    background:var(--i);color:#fff;border:none;cursor:pointer;}
+  #pd-{{ section.id }} .pd-again:hover{opacity:.9;}
+
+  #pd-{{ section.id }} .pd-legal{font-size:.8rem;color:#7A889A;border-top:1px solid var(--r);margin-top:26px;padding-top:16px;}
+</style>
+
+<h1 class="pd-h1">{{ section.settings.heading }}</h1>
+<p class="pd-sub">{{ section.settings.subheading }}</p>
+<p class="pd-score" id="pd-score-{{ section.id }}">Round 1 · 0 correct so far</p>
+<p class="pd-prompt">Which of these four is hiding its actual doses behind a "blend"?</p>
+
+<div class="pd-grid" id="pd-grid-{{ section.id }}"></div>
+
+<div class="pd-explain" id="pd-explain-{{ section.id }}">
+  <p class="pd-explain-h" id="pd-explain-h-{{ section.id }}"></p>
+  <p id="pd-explain-p1-{{ section.id }}"></p>
+  <p id="pd-explain-p2-{{ section.id }}">A proprietary blend lists a total weight and the ingredients in it, but not how much of each. The label is legal — it just means the one ingredient that actually matters could be 5mg or 500mg, and there's no way to tell from the can.</p>
+  <button type="button" class="pd-again" id="pd-again-{{ section.id }}">Next round &rarr;</button>
+</div>
+
+<p class="pd-legal">{{ section.settings.legal }}</p>
+</div>
+
+{% raw %}
+<script>
+(function(){
+  document.querySelectorAll('.pd-root:not([data-pd-init])').forEach(function(root){
+    root.setAttribute('data-pd-init','1');
+    var sid=root.id.replace('pd-','');
+    var $=function(p){return document.getElementById('pd-'+p+'-'+sid);};
+
+    // Clean (fully dosed) label pool.
+    var CLEAN=[
+      {name:'APEX FOCUS',items:[['Caffeine','150mg'],['L-Theanine','100mg'],['Alpha-GPC','300mg'],['Rhodiola Extract','200mg']]},
+      {name:'CLARITY+',items:[['Caffeine Anhydrous','120mg'],['Bacopa Monnieri','300mg'],['Ginkgo Biloba','120mg'],['Vitamin B12','500mcg']]},
+      {name:'IGNITE',items:[['Caffeine','100mg'],['N-Acetyl L-Tyrosine','500mg'],['Huperzine A','50mcg']]},
+      {name:'PEAK ENERGY',items:[['Caffeine','130mg'],['L-Theanine','150mg'],['Ashwagandha Extract','250mg'],['Zinc','5mg']]},
+      {name:'STEADY',items:[['Caffeine','140mg'],['L-Theanine','120mg'],['Taurine','500mg'],['Vitamin B6','2mg']]},
+      {name:'CLEARHEAD',items:[['Caffeine Anhydrous','110mg'],['Bacopa Monnieri','250mg'],['L-Tyrosine','400mg']]}
+    ];
+    // Pixie-dusted (blend, no individual amounts) label pool.
+    var BLEND=[
+      {name:'SURGE',blendName:'Focus & Energy Blend',blendTotal:'1,850mg',
+        blendItems:'Caffeine, Taurine, Beta-Alanine, L-Tyrosine, Guarana Extract'},
+      {name:'VOLTAGE',blendName:'Proprietary Performance Complex',blendTotal:'2,100mg',
+        blendItems:'Caffeine, Citrulline Malate, Betaine, Creatine, Beta-Alanine'},
+      {name:'NITRO DRIVE',blendName:'Energy Matrix',blendTotal:'950mg',
+        blendItems:'Caffeine, Guarana, Yerba Mate, Ginseng'},
+      {name:'DRIVE',blendName:'Pump & Focus Blend',blendTotal:'3,200mg',
+        blendItems:'Citrulline, Beta-Alanine, Caffeine, Taurine, Tyrosine'},
+      {name:'RUSH',blendName:'Thermo Energy Blend',blendTotal:'1,200mg',
+        blendItems:'Caffeine Anhydrous, Green Tea Extract, Yohimbine, Synephrine'},
+      {name:'OVERDRIVE',blendName:'Total Focus Complex',blendTotal:'1,650mg',
+        blendItems:'Caffeine, DMAE, Choline Bitartrate, Huperzine A'}
+    ];
+
+    var score=0, round=1, roundCards=[], answered=false;
+
+    function shuffle(arr){
+      var a=arr.slice();
+      for(var i=a.length-1;i>0;i--){
+        var j=Math.floor(Math.random()*(i+1));
+        var t=a[i];a[i]=a[j];a[j]=t;
+      }
+      return a;
+    }
+    function pick(arr,n){return shuffle(arr).slice(0,n);}
+
+    function cardHtml(card,i){
+      var facts;
+      if(card.blendName){
+        facts='<div class="pd-blend-row"><span>'+card.blendName+'</span><span>'+card.blendTotal+'</span></div>'+
+          '<p class="pd-blend-list">'+card.blendItems+'</p>';
+      }else{
+        facts=card.items.map(function(it){
+          return '<div class="pd-facts-row"><span>'+it[0]+'</span><b>'+it[1]+'</b></div>';
+        }).join('');
+      }
+      return '<button type="button" class="pd-card" data-i="'+i+'">'+
+        '<div class="pd-name"><span>'+card.name+'</span><span class="pd-badge" data-mark="'+i+'"></span></div>'+
+        '<div class="pd-facts">'+
+          '<p class="pd-facts-title">Supplement Facts</p>'+
+          '<p class="pd-facts-sub">Serving Size 1 can</p>'+
+          facts+
+        '</div>'+
+      '</button>';
+    }
+
+    function newRound(){
+      answered=false;
+      $('explain').classList.remove('is-shown');
+      var clean=pick(CLEAN,3);
+      var blend=pick(BLEND,1)[0];
+      roundCards=shuffle(clean.concat([blend]));
+      var blendIdx=roundCards.indexOf(blend);
+      $('grid').innerHTML=roundCards.map(cardHtml).join('');
+      $('grid').querySelectorAll('.pd-card').forEach(function(btn){
+        btn.addEventListener('click',function(){handleAnswer(+btn.dataset.i,blendIdx);});
+      });
+      $('score').textContent='Round '+round+' · '+score+' correct so far';
+    }
+
+    function handleAnswer(chosenIdx,blendIdx){
+      if(answered){return;}
+      answered=true;
+      var correct=chosenIdx===blendIdx;
+      if(correct){score++;}
+
+      $('grid').querySelectorAll('.pd-card').forEach(function(btn,i){
+        btn.disabled=true;
+        if(i===blendIdx){
+          btn.classList.add('pd-correct');
+          btn.querySelector('[data-mark]').textContent='✓';
+        }else if(i===chosenIdx){
+          btn.classList.add('pd-wrong');
+          btn.querySelector('[data-mark]').textContent='✗';
+        }else{
+          btn.classList.add('pd-dim');
+        }
+      });
+
+      var h=$('explain-h'),p1=$('explain-p1');
+      if(correct){
+        h.textContent='Spotted it.';
+        h.className='pd-explain-h pd-right';
+        p1.textContent='"'+roundCards[blendIdx].blendName+'" lists a total weight and the ingredients in it, but not the amount of any single one. That\'s the tell.';
+      }else{
+        h.textContent='Not this time.';
+        h.className='pd-explain-h pd-miss';
+        p1.textContent='It was "'+roundCards[blendIdx].name+'" — the "'+roundCards[blendIdx].blendName+'" line gives a total ('+roundCards[blendIdx].blendTotal+') but never breaks out the individual ingredients.';
+      }
+      $('explain').classList.add('is-shown');
+      $('score').textContent='Round '+round+' · '+score+' correct so far';
+    }
+
+    $('again').addEventListener('click',function(){
+      round++;
+      newRound();
+    });
+
+    newRound();
+  });
+})();
+</script>
+{% endraw %}
+
+{% schema %}
+{
+  "name": "Pixie-dust label quiz",
+  "tag": "section",
+  "class": "bl-pixie-dust-quiz",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Spot the Pixie-Dusted Label" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Four labels. Three tell you exactly how much of each ingredient you're getting. One hides it behind a \"blend\" total. Can you spot which?" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "max_width", "min": 600, "max": 1100, "step": 20, "unit": "px", "label": "Max width", "default": 820 },
+    { "type": "range", "id": "pad_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 48 },
+    { "type": "range", "id": "pad_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 48 },
+    { "type": "textarea", "id": "legal", "label": "Disclaimer", "default": "All product names and labels shown here are invented for this exercise — they are not real products. Proprietary blends are legal to sell; the point of this game is just to make the format easier to recognize on labels you actually hold." }
+  ],
+  "presets": [{ "name": "Pixie-dust label quiz" }]
+}
+{% endschema %}

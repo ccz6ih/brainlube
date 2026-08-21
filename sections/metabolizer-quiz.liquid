@@ -1,0 +1,267 @@
+{%- comment -%}
+  BRAiNLUBE — Fast or Slow Metabolizer Quiz
+  Lives on a page via templates/page.metabolizer-quiz.json.
+  Result is saved to localStorage (key: bl_metabolizer) and read by
+  caffeine-calculator.liquid to preselect the metabolism dropdown —
+  keep that key in sync if either file changes.
+  Shareable via ?r=fast|avg|slow, which skips straight to the result.
+{%- endcomment -%}
+
+<div id="mq-{{ section.id }}" class="mq-root">
+
+<style>
+  #mq-{{ section.id }}{--i:#0F1A2E;--b:#2E86B8;--g:#EDB143;--t:#E8F4FB;--m:#52657C;--r:#DCE6EF;--bone:#FAF7F2;
+    max-width:{{ section.settings.max_width }}px;margin:0 auto;padding:{{ section.settings.pad_top }}px 20px {{ section.settings.pad_bottom }}px;
+    color:var(--i);line-height:1.6;}
+  #mq-{{ section.id }} .mq-h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;line-height:1.2;margin:0 0 10px;}
+  #mq-{{ section.id }} .mq-sub{font-size:1.05rem;color:var(--m);margin:0 0 26px;max-width:56ch;}
+
+  #mq-{{ section.id }} .mq-dots{display:flex;gap:6px;margin:0 0 20px;}
+  #mq-{{ section.id }} .mq-dot{height:6px;flex:1;border-radius:99px;background:var(--r);transition:background .25s ease;}
+  #mq-{{ section.id }} .mq-dot.is-done{background:var(--b);}
+  #mq-{{ section.id }} .mq-dot.is-active{background:var(--g);}
+
+  #mq-{{ section.id }} .mq-panel{background:var(--bone);border-radius:16px;padding:28px 24px;position:relative;min-height:230px;}
+  #mq-{{ section.id }} .mq-q{opacity:0;transform:translateX(14px);transition:opacity .28s ease,transform .28s ease;
+    position:absolute;inset:28px 24px;display:none;}
+  #mq-{{ section.id }} .mq-q.is-active{opacity:1;transform:translateX(0);display:block;position:relative;inset:auto;}
+  #mq-{{ section.id }} .mq-qnum{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--b);margin:0 0 8px;}
+  #mq-{{ section.id }} .mq-qtext{font-size:1.15rem;font-weight:700;margin:0 0 18px;line-height:1.4;}
+  #mq-{{ section.id }} .mq-opts{display:flex;flex-direction:column;gap:8px;}
+  #mq-{{ section.id }} .mq-opt{background:#fff;border:1.5px solid var(--r);border-radius:10px;padding:13px 16px;
+    text-align:left;font:inherit;font-size:.95rem;cursor:pointer;transition:border-color .15s ease,background .15s ease;}
+  #mq-{{ section.id }} .mq-opt:hover{border-color:var(--b);background:var(--t);}
+
+  #mq-{{ section.id }} .mq-result{display:none;}
+  #mq-{{ section.id }} .mq-result.is-active{display:block;}
+  #mq-{{ section.id }} .mq-out{background:#0F1A2E;border-radius:16px;padding:30px 26px;color:#fff;margin-bottom:20px;}
+  #mq-{{ section.id }} .mq-eyebrow{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#6E8BA8;margin:0 0 8px;}
+  #mq-{{ section.id }} .mq-verdict-h{font-size:clamp(1.7rem,5vw,2.3rem);font-weight:700;color:var(--g);margin:0 0 12px;line-height:1.15;}
+  #mq-{{ section.id }} .mq-verdict-p{font-size:1rem;line-height:1.6;color:#C8D6E4;margin:0 0 18px;}
+  #mq-{{ section.id }} .mq-stat{border-top:1px solid #1B2B44;padding-top:16px;display:flex;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;font-size:.92rem;color:#8FA6BC;}
+  #mq-{{ section.id }} .mq-stat b{color:#fff;}
+  #mq-{{ section.id }} .mq-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;}
+  #mq-{{ section.id }} .mq-btn{font:inherit;font-size:.9rem;font-weight:600;padding:11px 18px;border-radius:8px;
+    cursor:pointer;text-decoration:none;display:inline-block;text-align:center;}
+  #mq-{{ section.id }} .mq-btn-primary{background:var(--g);color:var(--i);border:none;}
+  #mq-{{ section.id }} .mq-btn-primary:hover{opacity:.9;}
+  #mq-{{ section.id }} .mq-btn-ghost{background:none;border:1px solid var(--r);color:var(--i);}
+  #mq-{{ section.id }} .mq-btn-ghost:hover{border-color:var(--b);color:var(--b);}
+  #mq-{{ section.id }} .mq-copied{font-size:.84rem;color:var(--b);margin-left:6px;opacity:0;transition:opacity .2s ease;}
+  #mq-{{ section.id }} .mq-copied.is-shown{opacity:1;}
+  #mq-{{ section.id }} .mq-legal{font-size:.8rem;color:#7A889A;border-top:1px solid var(--r);margin-top:26px;padding-top:16px;}
+</style>
+
+<h1 class="mq-h1">{{ section.settings.heading }}</h1>
+<p class="mq-sub">{{ section.settings.subheading }}</p>
+
+<div class="mq-dots" id="mq-dots-{{ section.id }}"></div>
+
+<div class="mq-panel" id="mq-panel-{{ section.id }}"></div>
+
+<div class="mq-result" id="mq-result-{{ section.id }}">
+  <div class="mq-out">
+    <p class="mq-eyebrow">Your result</p>
+    <p class="mq-verdict-h" id="mq-title-{{ section.id }}">&mdash;</p>
+    <p class="mq-verdict-p" id="mq-desc-{{ section.id }}"></p>
+    <div class="mq-stat">
+      <span>Estimated half-life: <b id="mq-hl-{{ section.id }}">&mdash;</b></span>
+      <span>Rough cutoff for an 11pm bedtime: <b id="mq-cut-{{ section.id }}">&mdash;</b></span>
+    </div>
+  </div>
+  <div class="mq-actions">
+    <a class="mq-btn mq-btn-primary" id="mq-calc-link-{{ section.id }}" href="{{ section.settings.calculator_url }}">Try it with your real numbers &rarr;</a>
+    <button type="button" class="mq-btn mq-btn-ghost" id="mq-copy-{{ section.id }}">Copy my result</button>
+    <button type="button" class="mq-btn mq-btn-ghost" id="mq-retake-{{ section.id }}">Retake</button>
+    <span class="mq-copied" id="mq-copied-{{ section.id }}">Copied!</span>
+  </div>
+</div>
+
+<p class="mq-legal">{{ section.settings.legal }}</p>
+</div>
+
+{% raw %}
+<script>
+(function(){
+  document.querySelectorAll('.mq-root:not([data-mq-init])').forEach(function(root){
+    root.setAttribute('data-mq-init','1');
+    var sid=root.id.replace('mq-','');
+    var $=function(p){return document.getElementById('mq-'+p+'-'+sid);};
+
+    var QUESTIONS=[
+      {
+        q:'Can you drink coffee after dinner and still fall asleep normally?',
+        opts:[
+          {t:'Yes, no problem',v:2},
+          {t:'Sometimes, depends how much',v:0},
+          {t:'No — it keeps me up',v:-2}
+        ]
+      },
+      {
+        q:'How long after your first coffee do you usually feel it kick in?',
+        opts:[
+          {t:'Almost immediately, under 15 minutes',v:1},
+          {t:'15 to 30 minutes',v:0},
+          {t:'30-60 minutes, or I barely notice',v:-1}
+        ]
+      },
+      {
+        q:'Do you get jittery or anxious from just one cup of coffee?',
+        opts:[
+          {t:'Never',v:2},
+          {t:'Occasionally',v:0},
+          {t:'Often, even from one cup',v:-2}
+        ]
+      },
+      {
+        q:"If you have caffeine after 6pm, does it affect that night's sleep?",
+        opts:[
+          {t:'Not at all',v:2},
+          {t:'A little',v:0},
+          {t:'Yes, noticeably',v:-2}
+        ]
+      },
+      {
+        q:'Do any of these apply to you?',
+        opts:[
+          {t:'I smoke or vape nicotine regularly',v:2},
+          {t:"I'm pregnant, nursing, or on hormonal birth control",v:-3},
+          {t:'None of these / prefer not to say',v:0}
+        ]
+      }
+    ];
+
+    var RESULTS={
+      fast:{title:'Fast metabolizer',hl:4,
+        desc:"Caffeine clears your system quickly. You can likely get away with an afternoon coffee without it touching your sleep — though everyone still has a limit."},
+      avg:{title:'Average metabolizer',hl:5.7,
+        desc:"You're in the largest group. Caffeine sticks around for a while — long enough that a mid-afternoon drink can still be working when you go to bed."},
+      slow:{title:'Slow metabolizer',hl:8,
+        desc:'Caffeine lingers in your system well into the evening. A cutoff earlier in the day will likely make a bigger difference for you than for most people.'}
+    };
+
+    var idx=0, answers=[];
+
+    function classify(score){
+      if(score>=3){return 'fast';}
+      if(score<=-3){return 'slow';}
+      return 'avg';
+    }
+
+    function renderDots(){
+      var html='';
+      for(var i=0;i<QUESTIONS.length;i++){
+        var cls=i<idx?'is-done':i===idx?'is-active':'';
+        html+='<div class="mq-dot '+cls+'"></div>';
+      }
+      $('dots').innerHTML=html;
+    }
+
+    function renderQuestion(){
+      renderDots();
+      var q=QUESTIONS[idx];
+      $('panel').innerHTML=
+        '<div class="mq-q is-active">'+
+          '<p class="mq-qnum">Question '+(idx+1)+' of '+QUESTIONS.length+'</p>'+
+          '<p class="mq-qtext">'+q.q+'</p>'+
+          '<div class="mq-opts">'+
+            q.opts.map(function(o,i){return '<button type="button" class="mq-opt" data-v="'+o.v+'">'+o.t+'</button>';}).join('')+
+          '</div>'+
+        '</div>';
+      $('panel').querySelectorAll('.mq-opt').forEach(function(btn){
+        btn.addEventListener('click',function(){
+          answers.push(+btn.dataset.v);
+          idx++;
+          if(idx<QUESTIONS.length){renderQuestion();}
+          else{finish();}
+        });
+      });
+    }
+
+    function fmtTime(mins){
+      mins=((mins%1440)+1440)%1440;
+      var h=Math.floor(mins/60),m=Math.round(mins%60);
+      var ap=h<12?'am':'pm';var h12=h%12;if(h12===0){h12=12;}
+      return h12+':'+(m<10?'0':'')+m+ap;
+    }
+
+    function showResult(type){
+      var r=RESULTS[type];
+      root.querySelector('#mq-panel-'+sid).style.display='none';
+      root.querySelector('#mq-dots-'+sid).style.display='none';
+      $('result').classList.add('is-active');
+      $('title').textContent=r.title;
+      $('desc').textContent=r.desc;
+      $('hl').textContent=r.hl+' hours';
+      var bedMins=23*60;
+      var hoursNeeded=r.hl*Math.log(100/50)/Math.log(2);
+      $('cut').textContent=fmtTime(bedMins-hoursNeeded*60);
+
+      try{window.localStorage.setItem('bl_metabolizer',type);}catch(e){}
+
+      var link=$('calc-link');
+      if(link&&link.href){
+        try{
+          var u=new URL(link.getAttribute('href'),window.location.origin);
+          u.searchParams.set('metabolizer',type);
+          link.setAttribute('href',u.pathname+u.search);
+        }catch(e){}
+      }
+
+      $('copy').addEventListener('click',function(){
+        var shareUrl=window.location.origin+window.location.pathname+'?r='+type;
+        var text="I'm a "+r.title.toLowerCase()+", according to BRAiNLUBE's caffeine quiz. Find out yours: "+shareUrl;
+        if(navigator.clipboard){
+          navigator.clipboard.writeText(text).then(function(){
+            $('copied').classList.add('is-shown');
+            setTimeout(function(){$('copied').classList.remove('is-shown');},1800);
+          });
+        }
+      });
+
+      $('retake').addEventListener('click',function(){
+        idx=0;answers=[];
+        $('result').classList.remove('is-active');
+        root.querySelector('#mq-panel-'+sid).style.display='';
+        root.querySelector('#mq-dots-'+sid).style.display='';
+        renderQuestion();
+        history.replaceState(null,'',window.location.pathname);
+      });
+    }
+
+    function finish(){
+      var score=answers.reduce(function(s,v){return s+v;},0);
+      showResult(classify(score));
+    }
+
+    var params=new URLSearchParams(window.location.search);
+    var shared=params.get('r');
+    if(shared&&RESULTS[shared]){
+      showResult(shared);
+    }else{
+      renderQuestion();
+    }
+  });
+})();
+</script>
+{% endraw %}
+
+{% schema %}
+{
+  "name": "Metabolizer quiz",
+  "tag": "section",
+  "class": "bl-metabolizer-quiz",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Are You a Fast or Slow Caffeine Metabolizer?" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Five quick questions about how caffeine actually affects you. No blood test required." },
+    { "type": "url", "id": "calculator_url", "label": "Link to the caffeine calculator page", "default": "/pages/caffeine-calculator" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "max_width", "min": 600, "max": 1100, "step": 20, "unit": "px", "label": "Max width", "default": 700 },
+    { "type": "range", "id": "pad_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 48 },
+    { "type": "range", "id": "pad_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 48 },
+    { "type": "textarea", "id": "legal", "label": "Disclaimer", "default": "This is a behavioral estimate, not a genetic or medical test — actual caffeine metabolism is influenced by genetics (notably the CYP1A2 gene), liver function, smoking, pregnancy, and medications. General information, not medical advice." }
+  ],
+  "presets": [{ "name": "Metabolizer quiz" }]
+}
+{% endschema %}

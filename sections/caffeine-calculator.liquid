@@ -280,6 +280,17 @@
     $('bed').addEventListener('change',calc);
     $('met').addEventListener('change',calc);
 
+    // Picks up a result from the metabolizer quiz, via ?metabolizer= or
+    // the localStorage key it sets (bl_metabolizer). Query param wins,
+    // since it means someone just clicked through with a fresh result.
+    (function(){
+      var fromQuery=new URLSearchParams(window.location.search).get('metabolizer');
+      var fromStorage=null;
+      try{fromStorage=window.localStorage.getItem('bl_metabolizer');}catch(e){}
+      var met=fromQuery||fromStorage;
+      if(met&&HL[met]!==undefined){$('met').value=met;}
+    })();
+
     addRow(1,'07:30');
     addRow(0,'14:00');
     calc();

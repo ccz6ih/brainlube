@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "metabolizer-quiz", "settings": {} }
+  },
+  "order": ["main"]
+}

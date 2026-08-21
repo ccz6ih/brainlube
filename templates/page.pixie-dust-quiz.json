@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "pixie-dust-quiz", "settings": {} }
+  },
+  "order": ["main"]
+}
