@@ -106,12 +106,12 @@
         "subscriptions_app_block_GNpiNE": {
           "type": "shopify://apps/subscriptions/blocks/app-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
           "settings": {
-            "widget_style": "toggle",
+            "widget_style": "button",
             "widget_style_card_selector": "radio_button",
             "subscription_policy_url": "",
-            "color_text_body": "#000000",
-            "dividers_color": "#000000",
-            "background_color": "#faa638",
+            "color_text_body": "#FFFFFF",
+            "dividers_color": "#FFFFFF",
+            "background_color": "#000000",
             "border_thickness": 1,
             "border_radius": 0,
             "product": "{{product}}"
