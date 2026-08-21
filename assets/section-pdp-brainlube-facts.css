@@ -1,0 +1,110 @@
+.pdp-facts__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+  align-items: start;
+}
+
+.pdp-facts__header {
+  grid-column: 1 / -1;
+}
+
+.pdp-facts__panel {
+  border-radius: var(--pdp-facts-radius, 14px);
+}
+
+.pdp-facts__comparison {
+  background: var(--color-background);
+  border: 1px solid var(--color-borders);
+  padding: 2.4rem 2.6rem;
+}
+
+.pdp-facts__eyebrow {
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-outlines);
+}
+
+.pdp-facts__lede {
+  margin: 0 0 1.8rem;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.pdp-facts__bar-row {
+  margin-bottom: 1.4rem;
+}
+
+.pdp-facts__bar-row:last-of-type {
+  margin-bottom: 0;
+}
+
+.pdp-facts__bar-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.pdp-facts__bar-name {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.pdp-facts__bar-row--brand .pdp-facts__bar-name {
+  font-weight: 700;
+}
+
+.pdp-facts__bar-value {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pdp-facts__bar-track {
+  background: color-mix(in srgb, var(--color-foreground) 8%, transparent);
+  border-radius: 99px;
+  height: 1.2rem;
+  overflow: hidden;
+}
+
+.pdp-facts__bar-fill {
+  height: 100%;
+  width: var(--bar-width, 0%);
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--color-foreground) 25%, transparent);
+  transition: width 0.6s ease;
+}
+
+.pdp-facts__bar-fill--brand {
+  background: var(--color-button-background);
+}
+
+.pdp-facts__helper {
+  margin-top: 1.8rem;
+  color: var(--color-outlines);
+}
+
+.pdp-facts__callout {
+  background: var(--color-background);
+}
+
+.pdp-facts__callout-title {
+  margin: 0 0 0.8rem;
+  font-weight: 700;
+  font-size: 1.02em;
+}
+
+.pdp-facts__callout .rte:last-child > *:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .pdp-facts__grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+}

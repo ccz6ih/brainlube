@@ -757,6 +757,8 @@
               {% endif %}
             {%- when 'attribute_insights' -%}
               {%- render 'attribute-insights', type: block.settings.display_type, show_helper_splitters: block.settings.show_helper_splitters, amount_of_segments: block.settings.amount_of_segments, start_label: block.settings.start_label, center_label: block.settings.center_label, end_label: block.settings.end_label, value: block.settings.value, attribute_title: block.settings.title, border_radius: block.settings.border_radius, show_messages: block.settings.show_messages, below_threshold_value: block.settings.below_threshold_value, above_threshold_value: block.settings.above_threshold_value, below_threshold_message: block.settings.below_threshold_message, above_threshold_message: block.settings.above_threshold_message, between_threshold_message: block.settings.between_threshold_message -%}
+            {%- when 'purchase_options' -%}
+              {%- render 'purchase-options', product: product, product_form_id: product_form_id, block: block -%}
             {%- endcase -%}
         {%- endcapture -%}
 

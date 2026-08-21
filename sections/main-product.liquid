@@ -1483,6 +1483,64 @@
       ]
     },
     {
+      "type": "purchase_options",
+      "name": "Purchase options",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Native one-time vs. subscribe picker, built from real selling plan pricing (no manual price entry, so it can never drift out of sync with the discount configured in Settings > Subscriptions)."
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Highlight badge text",
+          "default": "Most popular"
+        },
+        {
+          "type": "text",
+          "id": "subscribe_label",
+          "label": "Subscribe option label",
+          "default": "Subscribe & Save"
+        },
+        {
+          "type": "text",
+          "id": "savings_label",
+          "label": "Savings label",
+          "info": "Use [percent] as a placeholder for the computed discount percentage.",
+          "default": "Save [percent]%"
+        },
+        {
+          "type": "text",
+          "id": "one_time_label",
+          "label": "One-time option label",
+          "default": "One-time purchase"
+        },
+        {
+          "type": "text",
+          "id": "default_frequency_match",
+          "label": "Default plan match",
+          "info": "If the product has more than one selling plan (e.g. weekly and monthly), the first plan whose name contains this text is featured as the default subscribe option.",
+          "default": "month"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.headers.layout"
+        },
+        {
+          "id": "margin_top",
+          "type": "range",
+          "label": "t:sections.layout.margin_top",
+          "info": "t:sections.blocks.margin_info",
+          "unit": "px",
+          "default": 8,
+          "min": 0,
+          "max": 48,
+          "step": 4
+        }
+      ]
+    },
+    {
       "type": "upsell_products",
       "name": "t:sections.blocks.upsell_products.name",
       "settings": [

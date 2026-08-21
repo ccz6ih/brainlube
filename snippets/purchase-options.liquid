@@ -1,0 +1,81 @@
+{%- comment -%}
+  Purchase options — one-time vs. subscribe, native selling-plan radios.
+
+  ** PARAMETERS **
+  product           => REQUIRED | product object
+  product_form_id   => REQUIRED | string | id of the <product-form> this block submits into
+  block             => REQUIRED | block object | settings: default_frequency_match, badge_text,
+                                                  subscribe_label, one_time_label, savings_label
+{%- endcomment -%}
+
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+  assign group = product.selling_plan_groups.first
+-%}
+
+{%- if group != blank and variant != blank -%}
+  {{ 'component-purchase-options.css' | asset_url | stylesheet_tag }}
+
+  {%- liquid
+    assign match_str = block.settings.default_frequency_match | default: 'month' | downcase
+    assign default_plan = group.selling_plans.first
+    for plan in group.selling_plans
+      assign plan_name_downcase = plan.name | downcase
+      if plan_name_downcase contains match_str
+        assign default_plan = plan
+        break
+      endif
+    endfor
+
+    assign default_allocation = blank
+    for allocation in variant.selling_plan_allocations
+      if allocation.selling_plan.id == default_plan.id
+        assign default_allocation = allocation
+      endif
+    endfor
+
+    assign savings_pct = 0
+    if default_allocation != blank and variant.price > 0
+      assign savings_pct = variant.price | minus: default_allocation.price | times: 100.0 | divided_by: variant.price | round
+    endif
+  -%}
+
+  {%- if default_allocation != blank -%}
+    <div class="purchase-options">
+      <input
+        type="radio"
+        id="{{ product_form_id }}-purchase-subscribe"
+        name="selling_plan"
+        value="{{ default_plan.id }}"
+        form="{{ product_form_id }}"
+        class="purchase-options__radio"
+        checked>
+      <label for="{{ product_form_id }}-purchase-subscribe" class="purchase-options__card purchase-options__card--subscribe">
+        {%- if block.settings.badge_text != blank -%}
+          <span class="purchase-options__badge">{{ block.settings.badge_text }}</span>
+        {%- endif -%}
+        <span class="purchase-options__row">
+          <span class="purchase-options__title">{{ block.settings.subscribe_label | default: 'Subscribe & Save' }}</span>
+          <span class="purchase-options__price">{{ default_allocation.price | money }}</span>
+        </span>
+        {%- if savings_pct > 0 -%}
+          <span class="purchase-options__savings">{{ block.settings.savings_label | default: 'Save [percent]%' | replace: '[percent]', savings_pct }}</span>
+        {%- endif -%}
+      </label>
+
+      <input
+        type="radio"
+        id="{{ product_form_id }}-purchase-onetime"
+        name="selling_plan"
+        value=""
+        form="{{ product_form_id }}"
+        class="purchase-options__radio">
+      <label for="{{ product_form_id }}-purchase-onetime" class="purchase-options__card purchase-options__card--onetime">
+        <span class="purchase-options__row">
+          <span class="purchase-options__title">{{ block.settings.one_time_label | default: 'One-time purchase' }}</span>
+          <span class="purchase-options__price">{{ variant.price | money }}</span>
+        </span>
+      </label>
+    </div>
+  {%- endif -%}
+{%- endif -%}
