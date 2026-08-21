@@ -30,7 +30,6 @@
         },
         "rating_Ccm9zT": {
           "type": "rating",
-          "disabled": true,
           "settings": {
             "margin_top": 0
           }
@@ -103,18 +102,15 @@
             "margin_top": 0
           }
         },
-        "subscriptions_app_block_GNpiNE": {
-          "type": "shopify://apps/subscriptions/blocks/app-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+        "purchase_options_main": {
+          "type": "purchase_options",
           "settings": {
-            "widget_style": "toggle",
-            "widget_style_card_selector": "radio_button",
-            "subscription_policy_url": "",
-            "color_text_body": "#000000",
-            "dividers_color": "#000000",
-            "background_color": "#faa638",
-            "border_thickness": 1,
-            "border_radius": 0,
-            "product": "{{product}}"
+            "badge_text": "Most popular",
+            "subscribe_label": "Subscribe & Save",
+            "savings_label": "Save {{ percent }}%",
+            "one_time_label": "One-time purchase",
+            "default_frequency_match": "month",
+            "margin_top": 20
           }
         },
         "6fc29670-ecc3-4bbf-bc13-6d7232b75085": {
@@ -154,7 +150,7 @@
           "type": "inventory_status",
           "settings": {
             "inventory_threshold": 12,
-            "show_available_quantity": true,
+            "show_available_quantity": false,
             "inventory_transfers_enable": true,
             "additional__in_stock": "– 24h express shipping",
             "additional__few_on_stock": "",
@@ -253,7 +249,7 @@
         "the-price",
         "attribute_insights_caffeine",
         "attribute_insights_crash",
-        "subscriptions_app_block_GNpiNE",
+        "purchase_options_main",
         "6fc29670-ecc3-4bbf-bc13-6d7232b75085",
         "the-buy-buttons",
         "the-description",
@@ -299,6 +295,56 @@
         "media_gap": 0,
         "padding_top": 0,
         "padding_bottom": 40
+      }
+    },
+    "pdp_facts_main": {
+      "type": "pdp-brainlube-facts",
+      "blocks": {
+        "section_header_1": {
+          "type": "section_header",
+          "settings": {
+            "subtitle": "",
+            "title": "Why 130mg, not 200mg",
+            "text": "<p>Most &ldquo;performance&rdquo; energy drinks stack caffeine until you feel it in your teeth. We didn&rsquo;t. Here&rsquo;s the math &mdash; and the sugar trade-off we made instead.</p>",
+            "text_alignment": "text-align-left"
+          }
+        },
+        "comparison_1": {
+          "type": "comparison_group",
+          "settings": {
+            "eyebrow": "Caffeine per can",
+            "lede": "Enough to work. Not enough to wreck you.",
+            "item_1_label": "BRAiNLUBE",
+            "item_1_value": 130,
+            "item_2_label": "Most \"performance\" energy drinks",
+            "item_2_value": 200,
+            "unit": "mg",
+            "max_value": 200,
+            "helper_text": "<p>130mg is about a strong cup of coffee. It's a working dose, paired with L-theanine to keep the edges off. If you've ever finished a 200mg can and felt your hands buzzing through a meeting &mdash; this is the one built for you.</p>"
+          }
+        },
+        "callout_1": {
+          "type": "callout",
+          "settings": {
+            "title": "Let's talk about the 20g of sugar",
+            "body": "<p>We know. Every competitor is at zero. They get there with sucralose and acesulfame potassium. We made a different call: real mango juice and 90 calories, in a 12oz can.</p><p>That's less sugar than a can of Coke and roughly what you'd get in a small glass of orange juice. If zero sugar is non-negotiable for you, we're genuinely not your drink &mdash; there are twenty of those in the cooler. If you've been reading sweetener labels and putting cans back, we made this one for you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_1",
+        "comparison_1",
+        "callout_1"
+      ],
+      "name": "PDP — BRAiNLUBE facts",
+      "settings": {
+        "color_scheme": "default",
+        "border_radius": 14,
+        "enable_full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 24,
+        "md_padding_top": 64,
+        "md_padding_bottom": 48
       }
     },
     "divider_Tqdp6r": {
@@ -1110,6 +1156,7 @@
   },
   "order": [
     "main",
+    "pdp_facts_main",
     "divider_Tqdp6r",
     "image_with_hotspots_NV4NA8",
     "image_with_text_dJA7HA",
