@@ -1,0 +1,192 @@
+{%- comment -%}
+  BRAiNLUBE — Energy Drink Caffeine Database
+  Data lives in the DATA array below — edit there, not in the theme editor.
+  Verified against brand-published nutrition facts / multiple independent
+  sources on 2026-08-21. Re-verify quarterly — see notes shipped alongside
+  this build.
+{%- endcomment -%}
+
+<div id="db-{{ section.id }}" class="db-root" data-highlight="{{ section.settings.highlight_brand }}">
+
+<style>
+  #db-{{ section.id }}{--i:#0F1A2E;--b:#2E86B8;--g:#EDB143;--t:#E8F4FB;--m:#52657C;--r:#DCE6EF;--bone:#FAF7F2;
+    max-width:{{ section.settings.max_width }}px;margin:0 auto;padding:{{ section.settings.pad_top }}px 20px {{ section.settings.pad_bottom }}px;
+    color:var(--i);line-height:1.6;}
+  #db-{{ section.id }} .db-h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;line-height:1.2;margin:0 0 10px;}
+  #db-{{ section.id }} .db-sub{font-size:1.05rem;color:var(--m);margin:0 0 24px;max-width:60ch;}
+  #db-{{ section.id }} .db-controls{display:grid;gap:10px;grid-template-columns:1fr;margin-bottom:18px;}
+  @media(min-width:640px){#db-{{ section.id }} .db-controls{grid-template-columns:2fr 1fr 1fr;}}
+  #db-{{ section.id }} input,#db-{{ section.id }} select{font:inherit;font-size:.95rem;color:var(--i);background:#fff;
+    border:1px solid var(--r);border-radius:8px;padding:9px 11px;width:100%;box-sizing:border-box;}
+  #db-{{ section.id }} input:focus-visible,#db-{{ section.id }} select:focus-visible{outline:2px solid var(--b);outline-offset:1px;}
+  #db-{{ section.id }} .db-count{font-size:.86rem;color:var(--m);margin:0 0 10px;}
+  #db-{{ section.id }} .db-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  #db-{{ section.id }} table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:640px;}
+  #db-{{ section.id }} th{text-align:left;padding:11px 10px;border-bottom:2px solid var(--r);font-weight:700;
+    white-space:nowrap;cursor:pointer;user-select:none;background:#fff;}
+  #db-{{ section.id }} th:hover{color:var(--b);}
+  #db-{{ section.id }} th[aria-sort="ascending"]::after{content:' \2191';color:var(--b);}
+  #db-{{ section.id }} th[aria-sort="descending"]::after{content:' \2193';color:var(--b);}
+  #db-{{ section.id }} td{padding:11px 10px;border-bottom:1px solid #EDF2F7;vertical-align:top;}
+  #db-{{ section.id }} .db-num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  #db-{{ section.id }} tr.db-hl td{background:var(--t);font-weight:700;}
+  #db-{{ section.id }} tr.db-hl td:first-child{box-shadow:inset 3px 0 0 var(--g);}
+  #db-{{ section.id }} .db-empty{padding:28px 10px;text-align:center;color:var(--m);}
+  #db-{{ section.id }} .db-legal{font-size:.8rem;color:#7A889A;border-top:1px solid var(--r);margin-top:26px;padding-top:16px;}
+</style>
+
+<h1 class="db-h1">{{ section.settings.heading }}</h1>
+<p class="db-sub">{{ section.settings.subheading }}</p>
+
+<div class="db-controls">
+  <input type="search" id="db-q-{{ section.id }}" placeholder="Search a brand…" aria-label="Search brands">
+  <select id="db-sweet-{{ section.id }}" aria-label="Filter by sweetener">
+    <option value="">All sweeteners</option>
+    <option value="artificial">Artificial only</option>
+    <option value="sugar">Real sugar</option>
+    <option value="none">Unsweetened</option>
+  </select>
+  <select id="db-size-{{ section.id }}" aria-label="Filter by can size">
+    <option value="">All sizes</option>
+    <option value="8.4">8.4 oz</option>
+    <option value="12">12 oz</option>
+    <option value="16">16 oz</option>
+  </select>
+</div>
+
+<p class="db-count" id="db-count-{{ section.id }}"></p>
+
+<div class="db-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th data-k="name" aria-sort="none" tabindex="0">Drink</th>
+        <th data-k="size" class="db-num" aria-sort="none" tabindex="0">Size</th>
+        <th data-k="caf" class="db-num" aria-sort="descending" tabindex="0">Caffeine</th>
+        <th data-k="perOz" class="db-num" aria-sort="none" tabindex="0">Per oz</th>
+        <th data-k="sugar" class="db-num" aria-sort="none" tabindex="0">Sugar</th>
+        <th data-k="cal" class="db-num" aria-sort="none" tabindex="0">Cal</th>
+        <th data-k="sweet" aria-sort="none" tabindex="0">Sweetened with</th>
+      </tr>
+    </thead>
+    <tbody id="db-body-{{ section.id }}"></tbody>
+  </table>
+</div>
+
+<p class="db-legal">{{ section.settings.legal }}</p>
+</div>
+
+{% raw %}
+<script>
+(function(){
+  document.querySelectorAll('.db-root:not([data-db-init])').forEach(function(root){
+    root.setAttribute('data-db-init','1');
+    var sid=root.id.replace('db-','');
+    var $=function(p){return document.getElementById('db-'+p+'-'+sid);};
+    var HL=(root.dataset.highlight||'').toLowerCase();
+
+    var DATA=[
+      {name:'BRAiNLUBE Mango',size:12,caf:130,sugar:20,cal:90,sweet:'Cane sugar, mango juice',type:'sugar'},
+      {name:'Red Bull',size:8.4,caf:80,sugar:27,cal:110,sweet:'Sucrose, glucose',type:'sugar'},
+      {name:'Red Bull Sugarfree',size:8.4,caf:80,sugar:0,cal:5,sweet:'Aspartame, Ace-K',type:'artificial'},
+      {name:'Monster Energy',size:16,caf:160,sugar:54,cal:210,sweet:'Sugar, glucose',type:'sugar'},
+      {name:'Monster Zero Ultra',size:16,caf:140,sugar:0,cal:10,sweet:'Sucralose, Ace-K',type:'artificial'},
+      {name:'Rockstar Energy',size:16,caf:160,sugar:63,cal:250,sweet:'Sugar, glucose',type:'sugar'},
+      {name:'Rockstar Sugar Free',size:16,caf:160,sugar:0,cal:10,sweet:'Sucralose, Ace-K',type:'artificial'},
+      {name:'NOS Energy',size:16,caf:160,sugar:54,cal:210,sweet:'Sugar',type:'sugar'},
+      {name:'Celsius',size:12,caf:200,sugar:0,cal:10,sweet:'Sucralose',type:'artificial'},
+      {name:'Alani Nu',size:12,caf:200,sugar:0,cal:10,sweet:'Sucralose, Ace-K',type:'artificial'},
+      {name:'Ghost Energy',size:16,caf:200,sugar:0,cal:10,sweet:'Sucralose, Ace-K',type:'artificial'},
+      {name:'C4 Energy',size:16,caf:200,sugar:0,cal:0,sweet:'Sucralose, Ace-K',type:'artificial'},
+      {name:'Prime Energy',size:12,caf:200,sugar:0,cal:10,sweet:'Sucralose, Ace-K',type:'artificial'},
+      {name:'Reign Total Body Fuel',size:16,caf:300,sugar:0,cal:10,sweet:'Sucralose, Ace-K',type:'artificial'},
+      {name:'Reign Storm',size:12,caf:200,sugar:0,cal:10,sweet:'Sucralose, Ace-K',type:'artificial'},
+      {name:'Bang Energy',size:16,caf:300,sugar:0,cal:0,sweet:'Sucralose, Ace-K',type:'artificial'},
+      {name:'5-Hour Energy',size:2,caf:200,sugar:0,cal:4,sweet:'Sucralose',type:'artificial'},
+      {name:'Brewed coffee',size:8,caf:95,sugar:0,cal:2,sweet:'None',type:'none'},
+      {name:'Cold brew',size:12,caf:205,sugar:0,cal:5,sweet:'None',type:'none'},
+      {name:'Espresso, single',size:1,caf:63,sugar:0,cal:1,sweet:'None',type:'none'},
+      {name:'Black tea',size:8,caf:47,sugar:0,cal:2,sweet:'None',type:'none'},
+      {name:'Green tea',size:8,caf:28,sugar:0,cal:2,sweet:'None',type:'none'},
+      {name:'Matcha',size:8,caf:70,sugar:0,cal:5,sweet:'None',type:'none'},
+      {name:'Coca-Cola Classic',size:12,caf:34,sugar:39,cal:140,sweet:'HFCS or sugar',type:'sugar'}
+    ];
+    DATA.forEach(function(d){d.perOz=Math.round((d.caf/d.size)*10)/10;});
+
+    var sortKey='caf',sortDir=-1;
+
+    function render(){
+      var q=($('q').value||'').toLowerCase().trim();
+      var sw=$('sweet').value, sz=$('size').value;
+      var rows=DATA.filter(function(d){
+        if(q&&d.name.toLowerCase().indexOf(q)===-1){return false;}
+        if(sw&&d.type!==sw){return false;}
+        if(sz&&String(d.size)!==sz){return false;}
+        return true;
+      });
+      rows.sort(function(a,b){
+        var x=a[sortKey],y=b[sortKey];
+        if(typeof x==='string'){return x.localeCompare(y)*sortDir;}
+        return (x-y)*sortDir;
+      });
+
+      $('count').textContent=rows.length+(rows.length===1?' drink':' drinks')+' shown';
+
+      if(!rows.length){
+        $('body').innerHTML='<tr><td colspan="7" class="db-empty">Nothing matches those filters.</td></tr>';
+        return;
+      }
+      $('body').innerHTML=rows.map(function(d){
+        var hl=HL&&d.name.toLowerCase().indexOf(HL)!==-1?' class="db-hl"':'';
+        return '<tr'+hl+'><td>'+d.name+'</td>'+
+          '<td class="db-num">'+d.size+' oz</td>'+
+          '<td class="db-num">'+d.caf+' mg</td>'+
+          '<td class="db-num">'+d.perOz+'</td>'+
+          '<td class="db-num">'+d.sugar+' g</td>'+
+          '<td class="db-num">'+d.cal+'</td>'+
+          '<td>'+d.sweet+'</td></tr>';
+      }).join('');
+    }
+
+    function setSort(k,th){
+      if(sortKey===k){sortDir*=-1;}else{sortKey=k;sortDir=(k==='name')?1:-1;}
+      root.querySelectorAll('th').forEach(function(h){h.setAttribute('aria-sort','none');});
+      th.setAttribute('aria-sort',sortDir===1?'ascending':'descending');
+      render();
+    }
+
+    root.querySelectorAll('th').forEach(function(th){
+      th.addEventListener('click',function(){setSort(th.dataset.k,th);});
+      th.addEventListener('keydown',function(e){
+        if(e.key==='Enter'||e.key===' '){e.preventDefault();setSort(th.dataset.k,th);}
+      });
+    });
+    ['q','sweet','size'].forEach(function(p){
+      $(p).addEventListener('input',render);
+      $(p).addEventListener('change',render);
+    });
+
+    render();
+  });
+})();
+</script>
+{% endraw %}
+
+{% schema %}
+{
+  "name": "Caffeine database",
+  "tag": "section",
+  "class": "bl-caffeine-db",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Energy Drink Caffeine Database" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Caffeine, sugar, calories and sweetener for every major energy drink, plus coffee and tea for reference. Sort any column. Search any brand." },
+    { "type": "text", "id": "highlight_brand", "label": "Highlight rows containing", "default": "BRAiNLUBE", "info": "Case-insensitive. Leave blank for no highlight." },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "max_width", "min": 700, "max": 1300, "step": 20, "unit": "px", "label": "Max width", "default": 980 },
+    { "type": "range", "id": "pad_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 48 },
+    { "type": "range", "id": "pad_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 48 },
+    { "type": "textarea", "id": "legal", "label": "Disclaimer", "default": "Figures are per container as published by each brand and are compiled for comparison only. Formulations change and vary by flavour and region — always check the label on the can you're holding. Coffee and tea figures are typical averages and vary considerably by preparation. BRAiNLUBE is not affiliated with any other brand listed. Free to reference with a link to this page. Last verified August 21, 2026." }
+  ],
+  "presets": [{ "name": "Caffeine database" }]
+}
+{% endschema %}

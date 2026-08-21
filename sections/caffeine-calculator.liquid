@@ -1,0 +1,314 @@
+{%- comment -%}
+  BRAiNLUBE — Caffeine Cutoff Calculator
+  Lives on a page via templates/page.caffeine-calculator.json.
+  Blog articles strip <script>, so this must live on a page, not an article.
+{%- endcomment -%}
+
+<div id="cc-{{ section.id }}" class="cc-root"
+     data-halflife-fast="{{ section.settings.hl_fast }}"
+     data-halflife-avg="{{ section.settings.hl_avg }}"
+     data-halflife-slow="{{ section.settings.hl_slow }}"
+     data-threshold="{{ section.settings.sleep_threshold }}">
+
+<style>
+  #cc-{{ section.id }}{--i:#0F1A2E;--b:#2E86B8;--g:#EDB143;--t:#E8F4FB;--m:#52657C;--r:#DCE6EF;--bone:#FAF7F2;
+    max-width:{{ section.settings.max_width }}px;margin:0 auto;padding:{{ section.settings.pad_top }}px 20px {{ section.settings.pad_bottom }}px;
+    color:var(--i);line-height:1.6;}
+  #cc-{{ section.id }} .cc-h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;line-height:1.2;margin:0 0 10px;}
+  #cc-{{ section.id }} .cc-sub{font-size:1.05rem;color:var(--m);margin:0 0 28px;max-width:56ch;}
+  #cc-{{ section.id }} .cc-panel{background:var(--bone);border-radius:16px;padding:24px;margin-bottom:20px;}
+  #cc-{{ section.id }} .cc-lab{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--b);margin:0 0 8px;}
+  #cc-{{ section.id }} select,#cc-{{ section.id }} input{font:inherit;font-size:.95rem;color:var(--i);background:#fff;
+    border:1px solid var(--r);border-radius:8px;padding:9px 11px;width:100%;box-sizing:border-box;}
+  #cc-{{ section.id }} select:focus-visible,#cc-{{ section.id }} input:focus-visible{outline:2px solid var(--b);outline-offset:1px;}
+  #cc-{{ section.id }} .cc-row{display:grid;gap:10px;grid-template-columns:1fr;margin-bottom:10px;align-items:end;}
+  @media(min-width:620px){#cc-{{ section.id }} .cc-row{grid-template-columns:1fr 130px 40px;}}
+  #cc-{{ section.id }} .cc-x{background:none;border:1px solid var(--r);border-radius:8px;color:var(--m);
+    cursor:pointer;height:38px;font-size:1.1rem;line-height:1;padding:0;}
+  #cc-{{ section.id }} .cc-x:hover{border-color:#C0392B;color:#C0392B;}
+  #cc-{{ section.id }} .cc-add{background:#fff;border:1px dashed var(--b);color:var(--b);border-radius:8px;
+    padding:10px 16px;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer;width:100%;margin-top:4px;}
+  #cc-{{ section.id }} .cc-add:hover{background:var(--t);}
+  #cc-{{ section.id }} .cc-two{display:grid;gap:14px;grid-template-columns:1fr;margin-bottom:18px;}
+  @media(min-width:620px){#cc-{{ section.id }} .cc-two{grid-template-columns:1fr 1fr;}}
+  #cc-{{ section.id }} .cc-out{background:#0F1A2E;border-radius:16px;padding:28px;color:#fff;margin-bottom:20px;}
+  #cc-{{ section.id }} .cc-eyebrow{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#6E8BA8;margin:0 0 6px;}
+  #cc-{{ section.id }} .cc-big{font-size:clamp(2.4rem,8vw,3.4rem);font-weight:700;line-height:1;margin:0 0 4px;color:var(--g);}
+  #cc-{{ section.id }} .cc-verdict{font-size:1.05rem;line-height:1.5;margin:14px 0 0;color:#C8D6E4;}
+  #cc-{{ section.id }} .cc-cut{border-top:1px solid #1B2B44;margin-top:20px;padding-top:18px;display:flex;
+    justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;}
+  #cc-{{ section.id }} .cc-cut b{color:var(--g);font-size:1.25rem;}
+  #cc-{{ section.id }} .cc-note{font-size:.86rem;color:var(--m);margin:16px 0 0;}
+  #cc-{{ section.id }} .cc-legal{font-size:.8rem;color:#7A889A;border-top:1px solid var(--r);margin-top:28px;padding-top:16px;}
+  #cc-{{ section.id }} .cc-err{color:#C0392B;font-size:.86rem;margin:8px 0 0;}
+</style>
+
+<h1 class="cc-h1">{{ section.settings.heading }}</h1>
+<p class="cc-sub">{{ section.settings.subheading }}</p>
+
+<div class="cc-panel">
+  <div class="cc-two">
+    <div>
+      <label class="cc-lab" for="cc-bed-{{ section.id }}">Bedtime</label>
+      <input type="time" id="cc-bed-{{ section.id }}" value="22:30">
+    </div>
+    <div>
+      <label class="cc-lab" for="cc-met-{{ section.id }}">How you handle caffeine</label>
+      <select id="cc-met-{{ section.id }}">
+        <option value="fast">Fast &mdash; coffee after dinner is fine</option>
+        <option value="avg" selected>Average &mdash; most people</option>
+        <option value="slow">Slow &mdash; one cup and I'm wired</option>
+      </select>
+    </div>
+  </div>
+
+  <span class="cc-lab">What you drank, and when</span>
+  <div id="cc-list-{{ section.id }}"></div>
+  <button type="button" class="cc-add" id="cc-add-{{ section.id }}">+ Add another drink</button>
+  <p class="cc-err" id="cc-err-{{ section.id }}" hidden></p>
+</div>
+
+<div class="cc-out">
+  <p class="cc-eyebrow">Still in you at bedtime</p>
+  <p class="cc-big" id="cc-mg-{{ section.id }}">&mdash;</p>
+  <div id="cc-chart-{{ section.id }}"></div>
+  <p class="cc-verdict" id="cc-verdict-{{ section.id }}">Add a drink to see your numbers.</p>
+  <div class="cc-cut">
+    <span style="color:#8FA6BC;font-size:.92rem;">Your last drink should have been by</span>
+    <b id="cc-cutoff-{{ section.id }}">&mdash;</b>
+  </div>
+</div>
+
+<p class="cc-note">{{ section.settings.footnote }}</p>
+<p class="cc-legal">{{ section.settings.legal }}</p>
+</div>
+
+{% raw %}
+<script>
+(function(){
+  var roots=document.querySelectorAll('.cc-root:not([data-cc-init])');
+  roots.forEach(function(root){
+    root.setAttribute('data-cc-init','1');
+    var sid=root.id.replace('cc-','');
+    var $=function(p){return document.getElementById('cc-'+p+'-'+sid);};
+
+    var HL={fast:+root.dataset.halflifeFast||4,avg:+root.dataset.halflifeAvg||5.7,slow:+root.dataset.halflifeSlow||8};
+    var THRESH=+root.dataset.threshold||50;
+
+    var DRINKS=[
+      {n:'BRAiNLUBE, 12oz',mg:130},
+      {n:'Brewed coffee, 8oz',mg:95},
+      {n:'Espresso, single shot',mg:63},
+      {n:'Latte or cappuccino',mg:126},
+      {n:'Cold brew, 12oz',mg:205},
+      {n:'Black tea, 8oz',mg:47},
+      {n:'Green tea, 8oz',mg:28},
+      {n:'Matcha, 8oz',mg:70},
+      {n:'Red Bull, 8.4oz',mg:80},
+      {n:'Monster, 16oz',mg:160},
+      {n:'Rockstar, 16oz',mg:160},
+      {n:'NOS, 16oz',mg:160},
+      {n:'Celsius, 12oz',mg:200},
+      {n:'Alani Nu, 12oz',mg:200},
+      {n:'Ghost, 16oz',mg:200},
+      {n:'C4, 16oz',mg:200},
+      {n:'Prime Energy, 12oz',mg:200},
+      {n:'Bang, 16oz',mg:300},
+      {n:'Reign, 16oz',mg:300},
+      {n:'5-Hour Energy, 2oz',mg:200},
+      {n:'Cola, 12oz',mg:34},
+      {n:'Pre-workout scoop',mg:200},
+      {n:'Custom amount',mg:0}
+    ];
+
+    var rows=0;
+
+    function addRow(defIdx,defTime){
+      rows++;
+      var id=rows;
+      var wrap=document.createElement('div');
+      wrap.className='cc-row';
+      wrap.dataset.row=id;
+
+      var sel=document.createElement('select');
+      sel.setAttribute('aria-label','Drink');
+      DRINKS.forEach(function(d,i){
+        var o=document.createElement('option');
+        o.value=i;o.textContent=d.mg?d.n+' — '+d.mg+'mg':d.n;
+        sel.appendChild(o);
+      });
+      sel.value=(defIdx===undefined?0:defIdx);
+
+      var time=document.createElement('input');
+      time.type='time';time.value=defTime||'14:00';
+      time.setAttribute('aria-label','Time');
+
+      var custom=document.createElement('input');
+      custom.type='number';custom.min='0';custom.max='2000';custom.placeholder='mg';
+      custom.setAttribute('aria-label','Custom milligrams');
+      custom.hidden=true;custom.className='cc-custom';
+
+      var del=document.createElement('button');
+      del.type='button';del.className='cc-x';del.innerHTML='&times;';
+      del.setAttribute('aria-label','Remove this drink');
+
+      var selWrap=document.createElement('div');
+      selWrap.appendChild(sel);selWrap.appendChild(custom);
+      custom.style.marginTop='8px';
+
+      wrap.appendChild(selWrap);wrap.appendChild(time);wrap.appendChild(del);
+      $('list').appendChild(wrap);
+
+      sel.addEventListener('change',function(){
+        custom.hidden=DRINKS[+sel.value].mg!==0;
+        if(!custom.hidden){custom.focus();}
+        calc();
+      });
+      time.addEventListener('change',calc);
+      custom.addEventListener('input',calc);
+      del.addEventListener('click',function(){
+        if($('list').children.length<=1){return;}
+        wrap.remove();calc();
+      });
+    }
+
+    function minsBetween(drinkT,bedT){
+      var d=drinkT.split(':'),b=bedT.split(':');
+      var dm=+d[0]*60+ +d[1], bm=+b[0]*60+ +b[1];
+      var diff=bm-dm;
+      if(diff<0){diff+=1440;}
+      return diff;
+    }
+
+    function remaining(mg,hours,hl){
+      return mg*Math.pow(0.5,hours/hl);
+    }
+
+    function fmtTime(mins){
+      mins=((mins%1440)+1440)%1440;
+      var h=Math.floor(mins/60),m=Math.round(mins%60);
+      var ap=h<12?'am':'pm';var h12=h%12;if(h12===0){h12=12;}
+      return h12+':'+(m<10?'0':'')+m+ap;
+    }
+
+    function drawChart(items,hl,bedMins){
+      var W=600,H=110,pad=4;
+      var start=Math.min.apply(null,items.map(function(i){return i.absMin;}));
+      var end=bedMins+360;
+      if(end<=start){end=start+720;}
+      var span=end-start;
+      var pts=[],peak=0;
+      for(var t=0;t<=60;t++){
+        var min=start+span*(t/60);
+        var tot=0;
+        items.forEach(function(i){
+          if(min>=i.absMin){tot+=remaining(i.mg,(min-i.absMin)/60,hl);}
+        });
+        pts.push([t/60,tot]);
+        if(tot>peak){peak=tot;}
+      }
+      if(peak<=0){return '';}
+      var d=pts.map(function(p,i){
+        var x=pad+p[0]*(W-pad*2);
+        var y=H-pad-(p[1]/peak)*(H-pad*2);
+        return (i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1);
+      }).join(' ');
+      var bx=pad+((bedMins-start)/span)*(W-pad*2);
+      return '<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;display:block;margin:18px 0 0;" role="img" aria-label="Caffeine level over time, with a marker at bedtime.">'+
+        '<path d="'+d+'" fill="none" stroke="#EDB143" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'+
+        '<line x1="'+bx.toFixed(1)+'" y1="0" x2="'+bx.toFixed(1)+'" y2="'+H+'" stroke="#6E8BA8" stroke-width="1.5" stroke-dasharray="4 4"/>'+
+        '<text x="'+(bx+6).toFixed(1)+'" y="14" font-size="11" fill="#8FA6BC">bed</text></svg>';
+    }
+
+    function calc(){
+      var bed=$('bed').value;
+      if(!bed){return;}
+      var hl=HL[$('met').value]||5.7;
+      var bedMins=+bed.split(':')[0]*60+ +bed.split(':')[1];
+
+      var items=[],bad=false;
+      Array.prototype.forEach.call($('list').children,function(w){
+        var sel=w.querySelector('select'),time=w.querySelector('input[type=time]'),cu=w.querySelector('.cc-custom');
+        var def=DRINKS[+sel.value];
+        var mg=def.mg;
+        if(mg===0){
+          mg=parseFloat(cu.value);
+          if(isNaN(mg)||mg<=0){bad=true;return;}
+        }
+        if(!time.value){bad=true;return;}
+        var gap=minsBetween(time.value,bed);
+        items.push({mg:mg,gap:gap,absMin:bedMins-gap});
+      });
+
+      var err=$('err');
+      if(bad){err.textContent='Enter a milligram amount and a time for every drink.';err.hidden=false;}
+      else{err.hidden=true;}
+
+      if(!items.length){
+        $('mg').innerHTML='&mdash;';
+        $('verdict').textContent='Add a drink to see your numbers.';
+        $('cutoff').innerHTML='&mdash;';
+        $('chart').innerHTML='';
+        return;
+      }
+
+      var total=0,totalDose=0;
+      items.forEach(function(i){
+        total+=remaining(i.mg,i.gap/60,hl);
+        totalDose+=i.mg;
+      });
+      total=Math.round(total);
+
+      $('mg').textContent=total+'mg';
+      $('chart').innerHTML=drawChart(items,hl,bedMins);
+
+      var v;
+      if(total<15){v='Essentially clear. Caffeine is unlikely to be affecting your sleep tonight.';}
+      else if(total<THRESH){v='Low enough that most people would fall asleep normally — though sleep depth can still be affected.';}
+      else if(total<100){v='Enough to delay sleep onset for many people, and to reduce deep sleep even if you drop off fine.';}
+      else if(total<200){v='A substantial amount still working. Expect it to take longer to fall asleep and to wake less rested.';}
+      else{v='This is a large residual dose at bedtime. Moving your last drink earlier will likely do more for you than anything else.';}
+      if(totalDose>400){v+=' Your total today is '+Math.round(totalDose)+'mg, which is above the 400mg the FDA considers safe for most healthy adults.';}
+      $('verdict').textContent=v;
+
+      var hoursNeeded=hl*Math.log(Math.max(totalDose,1)/THRESH)/Math.log(2);
+      if(hoursNeeded<0){hoursNeeded=0;}
+      $('cutoff').textContent=fmtTime(bedMins-hoursNeeded*60);
+    }
+
+    $('add').addEventListener('click',function(){addRow(1,'14:00');});
+    $('bed').addEventListener('change',calc);
+    $('met').addEventListener('change',calc);
+
+    addRow(1,'07:30');
+    addRow(0,'14:00');
+    calc();
+  });
+})();
+</script>
+{% endraw %}
+
+{% schema %}
+{
+  "name": "Caffeine calculator",
+  "tag": "section",
+  "class": "bl-caffeine-calc",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Caffeine Cutoff Calculator" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Enter your bedtime and what you drank today. See how much caffeine is still working when the lights go out — and what time your last drink should have been." },
+    { "type": "header", "content": "Half-life assumptions (hours)" },
+    { "type": "text", "id": "hl_fast", "label": "Fast metaboliser", "default": "4" },
+    { "type": "text", "id": "hl_avg", "label": "Average", "default": "5.7" },
+    { "type": "text", "id": "hl_slow", "label": "Slow metaboliser", "default": "8" },
+    { "type": "text", "id": "sleep_threshold", "label": "Sleep threshold (mg)", "default": "50", "info": "The residual amount treated as low enough not to interfere. Used for the cutoff recommendation." },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "max_width", "min": 600, "max": 1100, "step": 20, "unit": "px", "label": "Max width", "default": 760 },
+    { "type": "range", "id": "pad_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 48 },
+    { "type": "range", "id": "pad_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 48 },
+    { "type": "header", "content": "Text" },
+    { "type": "textarea", "id": "footnote", "label": "Footnote", "default": "Caffeine half-life varies widely between individuals — genetics, smoking, oral contraceptives, pregnancy, and liver function all shift it. This calculator uses population averages, so treat the result as a starting point and adjust based on how you actually sleep." },
+    { "type": "textarea", "id": "legal", "label": "Disclaimer", "default": "General information, not medical advice. If you have a heart condition, a sleep disorder, an anxiety disorder, or are pregnant or nursing, talk to your doctor about caffeine. The FDA considers up to 400mg per day safe for most healthy adults." }
+  ],
+  "presets": [{ "name": "Caffeine calculator" }]
+}
+{% endschema %}

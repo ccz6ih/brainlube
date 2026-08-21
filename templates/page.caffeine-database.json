@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "caffeine-database", "settings": {} }
+  },
+  "order": ["main"]
+}
