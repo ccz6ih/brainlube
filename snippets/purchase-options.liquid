@@ -59,7 +59,7 @@
           <span class="purchase-options__price">{{ default_allocation.price | money }}</span>
         </span>
         {%- if savings_pct > 0 -%}
-          <span class="purchase-options__savings">{{ block.settings.savings_label | default: 'Save {{ percent }}%' | replace: '{{ percent }}', savings_pct }}</span>
+          <span class="purchase-options__savings">{{ block.settings.savings_label | default: 'Save [percent]%' | replace: '[percent]', savings_pct }}</span>
         {%- endif -%}
       </label>
 

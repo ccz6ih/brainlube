@@ -107,7 +107,7 @@
           "settings": {
             "badge_text": "Most popular",
             "subscribe_label": "Subscribe & Save",
-            "savings_label": "Save {{ percent }}%",
+            "savings_label": "Save [percent]%",
             "one_time_label": "One-time purchase",
             "default_frequency_match": "month",
             "margin_top": 20
