@@ -60,6 +60,20 @@
             "size_multiplier": "size--default"
           }
         },
+        "subscriptions_app_block_BMQxKd": {
+          "type": "shopify://apps/subscriptions/blocks/app-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+          "settings": {
+            "widget_style": "button",
+            "widget_style_card_selector": "radio_button",
+            "subscription_policy_url": "",
+            "color_text_body": "#FFFFFF",
+            "dividers_color": "#FFFFFF",
+            "background_color": "#000000",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "product": "{{product}}"
+          }
+        },
         "attribute_insights_caffeine": {
           "type": "attribute_insights",
           "settings": {
@@ -104,6 +118,7 @@
         },
         "purchase_options_main": {
           "type": "purchase_options",
+          "disabled": true,
           "settings": {
             "badge_text": "Most popular",
             "subscribe_label": "Subscribe & Save",
@@ -247,6 +262,7 @@
         "the-title",
         "557a3a73-80c5-47b2-abb8-a78027516c90",
         "the-price",
+        "subscriptions_app_block_BMQxKd",
         "attribute_insights_caffeine",
         "attribute_insights_crash",
         "purchase_options_main",
