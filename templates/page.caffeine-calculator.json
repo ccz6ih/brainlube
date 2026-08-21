@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "caffeine-calculator", "settings": {} }
+  },
+  "order": ["main"]
+}
