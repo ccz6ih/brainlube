@@ -606,7 +606,7 @@
                     <div class="product-form__buttons">
 
                       {% if has_quantity_selector and next_to_add_to_cart %}
-                        {% capture 'quantity_input' %}
+                        {% capture quantity_input %}
                           {% render 'quantity-input', input_min_value: 1, input_value: 1, input_form: product_form_id  %}
                         {% endcapture %}
                       {% elsif has_quantity_selector == false %}
@@ -862,4 +862,13 @@ endif
   <script type="application/ld+json">
     {{ product | structured_data }}
   </script>
-{% endunless %}
+{% endunless %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% capture 'quantity_input' %}"
+  to: "{% capture quantity_input %}"
+  position: 29806..29834
+{%- endcomment -%}
